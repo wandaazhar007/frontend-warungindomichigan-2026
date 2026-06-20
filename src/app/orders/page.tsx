@@ -62,7 +62,7 @@ export default function OrdersPage() {
 
   useEffect(() => {
     if (!user) return;
-    api.get<OrderSummary[]>('/orders/my')
+    api.get<OrderSummary[]>('/api/orders/my')
       .then((r) => setOrders(r.data))
       .catch(() => setFetchError('Gagal memuat riwayat pesanan.'))
       .finally(() => setFetching(false));

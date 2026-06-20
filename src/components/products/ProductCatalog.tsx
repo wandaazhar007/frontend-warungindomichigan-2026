@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Search, Loader2 } from 'lucide-react';
+import { Search, Loader2, SlidersHorizontal } from 'lucide-react';
 import { Product, Category } from '@/types';
 import { getProducts, getCategories } from '@/lib/api';
 import ProductCard from './ProductCard';
@@ -11,19 +11,20 @@ import { cn } from '@/lib/utils';
 import { useDebounce } from '@/lib/useDebounce';
 
 export default function ProductCatalog() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [total, setTotal] = useState(0);
-  const [loading, setLoading] = useState(true);
-  const [loadingMore, setLoadingMore] = useState(false);
+  const [products, setProducts]         = useState<Product[]>([]);
+  const [categories, setCategories]     = useState<Category[]>([]);
+  const [total, setTotal]               = useState(0);
+  const [loading, setLoading]           = useState(true);
+  const [loadingMore, setLoadingMore]   = useState(false);
 
-  const [search, setSearch] = useState('');
+  const [search, setSearch]             = useState('');
   const [activeCategory, setActiveCategory] = useState('');
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
+  const [page, setPage]                 = useState(1);
+  const [hasMore, setHasMore]           = useState(false);
+  const [sortBy, setSortBy]             = useState('');
 
   const debouncedSearch = useDebounce(search, 400);
-  const LIMIT = 20;
+  const LIMIT = 24;
 
   const fetchProducts = useCallback(
     async (p: number, reset = false) => {
@@ -31,15 +32,15 @@ export default function ProductCatalog() {
         p === 1 ? setLoading(true) : setLoadingMore(true);
         const result = await getProducts({
           categorySlug: activeCategory || undefined,
-          search: debouncedSearch || undefined,
-          page: p,
-          limit: LIMIT,
+          search:       debouncedSearch || undefined,
+          page:         p,
+          limit:        LIMIT,
         });
         setProducts((prev) => (reset || p === 1 ? result.data : [...prev, ...result.data]));
         setTotal(result.meta.total);
         setHasMore(p < result.meta.totalPages);
       } catch {
-        // keep existing state on error
+        // keep state on error
       } finally {
         setLoading(false);
         setLoadingMore(false);
@@ -48,7 +49,6 @@ export default function ProductCatalog() {
     [activeCategory, debouncedSearch]
   );
 
-  // Initial load + when filters change
   useEffect(() => {
     setPage(1);
     fetchProducts(1, true);
@@ -70,95 +70,103 @@ export default function ProductCatalog() {
     fetchProducts(next);
   }
 
-  function resultsLabel() {
-    if (debouncedSearch)
-      return `${total} produk ditemukan untuk "${debouncedSearch}"`;
-    if (activeCategory) {
-      const cat = categories.find((c) => c.slug === activeCategory);
-      return `${total} produk dalam kategori ${cat?.name ?? activeCategory}`;
-    }
-    return `Menampilkan ${total} produk`;
-  }
+  const sortedProducts = sortBy === 'price-asc'
+    ? [...products].sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
+    : sortBy === 'price-desc'
+    ? [...products].sort((a, b) => parseFloat(b.price) - parseFloat(a.price))
+    : products;
 
   return (
-    <section className="py-16 bg-gray-50" id="produk">
+    <section className="py-8 pb-16 bg-background" id="produk">
       <div className="container-wim">
 
-        {/* Header */}
-        <div className="text-center mb-10">
-          <span className="text-sm font-semibold text-red-500 uppercase tracking-wider">
-            Katalog Produk
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-700 text-gray-900 mt-2">
-            Produk Kami
-          </h2>
-        </div>
-
-        {/* Search */}
-        <div className="relative max-w-lg mx-auto mb-8">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+        {/* Search bar */}
+        <div className="relative max-w-2xl mb-6">
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
           <Input
             type="search"
-            placeholder="Cari produk... (misal: indomie, sambal, kopi)"
+            placeholder="Search products (e.g. indomie, sambal, kopi...)"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="pl-9"
+            className="pl-10 bg-white border-border h-11 text-sm"
           />
         </div>
 
-        {/* Category filter */}
-        <div className="flex items-center gap-2 flex-wrap justify-center mb-8">
+        {/* Category pills */}
+        <div className="flex items-center gap-2 flex-wrap mb-5">
           <button
             onClick={() => handleCategoryChange('')}
             className={cn(
-              'px-4 py-1.5 rounded-full text-sm font-medium transition-all border',
+              'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border',
               activeCategory === ''
-                ? 'bg-red-500 text-white border-red-500'
-                : 'bg-white text-gray-600 border-gray-200 hover:border-red-300 hover:text-red-500'
+                ? 'bg-primary text-white border-primary'
+                : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
             )}
           >
-            Semua Produk
+            All
           </button>
           {categories.map((cat) => (
             <button
               key={cat.slug}
               onClick={() => handleCategoryChange(cat.slug)}
               className={cn(
-                'px-4 py-1.5 rounded-full text-sm font-medium transition-all border',
+                'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border',
                 activeCategory === cat.slug
-                  ? 'bg-red-500 text-white border-red-500'
-                  : 'bg-white text-gray-600 border-gray-200 hover:border-red-300 hover:text-red-500'
+                  ? 'bg-primary text-white border-primary'
+                  : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
               )}
             >
-              {cat.icon} {cat.name}
+              {cat.icon ? `${cat.icon} ` : ''}{cat.name}
             </button>
           ))}
         </div>
 
-        {/* Results info */}
+        {/* Results bar */}
         {!loading && (
-          <p className="text-sm text-gray-500 text-center mb-6">{resultsLabel()}</p>
+          <div className="flex items-center justify-between mb-6 gap-4">
+            <p className="text-sm text-gray-500">
+              <span className="font-semibold text-gray-900">{total}</span> products
+              {activeCategory && categories.find((c) => c.slug === activeCategory) && (
+                <> in <span className="font-semibold">{categories.find((c) => c.slug === activeCategory)?.name}</span></>
+              )}
+              {debouncedSearch && (
+                <> for &ldquo;<span className="font-semibold">{debouncedSearch}</span>&rdquo;</>
+              )}
+            </p>
+            <div className="flex items-center gap-2 shrink-0">
+              <SlidersHorizontal className="h-4 w-4 text-gray-400" />
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="text-sm text-gray-700 bg-white border border-border rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary"
+              >
+                <option value="">Sort by: popularity</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+              </select>
+            </div>
+          </div>
         )}
 
         {/* Grid */}
         {loading ? (
-          <div className="flex items-center justify-center py-20">
-            <Loader2 className="h-8 w-8 text-red-400 animate-spin" />
+          <div className="flex items-center justify-center py-24">
+            <Loader2 className="h-8 w-8 text-primary/40 animate-spin" />
           </div>
         ) : products.length === 0 ? (
           <div className="text-center py-20">
             <span className="text-6xl mb-4 block">🔍</span>
-            <h3 className="font-display font-600 text-gray-900 text-lg mb-2">
-              Produk tidak ditemukan
+            <h3 className="font-display font-semibold text-gray-900 text-lg mb-2">
+              No products found
             </h3>
             <p className="text-gray-500 text-sm">
-              Coba kata kunci lain atau pilih kategori berbeda.
+              Try a different keyword or browse another category.
             </p>
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-              {products.map((product) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
+              {sortedProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
@@ -167,13 +175,15 @@ export default function ProductCatalog() {
               <div className="mt-10 text-center">
                 <Button
                   variant="outline"
+                  size="lg"
                   onClick={handleLoadMore}
                   disabled={loadingMore}
+                  className="border-border text-gray-700 hover:border-primary hover:text-primary px-10"
                 >
                   {loadingMore ? (
                     <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                   ) : null}
-                  Muat Lebih Banyak
+                  Load more products
                 </Button>
               </div>
             )}

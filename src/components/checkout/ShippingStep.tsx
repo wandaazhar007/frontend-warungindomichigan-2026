@@ -57,7 +57,7 @@ export default function ShippingStep() {
           servicelevel: { name: string; token: string };
           estimated_days: number | null;
         };
-        const res = await api.post<{ rates: RawRate[] }>('/shipping/rates', body);
+        const res = await api.post<{ rates: RawRate[] }>('/api/shipping/rates', body);
         // Normalize raw Shippo format to frontend ShippingRate
         const normalized: ShippingRate[] = res.data.rates.map((r) => ({
           objectId:      r.object_id,
@@ -119,7 +119,7 @@ export default function ShippingStep() {
         clientSecret:    string;
         paymentIntentId: string;
         breakdown:       { subtotal: number; shippingCost: number; tax: number; total: number; totalCents: number };
-      }>('/orders', body);
+      }>('/api/orders', body);
 
       setOrderData(res.data);
       router.push('/checkout/payment');

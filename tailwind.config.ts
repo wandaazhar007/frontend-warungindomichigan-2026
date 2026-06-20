@@ -6,7 +6,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Semantic tokens — mapped to CSS variables (required for @apply border-border etc.)
+        /* shadcn/ui semantic tokens */
         border:     'var(--border)',
         input:      'var(--input)',
         ring:       'var(--ring)',
@@ -40,15 +40,38 @@ const config: Config = {
           DEFAULT:    'var(--popover)',
           foreground: 'var(--popover-foreground)',
         },
-        // Design system — merah putih pastel Indonesia
+
+        /* WIM 2026 brand palette */
+        wim: {
+          red:        '#d92121',   /* primary red */
+          'red-hover':'#b81d1d',   /* button hover */
+          'red-deep': '#9e1717',   /* prices, shadows */
+          'red-dark': '#8B1A1A',   /* deep red panels (login/bundle) */
+          maroon:     '#3a1410',   /* footer bg, darkest */
+          cream:      '#FBF3E3',   /* page bg */
+          card:       '#FFFDF7',   /* card surface */
+          tint:       '#F6ECD8',   /* tinted section bg */
+          border:     '#EADDC6',   /* border */
+          divider:    '#F0E6D2',   /* subtle divider */
+          yellow:     '#E59500',   /* turmeric yellow */
+          green:      '#2F7A4F',   /* pandan green */
+          gold:       '#B07A2E',   /* golden-brown labels */
+          text:       '#2B1A12',   /* primary text */
+          text2:      '#5a4733',   /* secondary text */
+          muted:      '#7A6A57',   /* muted text */
+          faint:      '#A8967B',   /* placeholder / faint text */
+        },
+
+        /* Keep red scale updated */
         red: {
-          50:  '#FFF5F5',
-          100: '#FFE8E8',
-          200: '#FFCCCC',
-          400: '#F28B8B',
-          500: '#E86363',
-          600: '#D14F4F',
-          900: '#7F1D1D',
+          50:  '#FFF3EE',
+          100: '#FFE0D0',
+          200: '#FFBBA0',
+          400: '#E05050',
+          500: '#d92121',
+          600: '#b81d1d',
+          700: '#9e1717',
+          900: '#3a1410',
         },
         gray: {
           50:  '#FAFAFA',
@@ -59,10 +82,10 @@ const config: Config = {
           700: '#3F3F46',
           900: '#18181B',
         },
-        success: '#4ADE80',
-        warning: '#FBBF24',
-        error:   '#F87171',
-        info:    '#60A5FA',
+        success: '#2F7A4F',
+        warning: '#E59500',
+        error:   '#EF4444',
+        info:    '#3B82F6',
       },
       fontFamily: {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],

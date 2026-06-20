@@ -51,7 +51,8 @@ export const useCheckoutStore = create<CheckoutStore>((set) => ({
   paymentIntentId: null,
   breakdown:       null,
 
-  setContact:      (contact)   => set({ contact }),
+  // Clear selectedRate whenever address changes so ShippingStep refetches fresh rates
+  setContact: (contact) => set({ contact, selectedRate: null }),
   setSelectedRate: (selectedRate) => set({ selectedRate }),
   setOrderData:    (data)      => set(data),
   reset: () => set({

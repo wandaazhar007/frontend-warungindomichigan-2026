@@ -2,11 +2,9 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingCart, Plus } from 'lucide-react';
+import { Plus, ShoppingCart } from 'lucide-react';
 import { Product } from '@/types';
 import { useCartStore } from '@/store/cartStore';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { formatPrice } from '@/lib/utils';
 
 interface ProductCardProps {
@@ -18,9 +16,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   const inCart = items.find((i) => i.productId === product.id);
 
   const primaryImage = product.images.find((img) => img.isPrimary) ?? product.images[0];
-  const price = parseFloat(product.price);
+  const price        = parseFloat(product.price);
   const comparePrice = product.comparePrice ? parseFloat(product.comparePrice) : null;
-  const isLowStock = product.stock <= product.minStock && product.stock > 0;
   const isOutOfStock = product.stock === 0;
 
   function handleAddToCart(e: React.MouseEvent) {
@@ -28,97 +25,93 @@ export default function ProductCard({ product }: ProductCardProps) {
     if (isOutOfStock) return;
     addItem({
       productId: product.id,
-      name: product.name,
+      name:      product.name,
       price,
       comparePrice,
-      unit: product.unit,
-      imageUrl: primaryImage?.url ?? null,
-      slug: product.slug,
-      stock: product.stock,
+      unit:      product.unit,
+      imageUrl:  primaryImage?.url ?? null,
+      slug:      product.slug,
+      stock:     product.stock,
     });
   }
 
   return (
     <Link href={`/products/${product.slug}`} className="group block">
-      <div className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-red-200 hover:shadow-md transition-all duration-200">
+      <div className="bg-white rounded-xl border border-border overflow-hidden hover:border-primary/30 hover:shadow-sm transition-all duration-200">
 
-        {/* Image */}
-        <div className="relative aspect-square bg-red-50 overflow-hidden">
+        {/* Image area */}
+        <div className="relative aspect-square product-img-bg overflow-hidden">
           {primaryImage ? (
             <Image
               src={primaryImage.url}
               alt={primaryImage.altText ?? product.name}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-contain p-3 group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-5xl">{product.category.icon ?? '📦'}</span>
+              <span className="text-5xl opacity-70">{product.category.icon ?? '📦'}</span>
             </div>
           )}
 
-          {/* Badges */}
-          <div className="absolute top-2 left-2 flex flex-col gap-1">
-            {product.isFeatured && (
-              <Badge className="text-xs">⭐ Unggulan</Badge>
-            )}
-            {comparePrice && comparePrice > price && (
-              <Badge variant="secondary" className="bg-orange-100 text-orange-600 border-orange-200 text-xs">
-                Diskon
-              </Badge>
-            )}
-            {isLowStock && !isOutOfStock && (
-              <Badge variant="secondary" className="bg-yellow-100 text-yellow-700 border-yellow-200 text-xs">
-                Stok menipis
-              </Badge>
-            )}
-            {isOutOfStock && (
-              <Badge variant="secondary" className="bg-gray-100 text-gray-500 border-gray-200 text-xs">
-                Stok habis
-              </Badge>
-            )}
-          </div>
+          {/* Out of stock overlay */}
+          {isOutOfStock && (
+            <div className="absolute inset-0 bg-white/60 flex items-center justify-center">
+              <span className="text-xs font-semibold text-gray-500 bg-white/90 px-2 py-1 rounded-full border border-gray-200">
+                Out of stock
+              </span>
+            </div>
+          )}
+
+          {/* Discount badge */}
+          {comparePrice && comparePrice > price && (
+            <div className="absolute top-2 left-2">
+              <span className="text-[10px] font-bold bg-primary text-white px-1.5 py-0.5 rounded-md">
+                SALE
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Info */}
         <div className="p-3">
-          <p className="text-xs text-gray-400 mb-0.5">{product.category.name}</p>
-          <h3 className="font-display font-600 text-gray-900 text-sm leading-snug line-clamp-2 mb-2">
+          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">
+            {product.category.name}
+          </p>
+          <h3 className="font-display font-semibold text-gray-900 text-xs sm:text-sm leading-snug line-clamp-2 mb-2">
             {product.name}
           </h3>
+          <p className="text-[11px] text-gray-400 mb-2">
+            {product.unit}
+          </p>
 
-          <div className="flex items-center gap-1.5 mb-3">
-            <span className="font-display font-700 text-red-500 text-base">
-              {formatPrice(price)}
-            </span>
-            {comparePrice && comparePrice > price && (
-              <span className="text-xs text-gray-400 line-through">
-                {formatPrice(comparePrice)}
+          {/* Price + add button */}
+          <div className="flex items-center justify-between gap-1">
+            <div>
+              <span className="font-display font-bold text-primary text-sm">
+                {formatPrice(price)}
               </span>
-            )}
-            <span className="text-xs text-gray-400">/ {product.unit}</span>
-          </div>
+              {comparePrice && comparePrice > price && (
+                <span className="text-[10px] text-gray-400 line-through ml-1">
+                  {formatPrice(comparePrice)}
+                </span>
+              )}
+            </div>
 
-          <Button
-            size="sm"
-            className="w-full"
-            variant={inCart ? 'outline' : 'default'}
-            disabled={isOutOfStock}
-            onClick={handleAddToCart}
-          >
-            {inCart ? (
-              <>
-                <Plus className="h-3.5 w-3.5 mr-1.5" />
-                + Tambah
-              </>
-            ) : (
-              <>
-                <ShoppingCart className="h-3.5 w-3.5 mr-1.5" />
-                Tambah ke Keranjang
-              </>
-            )}
-          </Button>
+            <button
+              onClick={handleAddToCart}
+              disabled={isOutOfStock}
+              aria-label="Add to cart"
+              className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+            >
+              {inCart ? (
+                <ShoppingCart className="h-3.5 w-3.5" />
+              ) : (
+                <Plus className="h-3.5 w-3.5" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </Link>

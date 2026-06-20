@@ -10,6 +10,7 @@ import { useCartStore } from '@/store/cartStore';
 import { useCheckoutStore } from '@/store/checkoutStore';
 import { Button } from '@/components/ui/button';
 import { formatPrice } from '@/lib/utils';
+import api from '@/lib/api';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -43,6 +44,15 @@ function PaymentForm({ orderNumber, total }: { orderNumber: string; total: numbe
     }
 
     if (paymentIntent?.status === 'succeeded') {
+      // Confirm order server-side (verify + update DB + send email)
+      try {
+        await api.post(`/api/orders/${orderNumber}/confirm-payment`, {
+          paymentIntentId: paymentIntent.id,
+        });
+      } catch (confirmErr) {
+        // Log but don't block redirect — webhook may still fire in production
+        console.error('confirm-payment call failed:', confirmErr);
+      }
       clearCart();
       reset();
       router.push(`/order/${orderNumber}`);

@@ -1,15 +1,19 @@
 import HeroSection from '@/components/home/HeroSection';
 import WhyUsSection from '@/components/home/WhyUsSection';
-import ProductCatalog from '@/components/products/ProductCatalog';
-import ContactSection from '@/components/home/ContactSection';
+import BestSellersSection from '@/components/home/BestSellersSection';
+import BundleBannerSection from '@/components/home/BundleBannerSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
+import VisitUsSection from '@/components/home/VisitUsSection';
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
       <WhyUsSection />
-      <ProductCatalog />
-      <ContactSection />
+      <BestSellersSection />
+      <BundleBannerSection />
+      <ReviewsSection />
+      <VisitUsSection />
     </>
   );
 }

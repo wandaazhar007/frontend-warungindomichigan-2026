@@ -108,7 +108,7 @@ export default function OrderConfirmationPage() {
 
   useEffect(() => {
     if (!orderNumber) return;
-    api.get<OrderDetail>(`/orders/${orderNumber}`)
+    api.get<OrderDetail>(`/api/orders/${orderNumber}`)
       .then((r) => setOrder(r.data))
       .catch(() => setError('Pesanan tidak ditemukan.'))
       .finally(() => setLoading(false));
@@ -141,20 +141,52 @@ export default function OrderConfirmationPage() {
         {/* ── Header ── */}
         <div className="text-center space-y-3">
           {isPaid ? (
-            <CheckCircle2 className="h-16 w-16 text-green-500 mx-auto" />
+            <div className="flex flex-col items-center gap-3">
+              <div className="h-20 w-20 rounded-full bg-green-50 flex items-center justify-center">
+                <CheckCircle2 className="h-12 w-12 text-green-500" />
+              </div>
+              <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 text-sm font-semibold text-green-700">
+                ✓ Pembayaran Berhasil
+              </div>
+            </div>
           ) : (
-            <Clock className="h-16 w-16 text-yellow-400 mx-auto" />
+            <div className="flex flex-col items-center gap-3">
+              <div className="h-20 w-20 rounded-full bg-yellow-50 flex items-center justify-center">
+                <Clock className="h-12 w-12 text-yellow-400" />
+              </div>
+              <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-1.5 text-sm font-semibold text-yellow-700">
+                ⏳ Menunggu Konfirmasi Pembayaran
+              </div>
+            </div>
           )}
-          <h1 className="font-display text-2xl sm:text-3xl font-700 text-gray-900">
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-gray-900">
             {isPaid ? 'Terima kasih atas pesananmu! 🎉' : 'Pesanan Diterima'}
           </h1>
           <p className="text-gray-500 text-sm">
             Nomor pesanan: <span className="font-semibold text-gray-800">{order.orderNumber}</span>
           </p>
-          <p className="text-gray-500 text-sm">
-            Konfirmasi dikirim ke <span className="font-medium">{order.email}</span>
-          </p>
+          {isPaid && (
+            <p className="text-gray-500 text-sm">
+              Email konfirmasi dikirim ke{' '}
+              <span className="font-medium text-gray-800">{order.email}</span>
+            </p>
+          )}
         </div>
+
+        {/* ── Payment success banner ── */}
+        {isPaid && (
+          <div className="bg-green-50 border border-green-200 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="h-10 w-10 rounded-xl bg-green-100 flex items-center justify-center shrink-0">
+              <CheckCircle2 className="h-5 w-5 text-green-600" />
+            </div>
+            <div className="flex-1">
+              <p className="font-semibold text-green-800 text-sm">Pembayaran dikonfirmasi</p>
+              <p className="text-green-700 text-sm mt-0.5">
+                Pesananmu sudah kami terima dan sedang diproses. Email konfirmasi lengkap beserta rincian pesanan sudah dikirim ke <strong>{order.email}</strong>.
+              </p>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* ── Left column ── */}

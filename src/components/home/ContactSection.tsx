@@ -18,7 +18,7 @@ export default function ContactSection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Button size="lg" asChild className="w-full sm:w-auto bg-green-500 hover:bg-green-600">
-              <a href="https://wa.me/16264614963" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMI.%20Saya%20mau%20order%20dan%20bertanya" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-5 w-5 mr-2" />
                 Chat via WhatsApp
               </a>
