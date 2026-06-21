@@ -1,18 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-
-const bundleItems = [
-  { emoji: '🌶️', label: 'Sambal ABC' },
-  { emoji: '🍜', label: 'Indomie Goreng' },
-  { emoji: '☕', label: 'Kopi Kapal Api' },
-  { emoji: '🥥', label: 'Bumbu Rendang' },
-];
 
 export default function BundleBannerSection() {
   return (
     <section className="py-8 sm:py-10">
       <div className="container-wim">
-        <div className="rounded-2xl sm:rounded-3xl overflow-hidden relative bg-wim-red-dark">
+        <div className="rounded-2xl sm:rounded-3xl overflow-hidden relative bg-wim-red-dark min-h-[280px] sm:min-h-[320px]">
+
           {/* Subtle background pattern */}
           <div
             className="absolute inset-0 opacity-10"
@@ -22,17 +17,29 @@ export default function BundleBannerSection() {
             }}
           />
 
-          <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 p-8 md:p-12">
+          {/* Right-side image — fills top, bottom, right */}
+          <div className="absolute top-0 right-0 bottom-0 w-1/2 md:w-[45%]">
+            {/* Fade gradient on the left edge so image blends into red */}
+            <div className="absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-wim-red-dark to-transparent" />
+            <Image
+              src="/images/hero-image.jpg"
+              alt="Indonesian grocery bundle"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 50vw, 45vw"
+            />
+          </div>
 
-            {/* Left: text */}
-            <div className="text-white max-w-lg text-center md:text-left">
+          {/* Content — left side only */}
+          <div className="relative z-10 flex items-center p-8 md:p-12 w-full md:w-[55%]">
+            <div className="text-white max-w-lg">
               <div className="inline-flex items-center gap-1.5 bg-yellow-400/20 text-yellow-300 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest border border-yellow-400/30">
                 Weekly Special
               </div>
               <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3 leading-tight">
                 This week&rsquo;s<br className="hidden sm:block" /> dapur bundle
               </h2>
-              <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
+              <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6 max-w-sm">
                 Get your kitchen fully stocked with our curated Indonesian cooking essentials.
                 Everything you need to cook your favorite dishes at home.
               </p>
@@ -44,22 +51,8 @@ export default function BundleBannerSection() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-
-            {/* Right: product cards */}
-            <div className="flex gap-2 sm:gap-3 shrink-0">
-              {bundleItems.map(({ emoji, label }) => (
-                <div
-                  key={label}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl h-20 w-16 sm:h-24 sm:w-20 flex flex-col items-center justify-center gap-1.5"
-                >
-                  <span className="text-2xl sm:text-3xl">{emoji}</span>
-                  <span className="text-[9px] sm:text-[10px] font-semibold text-white/80 text-center leading-tight px-1">
-                    {label}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Plus, ShoppingCart } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import { Product } from '@/types';
 import { useCartStore } from '@/store/cartStore';
 import { formatPrice } from '@/lib/utils';
@@ -12,15 +12,16 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { items, addItem } = useCartStore();
+  const { items, addItem, updateQuantity } = useCartStore();
   const inCart = items.find((i) => i.productId === product.id);
+  const qty    = inCart?.quantity ?? 0;
 
   const primaryImage = product.images.find((img) => img.isPrimary) ?? product.images[0];
   const price        = parseFloat(product.price);
   const comparePrice = product.comparePrice ? parseFloat(product.comparePrice) : null;
   const isOutOfStock = product.stock === 0;
 
-  function handleAddToCart(e: React.MouseEvent) {
+  function handleAdd(e: React.MouseEvent) {
     e.preventDefault();
     if (isOutOfStock) return;
     addItem({
@@ -33,6 +34,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       slug:      product.slug,
       stock:     product.stock,
     });
+  }
+
+  function handleRemove(e: React.MouseEvent) {
+    e.preventDefault();
+    updateQuantity(product.id, qty - 1);
   }
 
   return (
@@ -86,7 +92,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {product.unit}
           </p>
 
-          {/* Price + add button */}
+          {/* Price + add/quantity controls */}
           <div className="flex items-center justify-between gap-1">
             <div>
               <span className="font-display font-bold text-primary text-sm">
@@ -99,18 +105,37 @@ export default function ProductCard({ product }: ProductCardProps) {
               )}
             </div>
 
-            <button
-              onClick={handleAddToCart}
-              disabled={isOutOfStock}
-              aria-label="Add to cart"
-              className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
-            >
-              {inCart ? (
-                <ShoppingCart className="h-3.5 w-3.5" />
-              ) : (
+            {qty > 0 ? (
+              <div className="flex items-center gap-1" onClick={(e) => e.preventDefault()}>
+                <button
+                  onClick={handleRemove}
+                  aria-label="Remove one"
+                  className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors shrink-0"
+                >
+                  <Minus className="h-3.5 w-3.5" />
+                </button>
+                <span className="text-sm font-bold text-gray-900 w-5 text-center leading-none">
+                  {qty}
+                </span>
+                <button
+                  onClick={handleAdd}
+                  disabled={qty >= product.stock}
+                  aria-label="Add one"
+                  className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+                >
+                  <Plus className="h-3.5 w-3.5" />
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={handleAdd}
+                disabled={isOutOfStock}
+                aria-label="Add to cart"
+                className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
+              >
                 <Plus className="h-3.5 w-3.5" />
-              )}
-            </button>
+              </button>
+            )}
           </div>
         </div>
       </div>

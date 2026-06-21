@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { Search, Loader2, SlidersHorizontal } from 'lucide-react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { Search, Loader2, SlidersHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Product, Category } from '@/types';
 import { getProducts, getCategories } from '@/lib/api';
 import ProductCard from './ProductCard';
@@ -24,6 +24,11 @@ export default function ProductCatalog() {
   const [sortBy, setSortBy]             = useState('');
 
   const debouncedSearch = useDebounce(search, 400);
+  const pillsRef = useRef<HTMLDivElement>(null);
+
+  function scrollPills(dir: 'left' | 'right') {
+    pillsRef.current?.scrollBy({ left: dir === 'left' ? -200 : 200, behavior: 'smooth' });
+  }
   const LIMIT = 24;
 
   const fetchProducts = useCallback(
@@ -87,38 +92,63 @@ export default function ProductCatalog() {
             type="search"
             placeholder="Search products (e.g. indomie, sambal, kopi...)"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => { setSearch(e.target.value); setActiveCategory(''); }}
             className="pl-10 bg-white border-border h-11 text-sm"
           />
         </div>
 
         {/* Category pills */}
-        <div className="flex items-center gap-2 flex-wrap mb-5">
+        <div className="relative flex items-center gap-2 mb-5">
+          {/* Left arrow */}
           <button
-            onClick={() => handleCategoryChange('')}
-            className={cn(
-              'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border',
-              activeCategory === ''
-                ? 'bg-primary text-white border-primary'
-                : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
-            )}
+            onClick={() => scrollPills('left')}
+            aria-label="Scroll left"
+            className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
           >
-            All
+            <ChevronLeft className="h-4 w-4" />
           </button>
-          {categories.map((cat) => (
+
+          {/* Scrollable pills track */}
+          <div
+            ref={pillsRef}
+            className="flex items-center gap-2 overflow-x-auto scroll-smooth"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             <button
-              key={cat.slug}
-              onClick={() => handleCategoryChange(cat.slug)}
+              onClick={() => handleCategoryChange('')}
               className={cn(
-                'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border',
-                activeCategory === cat.slug
+                'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border whitespace-nowrap shrink-0',
+                activeCategory === ''
                   ? 'bg-primary text-white border-primary'
                   : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
               )}
             >
-              {cat.icon ? `${cat.icon} ` : ''}{cat.name}
+              All
             </button>
-          ))}
+            {categories.map((cat) => (
+              <button
+                key={cat.slug}
+                onClick={() => handleCategoryChange(cat.slug)}
+                className={cn(
+                  'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border whitespace-nowrap shrink-0',
+                  activeCategory === cat.slug
+                    ? 'bg-primary text-white border-primary'
+                    : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
+                )}
+              >
+                {cat.icon ? `${cat.icon} ` : ''}{cat.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Right arrow */}
+          <button
+            onClick={() => scrollPills('right')}
+            aria-label="Scroll right"
+            className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
         </div>
 
         {/* Results bar */}
