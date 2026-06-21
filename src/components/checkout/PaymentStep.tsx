@@ -38,7 +38,7 @@ function PaymentForm({ orderNumber, total }: { orderNumber: string; total: numbe
     });
 
     if (stripeError) {
-      setError(stripeError.message ?? 'Pembayaran gagal. Coba lagi.');
+      setError(stripeError.message ?? 'Payment failed. Please try again.');
       setLoading(false);
       return;
     }
@@ -57,7 +57,7 @@ function PaymentForm({ orderNumber, total }: { orderNumber: string; total: numbe
       reset();
       router.push(`/order/${orderNumber}`);
     } else {
-      setError('Status pembayaran tidak diketahui. Hubungi kami jika dana sudah terpotong.');
+      setError('Payment status unknown. Please contact us if your card was charged.');
       setLoading(false);
     }
   }
@@ -80,12 +80,12 @@ function PaymentForm({ orderNumber, total }: { orderNumber: string; total: numbe
 
       <div className="flex items-center gap-2 text-xs text-gray-500">
         <ShieldCheck className="h-4 w-4 text-green-500 shrink-0" />
-        Pembayaran diproses secara aman oleh Stripe. Data kartu tidak disimpan di server kami.
+        Your payment is processed securely by Stripe. Card details are never stored on our servers.
       </div>
 
       <div className="flex flex-col-reverse sm:flex-row gap-3 pt-2">
         <Button type="button" variant="outline" asChild>
-          <Link href="/checkout/shipping">← Kembali</Link>
+          <Link href="/checkout/shipping">← Back</Link>
         </Button>
         <Button
           type="submit"
@@ -93,9 +93,9 @@ function PaymentForm({ orderNumber, total }: { orderNumber: string; total: numbe
           className="flex-1 sm:flex-none sm:min-w-48"
         >
           {loading ? (
-            <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Memproses…</>
+            <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Processing…</>
           ) : (
-            `Bayar ${formatPrice(total)} →`
+            `Pay ${formatPrice(total)} →`
           )}
         </Button>
       </div>
@@ -138,7 +138,7 @@ export default function PaymentStep() {
       }}
     >
       <div className="space-y-4">
-        <h2 className="font-display font-700 text-gray-900 text-lg">Pembayaran</h2>
+        <h2 className="font-display font-700 text-gray-900 text-lg">Payment</h2>
         <PaymentForm orderNumber={orderNumber} total={breakdown.total} />
       </div>
     </Elements>

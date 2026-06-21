@@ -16,7 +16,7 @@ export default function OrderSummary() {
 
   return (
     <div className="bg-white rounded-xl border border-gray-100 p-5 sticky top-24">
-      <h2 className="font-display font-700 text-gray-900 mb-4">Ringkasan Pesanan</h2>
+      <h2 className="font-display font-700 text-gray-900 mb-4">Order Summary</h2>
 
       {/* Items */}
       <ul className="space-y-3 mb-4">
@@ -47,17 +47,17 @@ export default function OrderSummary() {
         </div>
 
         <div className="flex justify-between text-sm">
-          <span className="text-gray-500">Ongkos Kirim</span>
+          <span className="text-gray-500">Shipping</span>
           {shippingCost != null ? (
             <span className="font-medium">{formatPrice(shippingCost)}</span>
           ) : (
-            <span className="text-gray-400 text-xs">Dihitung di step berikutnya</span>
+            <span className="text-gray-400 text-xs">Calculated at next step</span>
           )}
         </div>
 
         {breakdown?.tax != null && breakdown.tax > 0 && (
           <div className="flex justify-between text-sm">
-            <span className="text-gray-500">Pajak</span>
+            <span className="text-gray-500">Tax</span>
             <span className="font-medium">{formatPrice(breakdown.tax)}</span>
           </div>
         )}

@@ -2,9 +2,9 @@ import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const STEPS = [
-  { n: 1, label: 'Informasi Kontak' },
-  { n: 2, label: 'Pengiriman' },
-  { n: 3, label: 'Pembayaran' },
+  { n: 1, label: 'Contact Info' },
+  { n: 2, label: 'Shipping' },
+  { n: 3, label: 'Payment' },
 ];
 
 export default function CheckoutSteps({ current }: { current: 1 | 2 | 3 }) {

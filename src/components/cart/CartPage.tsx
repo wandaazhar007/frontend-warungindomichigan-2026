@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Trash2, Plus, Minus, ShoppingBag, ArrowRight, Truck, Tag } from 'lucide-react';
+import { Trash2, Plus, Minus, ShoppingBag, ArrowRight, Truck, Tag, ShieldCheck } from 'lucide-react';
 import { useCartStore } from '@/store/cartStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -31,8 +31,8 @@ export default function CartPage() {
           </h2>
           <p className="text-gray-500 mb-8">Add your favorite Indonesian products to get started!</p>
           <Button size="lg" asChild>
-            <Link href="/products">
-              <ShoppingBag className="h-5 w-5 mr-2" />
+            <Link href="/products" className="flex items-center gap-2">
+              <ShoppingBag className="h-5 w-5 shrink-0" />
               Start Shopping
             </Link>
           </Button>
@@ -229,11 +229,16 @@ export default function CartPage() {
                 </div>
 
                 <Button size="lg" className="w-full font-semibold" asChild>
-                  <Link href="/checkout">
+                  <Link href="/checkout" className="flex items-center justify-center gap-2">
                     Proceed to checkout
-                    <ArrowRight className="h-4 w-4 ml-2" />
+                    <ArrowRight className="h-4 w-4 shrink-0" />
                   </Link>
                 </Button>
+
+                <div className="flex items-center justify-center gap-1.5 mt-2">
+                  <ShieldCheck className="h-3.5 w-3.5 text-green-500 shrink-0" />
+                  <p className="text-xs text-gray-400">Secure checkout powered by Stripe</p>
+                </div>
 
                 <Button
                   variant="ghost"

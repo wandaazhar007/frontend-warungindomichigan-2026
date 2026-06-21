@@ -77,7 +77,7 @@ export default function ShippingStep() {
           setSelectedRate(cheapest);
         }
       } catch {
-        setError('Gagal mendapatkan pilihan pengiriman. Periksa koneksi dan coba lagi.');
+        setError('Failed to load shipping options. Please check your connection and try again.');
       } finally {
         setLoading(false);
       }
@@ -125,7 +125,7 @@ export default function ShippingStep() {
       router.push('/checkout/payment');
     } catch (err: unknown) {
       const msg = (err as { response?: { data?: { error?: string } } })
-        ?.response?.data?.error ?? 'Gagal membuat pesanan. Coba lagi.';
+        ?.response?.data?.error ?? 'Failed to create order. Please try again.';
       setError(msg);
     } finally {
       setSubmitting(false);
@@ -134,12 +134,12 @@ export default function ShippingStep() {
 
   return (
     <div className="space-y-6">
-      <h2 className="font-display font-700 text-gray-900 text-lg">Pilih Layanan Pengiriman</h2>
+      <h2 className="font-display font-700 text-gray-900 text-lg">Choose Shipping Method</h2>
 
       {loading && (
         <div className="flex items-center justify-center py-12 gap-3 text-gray-500">
           <Loader2 className="h-5 w-5 animate-spin" />
-          <span>Mengambil pilihan pengiriman…</span>
+          <span>Loading shipping options…</span>
         </div>
       )}
 
@@ -151,7 +151,7 @@ export default function ShippingStep() {
 
       {!loading && !error && rates.length === 0 && (
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800">
-          Tidak ada layanan pengiriman yang tersedia untuk alamat ini.
+          No shipping options available for this address.
         </div>
       )}
 
@@ -186,7 +186,7 @@ export default function ShippingStep() {
                       </p>
                       {rate.estimatedDays && (
                         <p className="text-xs text-gray-500 mt-0.5">
-                          Estimasi {rate.estimatedDays} hari kerja
+                          Estimated {rate.estimatedDays} business day{rate.estimatedDays === 1 ? '' : 's'}
                         </p>
                       )}
                     </div>
@@ -210,9 +210,9 @@ export default function ShippingStep() {
           className="flex-1 sm:flex-none sm:min-w-48"
         >
           {submitting ? (
-            <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Memproses…</>
+            <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Processing…</>
           ) : (
-            'Lanjut ke Pembayaran →'
+            'Continue to Payment →'
           )}
         </Button>
       </div>

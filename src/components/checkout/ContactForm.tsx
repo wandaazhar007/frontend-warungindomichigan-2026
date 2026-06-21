@@ -14,15 +14,15 @@ import { Input } from '@/components/ui/input';
 import { US_STATES } from '@/lib/constants';
 
 const schema = z.object({
-  firstName: z.string().min(2, 'Nama minimal 2 karakter'),
-  lastName:  z.string().min(2, 'Nama minimal 2 karakter'),
-  email:     z.string().min(1, 'Wajib diisi').email('Format email tidak valid'),
-  phone:     z.string().min(7, 'Format nomor telepon tidak valid (contoh: +1 626 461 4963)'),
-  street1:   z.string().min(3, 'Wajib diisi'),
+  firstName: z.string().min(2, 'First name must be at least 2 characters'),
+  lastName:  z.string().min(2, 'Last name must be at least 2 characters'),
+  email:     z.string().min(1, 'Email is required').email('Invalid email address'),
+  phone:     z.string().min(7, 'Invalid phone number (e.g. +1 626 461 4963)'),
+  street1:   z.string().min(3, 'Street address is required'),
   street2:   z.string().optional().default(''),
-  city:      z.string().min(2, 'Wajib diisi'),
-  state:     z.string().min(2, 'Wajib diisi'),
-  zip:       z.string().length(5, 'Kode pos harus 5 digit').regex(/^\d{5}$/, 'Kode pos harus 5 digit'),
+  city:      z.string().min(2, 'City is required'),
+  state:     z.string().min(2, 'State is required'),
+  zip:       z.string().length(5, 'ZIP code must be 5 digits').regex(/^\d{5}$/, 'ZIP code must be 5 digits'),
   country:   z.string().default('US'),
 });
 type FormValues = z.infer<typeof schema>;
@@ -67,60 +67,60 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
-        <h2 className="font-display font-700 text-gray-900 text-lg mb-4">Informasi Penerima</h2>
+        <h2 className="font-display font-700 text-gray-900 text-lg mb-4">Recipient Information</h2>
 
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Nama Depan *</label>
-            <Input placeholder="Budi" {...register('firstName')} />
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">First Name *</label>
+            <Input placeholder="John" {...register('firstName')} />
             {errors.firstName && <p className="text-xs text-error mt-1">{errors.firstName.message}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Nama Belakang *</label>
-            <Input placeholder="Santoso" {...register('lastName')} />
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Last Name *</label>
+            <Input placeholder="Doe" {...register('lastName')} />
             {errors.lastName && <p className="text-xs text-error mt-1">{errors.lastName.message}</p>}
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Alamat Email *</label>
-            <Input type="email" placeholder="kamu@email.com" {...register('email')} />
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Email Address *</label>
+            <Input type="email" placeholder="you@email.com" {...register('email')} />
             {errors.email && <p className="text-xs text-error mt-1">{errors.email.message}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Nomor Telepon *</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone Number *</label>
             <Input type="tel" placeholder="+1 626 461 4963" {...register('phone')} />
             {errors.phone && <p className="text-xs text-error mt-1">{errors.phone.message}</p>}
           </div>
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Alamat Jalan *</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1.5">Street Address *</label>
           <Input placeholder="123 Main St" {...register('street1')} />
           {errors.street1 && <p className="text-xs text-error mt-1">{errors.street1.message}</p>}
         </div>
 
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Apartemen, Suite, dll (opsional)
+            Apartment, Suite, etc. (optional)
           </label>
           <Input placeholder="Apt 4B" {...register('street2')} />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="sm:col-span-1">
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Kota *</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">City *</label>
             <Input placeholder="Detroit" {...register('city')} />
             {errors.city && <p className="text-xs text-error mt-1">{errors.city.message}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Negara Bagian *</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">State *</label>
             <select
               {...register('state')}
               className="flex h-10 w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500"
             >
-              <option value="">Pilih state</option>
+              <option value="">Select state</option>
               {US_STATES.map((s) => (
                 <option key={s.value} value={s.value}>{s.label}</option>
               ))}
@@ -128,7 +128,7 @@ export default function ContactForm() {
             {errors.state && <p className="text-xs text-error mt-1">{errors.state.message}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Kode Pos *</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">ZIP Code *</label>
             <Input placeholder="48201" maxLength={5} {...register('zip')} />
             {errors.zip && <p className="text-xs text-error mt-1">{errors.zip.message}</p>}
           </div>
@@ -137,10 +137,10 @@ export default function ContactForm() {
 
       <div className="flex flex-col-reverse sm:flex-row gap-3 pt-2">
         <Button type="button" variant="outline" asChild>
-          <Link href="/cart">Kembali ke Keranjang</Link>
+          <Link href="/cart">← Back to Cart</Link>
         </Button>
         <Button type="submit" className="flex-1 sm:flex-none sm:min-w-48" disabled={isSubmitting}>
-          Lanjut ke Pengiriman →
+          Continue to Shipping →
         </Button>
       </div>
     </form>
