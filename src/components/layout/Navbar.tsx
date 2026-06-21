@@ -18,18 +18,18 @@ const announcements = [
 ];
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen]     = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-  const [catMenuOpen, setCatMenuOpen]   = useState(false);
-  const [categories, setCategories]     = useState<Category[]>([]);
+  const [catMenuOpen, setCatMenuOpen] = useState(false);
+  const [categories, setCategories] = useState<Category[]>([]);
   const userMenuRef = useRef<HTMLDivElement>(null);
-  const catMenuRef  = useRef<HTMLDivElement>(null);
+  const catMenuRef = useRef<HTMLDivElement>(null);
 
   const totalItems = useCartStore((s) => s.totalItems());
   const { user, loading } = useAuthStore();
 
   useEffect(() => {
-    getCategories().then(setCategories).catch(() => {});
+    getCategories().then(setCategories).catch(() => { });
   }, []);
 
   useEffect(() => {
@@ -76,7 +76,7 @@ export default function Navbar() {
           {/* ── Left: Logo ── */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-              <span className="text-white font-display font-bold text-base leading-none">W</span>
+              <span className="text-white font-display font-bold text-[11px] leading-none tracking-wide">WIM</span>
             </div>
             <div className="leading-tight hidden sm:block">
               <p className="font-display font-bold text-[13px] leading-none tracking-tight text-foreground">
