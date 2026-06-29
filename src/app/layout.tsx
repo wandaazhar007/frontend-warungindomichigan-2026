@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import ScrollToTopButton from '@/components/layout/ScrollToTopButton';
 import AuthProvider from '@/components/providers/AuthProvider';
 
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -153,6 +154,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <ScrollToTopButton />
         </AuthProvider>
       </body>
     </html>
