@@ -81,10 +81,11 @@ export default function ProductCatalog() {
   }, [setMobileNavHidden]);
 
   function handleCategoryChange(slug: string) {
+    setMobileNavHidden(false);
     setActiveCategory(slug);
     setSearch('');
     setPage(1);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
 
   function handleLoadMore() {
