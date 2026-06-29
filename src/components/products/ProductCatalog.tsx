@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useDebounce } from '@/lib/useDebounce';
+import { useUIStore } from '@/store/uiStore';
 
 export default function ProductCatalog() {
   const [products, setProducts]         = useState<Product[]>([]);
@@ -25,6 +26,8 @@ export default function ProductCatalog() {
 
   const debouncedSearch = useDebounce(search, 400);
   const pillsRef = useRef<HTMLDivElement>(null);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const { mobileNavHidden, setMobileNavHidden } = useUIStore();
 
   function scrollPills(dir: 'left' | 'right') {
     pillsRef.current?.scrollBy({ left: dir === 'left' ? -200 : 200, behavior: 'smooth' });
@@ -63,10 +66,25 @@ export default function ProductCatalog() {
     getCategories().then(setCategories).catch(() => {});
   }, []);
 
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { setMobileNavHidden(!entry.isIntersecting); },
+      { threshold: 0 }
+    );
+    observer.observe(sentinel);
+    return () => {
+      observer.disconnect();
+      setMobileNavHidden(false);
+    };
+  }, [setMobileNavHidden]);
+
   function handleCategoryChange(slug: string) {
     setActiveCategory(slug);
     setSearch('');
     setPage(1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function handleLoadMore() {
@@ -82,74 +100,89 @@ export default function ProductCatalog() {
     : products;
 
   return (
-    <section className="py-8 pb-16 bg-background" id="produk">
-      <div className="container-wim">
+    <section className="pb-16 bg-background" id="produk">
 
-        {/* Search bar */}
-        <div className="relative max-w-2xl mb-6">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
-          <Input
-            type="search"
-            placeholder="Search products (e.g. indomie, sambal, kopi...)"
-            value={search}
-            onChange={(e) => { setSearch(e.target.value); setActiveCategory(''); }}
-            className="pl-10 bg-white border-border h-11 text-sm"
-          />
-        </div>
+      {/* Sentinel: keluar viewport = search bar sudah sticky, navbar mobile harus hilang */}
+      <div ref={sentinelRef} aria-hidden="true" />
 
-        {/* Category pills */}
-        <div className="relative flex items-center gap-2 mb-5">
-          {/* Left arrow */}
-          <button
-            onClick={() => scrollPills('left')}
-            aria-label="Scroll left"
-            className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </button>
+      {/* Sticky filter bar — full width so bg covers entire viewport */}
+      <div className={cn(
+        'sticky z-30 bg-white border-b border-border shadow-sm transition-[top] duration-300',
+        mobileNavHidden ? 'top-0 sm:top-[88px]' : 'top-14 sm:top-[88px]'
+      )}>
+        <div className="container-wim py-4 space-y-3">
 
-          {/* Scrollable pills track */}
-          <div
-            ref={pillsRef}
-            className="flex items-center gap-2 overflow-x-auto scroll-smooth"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
+          {/* Search bar */}
+          <div className="relative max-w-2xl">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+            <Input
+              type="search"
+              placeholder="Search products (e.g. indomie, sambal, kopi...)"
+              value={search}
+              onChange={(e) => { setSearch(e.target.value); setActiveCategory(''); }}
+              className="pl-10 bg-white border-border h-11 text-sm"
+            />
+          </div>
+
+          {/* Category pills */}
+          <div className="relative flex items-center gap-2">
+            {/* Left arrow */}
             <button
-              onClick={() => handleCategoryChange('')}
-              className={cn(
-                'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border whitespace-nowrap shrink-0',
-                activeCategory === ''
-                  ? 'bg-primary text-white border-primary'
-                  : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
-              )}
+              onClick={() => scrollPills('left')}
+              aria-label="Scroll left"
+              className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
             >
-              All
+              <ChevronLeft className="h-4 w-4" />
             </button>
-            {categories.map((cat) => (
+
+            {/* Scrollable pills track */}
+            <div
+              ref={pillsRef}
+              className="flex items-center gap-2 overflow-x-auto scroll-smooth"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
               <button
-                key={cat.slug}
-                onClick={() => handleCategoryChange(cat.slug)}
+                onClick={() => handleCategoryChange('')}
                 className={cn(
                   'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border whitespace-nowrap shrink-0',
-                  activeCategory === cat.slug
+                  activeCategory === ''
                     ? 'bg-primary text-white border-primary'
                     : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
                 )}
               >
-                {cat.icon ? `${cat.icon} ` : ''}{cat.name}
+                All
               </button>
-            ))}
+              {categories.map((cat) => (
+                <button
+                  key={cat.slug}
+                  onClick={() => handleCategoryChange(cat.slug)}
+                  className={cn(
+                    'px-4 py-1.5 rounded-full text-sm font-semibold transition-all border whitespace-nowrap shrink-0',
+                    activeCategory === cat.slug
+                      ? 'bg-primary text-white border-primary'
+                      : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
+                  )}
+                >
+                  {cat.icon ? `${cat.icon} ` : ''}{cat.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Right arrow */}
+            <button
+              onClick={() => scrollPills('right')}
+              aria-label="Scroll right"
+              className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
           </div>
 
-          {/* Right arrow */}
-          <button
-            onClick={() => scrollPills('right')}
-            aria-label="Scroll right"
-            className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
         </div>
+      </div>
+
+      {/* Content: results bar + grid + load more */}
+      <div className="container-wim pt-6">
 
         {/* Results bar */}
         {!loading && (

@@ -1,13 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { ShoppingBasket, Menu, X, LogOut, Package, ChevronDown, User } from 'lucide-react';
+import { ShoppingBasket, Menu, X, LogOut, Package, User } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useCartStore } from '@/store/cartStore';
 import { useAuthStore } from '@/store/authStore';
+import { useUIStore } from '@/store/uiStore';
 import { signOut } from '@/lib/auth';
-import { getCategories } from '@/lib/api';
-import { Category } from '@/types';
 import { cn } from '@/lib/utils';
 
 const announcements = [
@@ -20,25 +19,16 @@ const announcements = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-  const [catMenuOpen, setCatMenuOpen] = useState(false);
-  const [categories, setCategories] = useState<Category[]>([]);
   const userMenuRef = useRef<HTMLDivElement>(null);
-  const catMenuRef = useRef<HTMLDivElement>(null);
 
   const totalItems = useCartStore((s) => s.totalItems());
   const { user, loading } = useAuthStore();
-
-  useEffect(() => {
-    getCategories().then(setCategories).catch(() => { });
-  }, []);
+  const mobileNavHidden = useUIStore((s) => s.mobileNavHidden);
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
         setUserMenuOpen(false);
-      }
-      if (catMenuRef.current && !catMenuRef.current.contains(e.target as Node)) {
-        setCatMenuOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClick);
@@ -55,7 +45,10 @@ export default function Navbar() {
   const tickerItems = [...announcements, ...announcements, ...announcements];
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className={cn(
+      'sticky top-0 z-50 transition-transform duration-300',
+      mobileNavHidden ? '-translate-y-full sm:translate-y-0' : 'translate-y-0'
+    )}>
 
       {/* ── Announcement ticker ── */}
       <div className="hidden sm:flex bg-wim-divider border-b border-border overflow-hidden h-8 items-center">
@@ -88,43 +81,25 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* ── Right: Categories + Auth + Cart ── */}
+          {/* ── Right: Nav links + Auth + Cart ── */}
           <div className="flex items-center gap-1">
 
-            {/* Categories dropdown — desktop only */}
-            <div className="hidden md:block relative" ref={catMenuRef}>
-              <button
-                onClick={() => setCatMenuOpen((v) => !v)}
-                className="flex items-center gap-1 text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors text-foreground"
-              >
-                Categories
-                <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-200', catMenuOpen && 'rotate-180')} />
-              </button>
-
-              {catMenuOpen && (
-                <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl border border-border shadow-lg py-1.5 z-50">
-                  <Link
-                    href="/products"
-                    className="flex items-center gap-2.5 px-4 py-2.5 text-sm hover:bg-secondary transition-colors text-foreground"
-                    onClick={() => setCatMenuOpen(false)}
-                  >
-                    <span>🛒</span> All Products
-                  </Link>
-                  <div className="border-t border-border my-1" />
-                  {categories.map((cat) => (
-                    <Link
-                      key={cat.slug}
-                      href={`/products?category=${cat.slug}`}
-                      className="flex items-center gap-2.5 px-4 py-2 text-sm hover:bg-secondary transition-colors text-foreground"
-                      onClick={() => setCatMenuOpen(false)}
-                    >
-                      <span>{cat.icon ?? '📦'}</span>
-                      {cat.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* Nav links — desktop only */}
+            <nav className="hidden md:flex items-center gap-0.5">
+              {[
+                { href: '/products', label: 'Shop' },
+                { href: '/about', label: 'About Us' },
+                { href: '/faq', label: 'FAQ' },
+              ].map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors text-foreground"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
 
             {/* Auth — desktop */}
             {!loading && (
@@ -208,18 +183,15 @@ export default function Navbar() {
         mobileOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
       )}>
         <div className="container-wim py-4 flex flex-col gap-1">
-          <Link href="/products"
-            className="text-sm font-semibold px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors text-foreground"
-            onClick={() => setMobileOpen(false)}>
-            🛒 All Products
-          </Link>
-          {categories.slice(0, 8).map((cat) => (
-            <Link key={cat.slug}
-              href={`/products?category=${cat.slug}`}
-              className="flex items-center gap-2 text-sm px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-wim-text2"
+          {[
+            { href: '/products', label: '🛒 Shop' },
+            { href: '/about', label: '👋 About Us' },
+            { href: '/faq', label: '❓ FAQ' },
+          ].map(({ href, label }) => (
+            <Link key={href} href={href}
+              className="text-sm font-semibold px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors text-foreground"
               onClick={() => setMobileOpen(false)}>
-              <span>{cat.icon ?? '📦'}</span>
-              {cat.name}
+              {label}
             </Link>
           ))}
 

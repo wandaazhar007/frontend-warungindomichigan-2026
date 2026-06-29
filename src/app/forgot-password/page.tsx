@@ -12,7 +12,7 @@ export default function ForgotPasswordPage() {
       <div className="w-full max-w-md bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
         <div className="flex justify-center mb-6">
           <Image
-            src="/images/logo/logo-icon-warungindomichigan.png"
+            src="/images/icon-warung-indomi.png"
             alt="Warung Indo Michigan"
             width={48}
             height={48}

@@ -88,16 +88,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Shop */}
+          {/* Information */}
           <div>
-            <h4 className="font-semibold text-white text-sm mb-4">Shop</h4>
+            <h4 className="font-semibold text-white text-sm mb-4">Information</h4>
             <ul className="space-y-2.5">
               {[
-                { href: '/products', label: 'All Products' },
-                { href: '/products?category=mie-bubur', label: 'Mie & Bubur' },
-                { href: '/products?category=sambal-saos', label: 'Sambal & Saos' },
-                { href: '/products?category=bumbu-rempah', label: 'Bumbu & Rempah' },
-                { href: '/cart', label: 'My Cart' },
+                { href: '/about', label: 'About Us' },
+                { href: '/faq', label: 'FAQ' },
+                { href: '/shipping-policy', label: 'Shipping Policy' },
+                { href: '/return-policy', label: 'Return Policy' },
+                { href: '/privacy-policy', label: 'Privacy Policy' },
+                { href: '/terms', label: 'Terms & Conditions' },
               ].map(({ href, label }) => (
                 <li key={label}>
                   <Link href={href} className="text-sm transition-colors hover:text-white text-wim-faint">
@@ -116,7 +117,6 @@ export default function Footer() {
                 { href: '/login', label: 'Sign In' },
                 { href: '/register', label: 'Sign Up' },
                 { href: '/orders', label: 'My Orders' },
-                { href: '/forgot-password', label: 'Forgot Password' },
               ].map(({ href, label }) => (
                 <li key={label}>
                   <Link href={href} className="text-sm transition-colors hover:text-white text-wim-faint">
@@ -170,9 +170,22 @@ export default function Footer() {
         <div className="border-t border-white/[0.08] pt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
 
-            <p className="text-xs text-white">
-              © 2026 Warung Indo Michigan. All rights reserved.
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+              <p className="text-xs text-white">
+                © 2026 Warung Indo Michigan. All rights reserved.
+              </p>
+              <div className="flex items-center gap-3">
+                {[
+                  { href: '/privacy-policy', label: 'Privacy' },
+                  { href: '/terms', label: 'Terms' },
+                  { href: '/return-policy', label: 'Returns' },
+                ].map(({ href, label }) => (
+                  <Link key={href} href={href} className="text-[11px] text-wim-faint hover:text-white transition-colors">
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             {/* Payment brand badges */}
             <div className="flex items-center gap-2">

@@ -141,7 +141,7 @@ const localBusinessSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bricolageGrotesque.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${bricolageGrotesque.variable} ${dmSans.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
