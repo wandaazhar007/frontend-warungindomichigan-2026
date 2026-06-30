@@ -133,19 +133,18 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {CATEGORIES.map(({ icon, name, count }) => (
-                <Link
+                <div
                   key={name}
-                  href={`/products?category=${name.toLowerCase().replace(/\s+&\s+/g, '-').replace(/\s+/g, '-')}`}
-                  className="rounded-xl border border-border bg-white p-4 flex items-center gap-3 hover:border-primary/30 hover:bg-[var(--secondary)] transition-colors group"
+                  className="rounded-xl border border-border bg-white p-4 flex items-center gap-3"
                 >
                   <span className="text-2xl">{icon}</span>
                   <div className="min-w-0">
-                    <p className="text-xs font-semibold text-gray-900 leading-snug group-hover:text-primary transition-colors truncate">
+                    <p className="text-xs font-semibold text-gray-900 leading-snug truncate">
                       {name}
                     </p>
                     <p className="text-[10px] text-muted-foreground">{count} products</p>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </section>
@@ -154,21 +153,37 @@ export default function AboutPage() {
           <section className="mb-14">
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Location</p>
             <h2 className="font-display text-2xl font-bold text-gray-900 mb-5">Where We Are</h2>
-            <div className="rounded-xl border border-border bg-white p-6 flex gap-4">
-              <div className="h-10 w-10 rounded-lg bg-[var(--secondary)] flex items-center justify-center shrink-0">
-                <MapPin className="h-5 w-5 text-primary" />
+            <div className="rounded-xl border border-border bg-white overflow-hidden">
+              {/* Address info */}
+              <div className="p-6 flex gap-4">
+                <div className="h-10 w-10 rounded-lg bg-[var(--secondary)] flex items-center justify-center shrink-0">
+                  <MapPin className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm mb-1">Warung Indo Michigan</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    28130 Park Ct<br />
+                    Madison Heights, MI 48071<br />
+                    United States
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-3">
+                    We primarily operate as an online store. Orders are packed and shipped from our
+                    location in Madison Heights, Michigan.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm mb-1">Warung Indo Michigan</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  28130 Park Ct<br />
-                  Madison Heights, MI 48071<br />
-                  United States
-                </p>
-                <p className="text-xs text-muted-foreground mt-3">
-                  We primarily operate as an online store. Orders are packed and shipped from our
-                  location in Madison Heights, Michigan.
-                </p>
+              {/* Embed map */}
+              <div className="border-t border-border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.711521957843!2d-83.09339298792929!3d42.49835017106019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824cff7ecab89f3%3A0x8b977f50f6518174!2s28130%20Park%20Ct%2C%20Madison%20Heights%2C%20MI%2048071!5e1!3m2!1sen!2sus!4v1781940774978!5m2!1sen!2sus"
+                  width="100%"
+                  height="320"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Warung Indo Michigan location"
+                />
               </div>
             </div>
           </section>

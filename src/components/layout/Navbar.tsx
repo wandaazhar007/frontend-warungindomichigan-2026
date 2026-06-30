@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ShoppingBasket, Menu, X, LogOut, Package, User } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useCartStore } from '@/store/cartStore';
@@ -20,6 +21,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const userMenuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   const totalItems = useCartStore((s) => s.totalItems());
   const { user, loading } = useAuthStore();
@@ -90,15 +92,26 @@ export default function Navbar() {
                 { href: '/products', label: 'Shop' },
                 { href: '/about', label: 'About Us' },
                 { href: '/faq', label: 'FAQ' },
-              ].map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors text-foreground"
-                >
-                  {label}
-                </Link>
-              ))}
+              ].map(({ href, label }) => {
+                const isActive = pathname === href || pathname.startsWith(href + '/');
+                return (
+                  <Link
+                    key={href}
+                    href={href}
+                    className={cn(
+                      'relative text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors',
+                      isActive
+                        ? 'text-primary bg-red-50'
+                        : 'text-foreground hover:bg-gray-50'
+                    )}
+                  >
+                    {label}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-primary" />
+                    )}
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Auth — desktop */}
@@ -187,13 +200,27 @@ export default function Navbar() {
             { href: '/products', label: '🛒 Shop' },
             { href: '/about', label: '👋 About Us' },
             { href: '/faq', label: '❓ FAQ' },
-          ].map(({ href, label }) => (
-            <Link key={href} href={href}
-              className="text-sm font-semibold px-3 py-2.5 rounded-lg hover:bg-secondary transition-colors text-foreground"
-              onClick={() => setMobileOpen(false)}>
-              {label}
-            </Link>
-          ))}
+          ].map(({ href, label }) => {
+            const isActive = pathname === href || pathname.startsWith(href + '/');
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  'flex items-center justify-between text-sm font-semibold px-3 py-2.5 rounded-lg transition-colors',
+                  isActive
+                    ? 'text-primary bg-red-50'
+                    : 'text-foreground hover:bg-secondary'
+                )}
+                onClick={() => setMobileOpen(false)}
+              >
+                {label}
+                {isActive && (
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                )}
+              </Link>
+            );
+          })}
 
           {!loading && (
             <div className="mt-2 pt-3 border-t border-border">

@@ -3,6 +3,7 @@ import WhyUsSection from '@/components/home/WhyUsSection';
 import BestSellersSection from '@/components/home/BestSellersSection';
 import BundleBannerSection from '@/components/home/BundleBannerSection';
 import ReviewsSection from '@/components/home/ReviewsSection';
+import HomeFaqSection from '@/components/home/HomeFaqSection';
 import VisitUsSection from '@/components/home/VisitUsSection';
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <BestSellersSection />
       <BundleBannerSection />
       <ReviewsSection />
+      <HomeFaqSection />
       <VisitUsSection />
     </>
   );
