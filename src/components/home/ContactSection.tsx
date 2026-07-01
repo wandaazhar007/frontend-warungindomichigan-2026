@@ -18,7 +18,7 @@ export default function ContactSection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Button size="lg" asChild className="w-full sm:w-auto bg-green-500 hover:bg-green-600">
-              <a href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMI.%20Saya%20mau%20order%20dan%20bertanya" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMi.%20Saya%20mau%20order%20dan%20bertanya" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-5 w-5 mr-2" />
                 Chat via WhatsApp
               </a>
@@ -42,7 +42,7 @@ export default function ContactSection() {
             <div>
               <h3 className="font-display font-600 text-gray-900 mb-1">Komunitas Indonesia di USA</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Bergabunglah dengan ratusan anggota komunitas Indonesia yang sudah belanja di Warung Indo Michigan.
+                Bergabunglah dengan ratusan anggota komunitas Indonesia yang sudah belanja di Warung IndoMi.
               </p>
             </div>
           </div>

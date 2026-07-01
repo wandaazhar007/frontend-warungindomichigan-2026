@@ -27,7 +27,7 @@ export default function RegisterPage() {
             <span className="text-white font-display font-bold text-xl leading-none">W</span>
           </div>
           <div>
-            <p className="font-display font-semibold text-white text-sm leading-none">Warung IndoMI</p>
+            <p className="font-display font-semibold text-white text-sm leading-none">Warung IndoMi</p>
             <p className="text-[11px] text-white/60 mt-0.5">Michigan</p>
           </div>
         </div>

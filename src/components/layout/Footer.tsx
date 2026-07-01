@@ -64,7 +64,7 @@ export default function Footer() {
                 <span className="text-white font-display font-bold text-xl leading-none">W</span>
               </div>
               <div>
-                <p className="font-display font-bold text-white text-sm leading-none">Warung IndoMI</p>
+                <p className="font-display font-bold text-white text-sm leading-none">Warung IndoMi</p>
                 <p className="text-[10px] uppercase tracking-widest font-semibold mt-0.5 text-wim-faint">Michigan</p>
               </div>
             </Link>
@@ -133,7 +133,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMI.%20Saya%20mau%20order%20dan%20bertanya"
+                  href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMi.%20Saya%20mau%20order%20dan%20bertanya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm transition-colors hover:text-white text-wim-faint"
@@ -172,7 +172,7 @@ export default function Footer() {
 
             <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
               <p className="text-xs text-white">
-                © 2026 Warung Indo Michigan. All rights reserved.
+                © 2026 Warung IndoMi. All rights reserved.
               </p>
               <div className="flex items-center gap-3">
                 {[

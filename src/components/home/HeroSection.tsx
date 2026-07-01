@@ -42,7 +42,7 @@ export default function HeroSection() {
                 Shop Now
               </Link>
               <a
-                href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMI.%20Saya%20mau%20order%20dan%20bertanya"
+                href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMi.%20Saya%20mau%20order%20dan%20bertanya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 font-semibold text-sm px-6 py-3 rounded-xl border border-border transition-colors bg-white hover:bg-gray-50 text-foreground"
@@ -76,7 +76,7 @@ export default function HeroSection() {
               <div className="relative rounded-2xl overflow-hidden product-img-bg aspect-[4/3] border border-border">
                 <Image
                   src="/images/hero-image.jpg"
-                  alt="Indonesian grocery products — Warung Indo Michigan"
+                  alt="Indonesian grocery products — Warung IndoMi"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 520px"

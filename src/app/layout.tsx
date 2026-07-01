@@ -25,8 +25,8 @@ const BASE_URL = 'https://warungindomi.com';
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Warung Indo Michigan — Authentic Indonesian Grocery Store in the USA',
-    template: '%s | Warung Indo Michigan',
+    default: 'Warung IndoMi — Authentic Indonesian Grocery Store in the USA',
+    template: '%s | Warung IndoMi',
   },
   description:
     'Shop authentic Indonesian groceries online — Indomie, sambal, bumbu, kopi, snack & more. Based in Madison Heights, Michigan. Fast shipping to all 50 states.',
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     'Indonesian diaspora grocery',
     'Madison Heights Michigan Indonesian',
   ],
-  authors: [{ name: 'Warung Indo Michigan', url: BASE_URL }],
-  creator: 'Warung Indo Michigan',
-  publisher: 'Warung Indo Michigan',
+  authors: [{ name: 'Warung IndoMi', url: BASE_URL }],
+  creator: 'Warung IndoMi',
+  publisher: 'Warung IndoMi',
   category: 'shopping',
   robots: {
     index: true,
@@ -63,8 +63,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: 'id_ID',
     url: BASE_URL,
-    siteName: 'Warung Indo Michigan',
-    title: 'Warung Indo Michigan — Authentic Indonesian Grocery Store in the USA',
+    siteName: 'Warung IndoMi',
+    title: 'Warung IndoMi — Authentic Indonesian Grocery Store in the USA',
     description:
       'Shop authentic Indonesian groceries online — Indomie, sambal, bumbu, kopi, snack & more. Fast shipping to all 50 states from Madison Heights, Michigan.',
     images: [
@@ -72,14 +72,14 @@ export const metadata: Metadata = {
         url: '/images/hero-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Warung Indo Michigan — Authentic Indonesian Grocery Store',
+        alt: 'Warung IndoMi — Authentic Indonesian Grocery Store',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Warung Indo Michigan — Authentic Indonesian Grocery Store in the USA',
+    title: 'Warung IndoMi — Authentic Indonesian Grocery Store in the USA',
     description:
       'Shop authentic Indonesian groceries online — Indomie, sambal, bumbu, kopi & more. Fast shipping to all 50 states.',
     images: ['/images/hero-image.jpg'],
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'GroceryStore',
-  name: 'Warung Indo Michigan',
+  name: 'Warung IndoMi',
   description:
     'Authentic Indonesian grocery store shipping nationwide across the USA. Specializing in Indonesian food products including Indomie, sambal, bumbu, kopi, and more.',
   url: BASE_URL,

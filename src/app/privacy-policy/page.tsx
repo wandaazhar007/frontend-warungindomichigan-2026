@@ -11,7 +11,7 @@ import LegalPageLayout, {
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Learn how Warung Indo Michigan collects, uses, and protects your personal information when you shop on our website.',
+    'Learn how Warung IndoMi collects, uses, and protects your personal information when you shop on our website.',
   alternates: { canonical: 'https://warungindomi.com/privacy-policy' },
 };
 
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
       lastUpdated="June 29, 2026"
     >
       <ProseP>
-        Warung Indo Michigan (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy.
+        Warung IndoMi (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy.
         This Privacy Policy explains how we collect, use, disclose, and safeguard your information
         when you visit our website and place an order. Please read this policy carefully. By using
         our site, you agree to the practices described here.

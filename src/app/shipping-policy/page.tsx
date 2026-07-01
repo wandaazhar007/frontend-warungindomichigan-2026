@@ -11,7 +11,7 @@ import LegalPageLayout, {
 export const metadata: Metadata = {
   title: 'Shipping Policy',
   description:
-    'Warung Indo Michigan shipping policy — carriers, delivery times, shipping rates, coverage area, tracking, and how we handle lost or damaged packages.',
+    'Warung IndoMi shipping policy — carriers, delivery times, shipping rates, coverage area, tracking, and how we handle lost or damaged packages.',
   alternates: { canonical: 'https://warungindomi.com/shipping-policy' },
 };
 

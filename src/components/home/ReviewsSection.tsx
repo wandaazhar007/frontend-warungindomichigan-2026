@@ -8,7 +8,7 @@ const reviews = [
     name: 'Siti Rahmawati',
     location: 'Ann Arbor, MI',
     rating: 5,
-    text: 'Warung Indo Michigan is a lifesaver! Finally I can get Indomie Goreng and Sambal ABC without driving hours away. The shipping is fast and everything arrives in perfect condition.',
+    text: 'Warung IndoMi is a lifesaver! Finally I can get Indomie Goreng and Sambal ABC without driving hours away. The shipping is fast and everything arrives in perfect condition.',
     initials: 'SR',
   },
   {
@@ -43,7 +43,7 @@ const reviews = [
     name: 'Rina Wulandari',
     location: 'Flint, MI',
     rating: 5,
-    text: 'Senang banget ada Warung Indo Michigan. Saya bisa masak makanan Indonesia favorit di rumah tanpa ribet. Pelayanannya ramah dan responsif banget kalau ada pertanyaan. 10/10!',
+    text: 'Senang banget ada Warung IndoMi. Saya bisa masak makanan Indonesia favorit di rumah tanpa ribet. Pelayanannya ramah dan responsif banget kalau ada pertanyaan. 10/10!',
     initials: 'RW',
   },
 ];

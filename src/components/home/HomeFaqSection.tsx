@@ -83,7 +83,7 @@ export default function HomeFaqSection() {
             Questions? We Have Answers
           </h2>
           <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
-            Everything you need to know about ordering Indonesian groceries from Warung Indo Michigan.
+            Everything you need to know about ordering Indonesian groceries from Warung IndoMi.
           </p>
         </div>
 

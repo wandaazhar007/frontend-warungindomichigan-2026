@@ -10,7 +10,7 @@ import LegalPageLayout, {
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description:
-    'Terms and Conditions for shopping at Warung Indo Michigan — the rules governing orders, payments, shipping, and use of our website.',
+    'Terms and Conditions for shopping at Warung IndoMi — the rules governing orders, payments, shipping, and use of our website.',
   alternates: { canonical: 'https://warungindomi.com/terms' },
 };
 
@@ -23,7 +23,7 @@ export default function TermsPage() {
       lastUpdated="June 29, 2026"
     >
       <ProseP>
-        These Terms and Conditions (&quot;Terms&quot;) govern your use of the Warung Indo Michigan website
+        These Terms and Conditions (&quot;Terms&quot;) govern your use of the Warung IndoMi website
         (warungindomi.com) and your purchase of products from us. By accessing our site or placing
         an order, you agree to be bound by these Terms. If you do not agree, please do not use our
         site.
@@ -31,7 +31,7 @@ export default function TermsPage() {
 
       <ProseH2>1. Who We Are</ProseH2>
       <ProseP>
-        Warung Indo Michigan is an Indonesian grocery store based in Madison Heights, Michigan,
+        Warung IndoMi is an Indonesian grocery store based in Madison Heights, Michigan,
         USA. We sell authentic Indonesian food products and ship nationwide across the United States.
       </ProseP>
       <ProseP>Contact: WhatsApp +1 (626) 461-4963</ProseP>
@@ -191,7 +191,7 @@ export default function TermsPage() {
       <ProseH2>11. Intellectual Property</ProseH2>
       <ProseP>
         The content on this website — including text, images, logos, and design — is owned by or
-        licensed to Warung Indo Michigan. You may not reproduce, distribute, or use our content
+        licensed to Warung IndoMi. You may not reproduce, distribute, or use our content
         without prior written permission, except for personal, non-commercial use.
       </ProseP>
       <ProseP>
@@ -203,7 +203,7 @@ export default function TermsPage() {
 
       <ProseH2>12. Limitation of Liability</ProseH2>
       <ProseP>
-        To the fullest extent permitted by law, Warung Indo Michigan shall not be liable for any
+        To the fullest extent permitted by law, Warung IndoMi shall not be liable for any
         indirect, incidental, special, or consequential damages arising from your use of our site or
         products, including but not limited to loss of profits, data, or goodwill.
       </ProseP>

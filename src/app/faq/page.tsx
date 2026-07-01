@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'FAQ — Frequently Asked Questions',
   description:
-    'Answers to common questions about ordering, shipping, products, payments, and your account at Warung Indo Michigan.',
+    'Answers to common questions about ordering, shipping, products, payments, and your account at Warung IndoMi.',
   alternates: { canonical: 'https://warungindomi.com/faq' },
 };
 

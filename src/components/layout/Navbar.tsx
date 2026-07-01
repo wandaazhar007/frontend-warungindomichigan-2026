@@ -75,7 +75,7 @@ export default function Navbar() {
             </div>
             <div className="leading-tight hidden sm:block">
               <p className="font-display font-bold text-[13px] leading-none tracking-tight text-foreground">
-                Warung IndoMI
+                Warung IndoMi
               </p>
               <p className="text-[9px] uppercase tracking-widest font-semibold mt-0.5 text-wim-faint">
                 Michigan

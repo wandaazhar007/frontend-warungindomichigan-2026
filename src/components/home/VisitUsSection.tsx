@@ -28,7 +28,7 @@ export default function VisitUsSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Warung Indo Michigan location"
+              title="Warung IndoMi location"
             />
           </div>
 
@@ -62,7 +62,7 @@ export default function VisitUsSection() {
 
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
               <a
-                href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMI.%20Saya%20mau%20order%20dan%20bertanya"
+                href="https://wa.me/16264614963?text=Hi%2C%20Warung%20IndoMi.%20Saya%20mau%20order%20dan%20bertanya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE59] text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm flex-1"

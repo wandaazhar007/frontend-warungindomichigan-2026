@@ -11,7 +11,7 @@ import LegalPageLayout, {
 export const metadata: Metadata = {
   title: 'Return & Refund Policy',
   description:
-    'Warung Indo Michigan return and refund policy — learn when refunds are issued, how to request one, and our policy on food and grocery items.',
+    'Warung IndoMi return and refund policy — learn when refunds are issued, how to request one, and our policy on food and grocery items.',
   alternates: { canonical: 'https://warungindomi.com/return-policy' },
 };
 
@@ -25,7 +25,7 @@ export default function ReturnPolicyPage() {
     >
       <ProseH2>Our Commitment</ProseH2>
       <ProseP>
-        At Warung Indo Michigan, we take great care in packing and shipping every order. If
+        At Warung IndoMi, we take great care in packing and shipping every order. If
         something goes wrong, we want to make it right. Please read this policy carefully so you
         know what to expect and how to reach us if you have a problem.
       </ProseP>

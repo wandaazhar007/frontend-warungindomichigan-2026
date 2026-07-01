@@ -83,7 +83,7 @@ export default function OrdersPage() {
         <div className="mb-8">
           <h1 className="font-display text-2xl font-700 text-gray-900">Riwayat Pesanan</h1>
           <p className="text-gray-500 text-sm mt-1">
-            Semua pesanan yang pernah kamu buat di Warung Indo Michigan.
+            Semua pesanan yang pernah kamu buat di Warung IndoMi.
           </p>
         </div>
 

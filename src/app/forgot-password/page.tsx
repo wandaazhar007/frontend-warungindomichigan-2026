@@ -13,7 +13,7 @@ export default function ForgotPasswordPage() {
         <div className="flex justify-center mb-6">
           <Image
             src="/images/icon-warung-indomi.png"
-            alt="Warung Indo Michigan"
+            alt="Warung Indo Mi — Indonesian Grocery Store"
             width={48}
             height={48}
             className="rounded-xl"

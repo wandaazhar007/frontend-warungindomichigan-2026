@@ -5,7 +5,7 @@ import { MessageCircle, Facebook, MapPin, Package, Phone, Star, Truck, ShieldChe
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Warung Indo Michigan — your trusted source for authentic Indonesian groceries, shipped nationwide across the USA from Madison Heights, Michigan.',
+    'Learn about Warung IndoMi — your trusted source for authentic Indonesian groceries, shipped nationwide across the USA from Madison Heights, Michigan.',
   alternates: { canonical: 'https://warungindomi.com/about' },
 };
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
         <div className="container-wim">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">About</p>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-            About Warung Indo Michigan
+            About Warung IndoMi
           </h1>
           <p className="text-muted-foreground text-sm sm:text-base max-w-2xl">
             Your trusted source for authentic Indonesian groceries, delivered across the USA.
@@ -74,7 +74,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
               <p>
-                Warung Indo Michigan was born out of a simple, deeply felt need: the longing for
+                Warung IndoMi was born out of a simple, deeply felt need: the longing for
                 the flavors of home. For the Indonesian diaspora scattered across the United
                 States, finding authentic Indonesian products — the same brands you grew up with,
                 the same tastes that remind you of your mother&apos;s cooking, your favorite street
@@ -160,7 +160,7 @@ export default function AboutPage() {
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 text-sm mb-1">Warung Indo Michigan</p>
+                  <p className="font-semibold text-gray-900 text-sm mb-1">Warung IndoMi</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     28130 Park Ct<br />
                     Madison Heights, MI 48071<br />
@@ -182,7 +182,7 @@ export default function AboutPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Warung Indo Michigan location"
+                  title="Warung IndoMi location"
                 />
               </div>
             </div>
