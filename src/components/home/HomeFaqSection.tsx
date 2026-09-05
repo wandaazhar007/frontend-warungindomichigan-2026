@@ -2,37 +2,12 @@
 
 import { useState } from 'react';
 import { ChevronDown, Phone } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 
-interface FaqItem {
-  q: string;
-  a: string;
-}
+const FAQ_KEYS = ['guestCheckout', 'shippingTime', 'shippingCost', 'authentic', 'paymentMethods'] as const;
 
-const HOME_FAQS: FaqItem[] = [
-  {
-    q: 'Do I need an account to place an order?',
-    a: 'No! We support guest checkout — simply enter your contact info and shipping address at checkout. However, creating an account lets you track your order history and save your addresses for faster future checkouts.',
-  },
-  {
-    q: 'How long does shipping take?',
-    a: 'We process orders within 1–2 business days. After that, estimated delivery is 3–7 business days depending on your location. USPS Priority Mail typically takes 1–3 days; USPS Ground Advantage 2–5 days; UPS Ground 1–5 days.',
-  },
-  {
-    q: 'How are shipping costs calculated?',
-    a: 'Shipping costs are calculated at checkout based on the total weight of your order and your delivery address. You\'ll see the exact rate before entering payment information — no surprises.',
-  },
-  {
-    q: 'Are your products authentic Indonesian brands?',
-    a: 'Absolutely. All products we carry are genuine, original Indonesian brands — the same ones you\'d find at a supermarket in Indonesia. We do not sell counterfeit or knock-off products.',
-  },
-  {
-    q: 'What payment methods do you accept?',
-    a: 'We accept all major credit and debit cards: Visa, Mastercard, American Express, and Discover. Payments are processed securely through Stripe — your card information is never stored on our servers.',
-  },
-];
-
-function FaqItem({ item, index }: { item: FaqItem; index: number }) {
+function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -50,7 +25,7 @@ function FaqItem({ item, index }: { item: FaqItem; index: number }) {
           <span className="shrink-0 mt-0.5 h-5 w-5 rounded-full bg-red-100 text-red-600 text-xs font-bold flex items-center justify-center">
             {index + 1}
           </span>
-          <span className="text-sm font-semibold text-gray-900 leading-snug">{item.q}</span>
+          <span className="text-sm font-semibold text-gray-900 leading-snug">{q}</span>
         </div>
         <ChevronDown
           className={`h-4 w-4 text-gray-400 shrink-0 mt-0.5 transition-transform duration-200 ${
@@ -62,7 +37,7 @@ function FaqItem({ item, index }: { item: FaqItem; index: number }) {
         <div className="px-5 pb-5 pt-2 bg-white border-t border-gray-100">
           {/* left accent bar */}
           <div className="pl-8">
-            <p className="text-sm text-gray-500 leading-relaxed">{item.a}</p>
+            <p className="text-sm text-gray-500 leading-relaxed">{a}</p>
           </div>
         </div>
       )}
@@ -71,26 +46,28 @@ function FaqItem({ item, index }: { item: FaqItem; index: number }) {
 }
 
 export default function HomeFaqSection() {
+  const t = useTranslations('Home.Faq');
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="container-wim">
         {/* Header */}
         <div className="text-center mb-10">
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-red-500 mb-3">
-            FAQ
+            {t('kicker')}
           </span>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-            Questions? We Have Answers
+            {t('heading')}
           </h2>
           <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
-            Everything you need to know about ordering Indonesian groceries from Warung IndoMi.
+            {t('subheading')}
           </p>
         </div>
 
         {/* FAQ list */}
         <div className="max-w-2xl mx-auto space-y-3">
-          {HOME_FAQS.map((item, i) => (
-            <FaqItem key={item.q} item={item} index={i} />
+          {FAQ_KEYS.map((key, i) => (
+            <FaqItem key={key} q={t(`items.${key}.q`)} a={t(`items.${key}.a`)} index={i} />
           ))}
         </div>
 
@@ -100,7 +77,7 @@ export default function HomeFaqSection() {
             href="/faq"
             className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 hover:border-red-300 hover:text-red-600 transition-colors"
           >
-            See all FAQ
+            {t('seeAll')}
           </Link>
           <a
             href="https://wa.me/16264614963"
@@ -109,7 +86,7 @@ export default function HomeFaqSection() {
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-500 px-6 py-3 text-sm font-semibold text-white hover:bg-red-600 transition-colors"
           >
             <Phone className="h-4 w-4" />
-            Call Us
+            {t('callUs')}
           </a>
         </div>
       </div>

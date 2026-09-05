@@ -1,11 +1,13 @@
 'use client';
 
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { useCartStore } from '@/store/cartStore';
 import { useCheckoutStore } from '@/store/checkoutStore';
 import { formatPrice } from '@/lib/utils';
 
 export default function OrderSummary() {
+  const t = useTranslations('Checkout.OrderSummary');
   const items     = useCartStore((s) => s.items);
   const subtotal  = useCartStore((s) => s.subtotal());
   const breakdown = useCheckoutStore((s) => s.breakdown);
@@ -16,7 +18,7 @@ export default function OrderSummary() {
 
   return (
     <div className="bg-white rounded-xl border border-gray-100 p-5 sticky top-24">
-      <h2 className="font-display font-700 text-gray-900 mb-4">Order Summary</h2>
+      <h2 className="font-display font-700 text-gray-900 mb-4">{t('title')}</h2>
 
       {/* Items */}
       <ul className="space-y-3 mb-4">
@@ -42,29 +44,29 @@ export default function OrderSummary() {
 
       <div className="border-t border-gray-100 pt-4 space-y-2">
         <div className="flex justify-between text-sm">
-          <span className="text-gray-500">Subtotal</span>
+          <span className="text-gray-500">{t('subtotal')}</span>
           <span className="font-medium">{formatPrice(subtotal)}</span>
         </div>
 
         <div className="flex justify-between text-sm">
-          <span className="text-gray-500">Shipping</span>
+          <span className="text-gray-500">{t('shipping')}</span>
           {shippingCost != null ? (
             <span className="font-medium">{formatPrice(shippingCost)}</span>
           ) : (
-            <span className="text-gray-400 text-xs">Calculated at next step</span>
+            <span className="text-gray-400 text-xs">{t('calculatedNextStep')}</span>
           )}
         </div>
 
         {breakdown?.tax != null && breakdown.tax > 0 && (
           <div className="flex justify-between text-sm">
-            <span className="text-gray-500">Tax</span>
+            <span className="text-gray-500">{t('tax')}</span>
             <span className="font-medium">{formatPrice(breakdown.tax)}</span>
           </div>
         )}
 
         {total != null && (
           <div className="flex justify-between font-700 text-base pt-2 border-t border-gray-100">
-            <span className="text-gray-900">Total</span>
+            <span className="text-gray-900">{t('total')}</span>
             <span className="text-red-500">{formatPrice(total)}</span>
           </div>
         )}

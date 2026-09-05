@@ -1,22 +1,22 @@
 import { Check } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
-const STEPS = [
-  { n: 1, label: 'Contact Info' },
-  { n: 2, label: 'Shipping' },
-  { n: 3, label: 'Payment' },
-];
+const STEP_KEYS = ['contactInfo', 'shipping', 'payment'] as const;
 
 export default function CheckoutSteps({ current }: { current: 1 | 2 | 3 }) {
+  const t = useTranslations('Checkout.Steps');
+
   return (
-    <nav aria-label="Checkout steps" className="flex items-center justify-center mb-10">
-      {STEPS.map(({ n, label }, idx) => {
+    <nav aria-label={t('ariaLabel')} className="flex items-center justify-center mb-10">
+      {STEP_KEYS.map((key, idx) => {
+        const n = idx + 1;
         const done    = n < current;
         const active  = n === current;
         const pending = n > current;
 
         return (
-          <div key={n} className="flex items-center">
+          <div key={key} className="flex items-center">
             {/* Circle */}
             <div className="flex flex-col items-center">
               <div
@@ -36,12 +36,12 @@ export default function CheckoutSteps({ current }: { current: 1 | 2 | 3 }) {
                   !active && 'text-gray-400'
                 )}
               >
-                {label}
+                {t(key)}
               </span>
             </div>
 
             {/* Connector */}
-            {idx < STEPS.length - 1 && (
+            {idx < STEP_KEYS.length - 1 && (
               <div
                 className={cn(
                   'h-0.5 w-16 sm:w-24 mx-2 mb-4 rounded transition-colors',

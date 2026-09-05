@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { MessageCircle, Facebook, MapPin, Phone } from 'lucide-react';
 
 // ── Payment brand SVG logos ───────────────────────────────────────────────────
@@ -50,6 +51,29 @@ const PAYMENT_BADGES = [
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function Footer() {
+  const t = useTranslations('Footer');
+
+  const infoLinks = [
+    { href: '/about', label: t('links.about') },
+    { href: '/faq', label: t('links.faq') },
+    { href: '/shipping-policy', label: t('links.shippingPolicy') },
+    { href: '/return-policy', label: t('links.returnPolicy') },
+    { href: '/privacy-policy', label: t('links.privacyPolicy') },
+    { href: '/terms', label: t('links.terms') },
+  ];
+
+  const accountLinks = [
+    { href: '/login', label: t('links.signIn') },
+    { href: '/register', label: t('links.signUp') },
+    { href: '/orders', label: t('links.myOrders') },
+  ];
+
+  const bottomLinks = [
+    { href: '/privacy-policy', label: t('bottom.privacy') },
+    { href: '/terms', label: t('bottom.terms') },
+    { href: '/return-policy', label: t('bottom.returns') },
+  ];
+
   return (
     <footer className="bg-wim-maroon text-white mt-16">
       <div className="container-wim pt-14 pb-8">
@@ -69,7 +93,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed mb-6 max-w-xs text-wim-faint">
-              Authentic Indonesian groceries, delivered nationwide. Taste of home, wherever you are.
+              {t('tagline')}
             </p>
 
             {/* Address */}
@@ -78,11 +102,11 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 text-wim-faint" />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-wider mb-1 text-white">Our Location</p>
+                <p className="text-xs font-bold uppercase tracking-wider mb-1 text-white">{t('ourLocation')}</p>
                 <p className="text-sm text-wim-faint leading-relaxed">
                   28130 Park Ct<br />
                   Madison Heights, MI 48071<br />
-                  United States
+                  {t('unitedStates')}
                 </p>
               </div>
             </div>
@@ -90,17 +114,10 @@ export default function Footer() {
 
           {/* Information */}
           <div>
-            <h4 className="font-semibold text-white text-sm mb-4">Information</h4>
+            <h4 className="font-semibold text-white text-sm mb-4">{t('information')}</h4>
             <ul className="space-y-2.5">
-              {[
-                { href: '/about', label: 'About Us' },
-                { href: '/faq', label: 'FAQ' },
-                { href: '/shipping-policy', label: 'Shipping Policy' },
-                { href: '/return-policy', label: 'Return Policy' },
-                { href: '/privacy-policy', label: 'Privacy Policy' },
-                { href: '/terms', label: 'Terms & Conditions' },
-              ].map(({ href, label }) => (
-                <li key={label}>
+              {infoLinks.map(({ href, label }) => (
+                <li key={href}>
                   <Link href={href} className="text-sm transition-colors hover:text-white text-wim-faint">
                     {label}
                   </Link>
@@ -111,14 +128,10 @@ export default function Footer() {
 
           {/* Account */}
           <div>
-            <h4 className="font-semibold text-white text-sm mb-4">Account</h4>
+            <h4 className="font-semibold text-white text-sm mb-4">{t('account')}</h4>
             <ul className="space-y-2.5">
-              {[
-                { href: '/login', label: 'Sign In' },
-                { href: '/register', label: 'Sign Up' },
-                { href: '/orders', label: 'My Orders' },
-              ].map(({ href, label }) => (
-                <li key={label}>
+              {accountLinks.map(({ href, label }) => (
+                <li key={href}>
                   <Link href={href} className="text-sm transition-colors hover:text-white text-wim-faint">
                     {label}
                   </Link>
@@ -129,7 +142,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-white text-sm mb-4">Contact Us</h4>
+            <h4 className="font-semibold text-white text-sm mb-4">{t('contactUs')}</h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -159,7 +172,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-sm transition-colors hover:text-white text-wim-faint"
                 >
                   <Facebook className="h-4 w-4 shrink-0" />
-                  Follow on Facebook
+                  {t('followFacebook')}
                 </a>
               </li>
             </ul>
@@ -172,14 +185,10 @@ export default function Footer() {
 
             <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
               <p className="text-xs text-white">
-                © 2026 Warung IndoMi. All rights reserved.
+                {t('copyright')}
               </p>
               <div className="flex items-center gap-3">
-                {[
-                  { href: '/privacy-policy', label: 'Privacy' },
-                  { href: '/terms', label: 'Terms' },
-                  { href: '/return-policy', label: 'Returns' },
-                ].map(({ href, label }) => (
+                {bottomLinks.map(({ href, label }) => (
                   <Link key={href} href={href} className="text-[11px] text-wim-faint hover:text-white transition-colors">
                     {label}
                   </Link>
@@ -200,16 +209,18 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-white">
-              Built with ❤️ by{' '}
-              <a
-                href="https://instagram.com/wanda_azharr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-wim-faint hover:text-white underline underline-offset-2 transition-colors"
-              >
-                Wanda Azhar
-              </a>{' '}
-              in Michigan, USA
+              {t.rich('builtWith', {
+                author: (chunks) => (
+                  <a
+                    href="https://instagram.com/wanda_azharr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-wim-faint hover:text-white underline underline-offset-2 transition-colors"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
           </div>
         </div>

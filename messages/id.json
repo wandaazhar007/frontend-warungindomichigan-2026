@@ -1,0 +1,1052 @@
+{
+  "Navbar": {
+    "account": "Akun",
+    "myOrders": "Pesanan Saya",
+    "signOut": "Keluar",
+    "signIn": "Masuk",
+    "signUp": "Daftar",
+    "announcements": {
+      "shipping": "Pengiriman ke seluruh penjuru A.S.",
+      "sameDay": "Pesan sebelum jam 2 siang, dikirim hari ini",
+      "authentic": "Rasa asli Indonesia, diantar sampai depan pintu",
+      "freeDelivery": "Gratis ongkir untuk pesanan di atas $50"
+    },
+    "links": {
+      "shop": "Belanja",
+      "about": "Tentang Kami",
+      "faq": "FAQ"
+    }
+  },
+  "Footer": {
+    "tagline": "Bahan makanan Indonesia asli, dikirim ke seluruh negeri. Rasa rumah, di mana pun kamu berada.",
+    "ourLocation": "Lokasi Kami",
+    "unitedStates": "Amerika Serikat",
+    "information": "Informasi",
+    "account": "Akun",
+    "contactUs": "Hubungi Kami",
+    "followFacebook": "Ikuti di Facebook",
+    "copyright": "© 2026 Warung IndoMi. Hak cipta dilindungi.",
+    "builtWith": "Dibuat dengan ❤️ oleh <author>Wanda Azhar</author> di Michigan, USA",
+    "links": {
+      "about": "Tentang Kami",
+      "faq": "FAQ",
+      "shippingPolicy": "Kebijakan Pengiriman",
+      "returnPolicy": "Kebijakan Pengembalian",
+      "privacyPolicy": "Kebijakan Privasi",
+      "terms": "Syarat & Ketentuan",
+      "signIn": "Masuk",
+      "signUp": "Daftar",
+      "myOrders": "Pesanan Saya"
+    },
+    "bottom": {
+      "privacy": "Privasi",
+      "terms": "Ketentuan",
+      "returns": "Pengembalian"
+    }
+  },
+  "Home": {
+    "Hero": {
+      "sinceBadge": "Toko bahan makanan Indonesia · sejak 2019",
+      "headingLine1": "Rasa Indonesia,",
+      "headingLine2": "diantar sampai depan",
+      "headingLine3": "pintu",
+      "headingEmphasis": "ke seluruh A.S.",
+      "description": "Bahan pokok dapur Indonesia asli — kecap manis, sambal, kopi, teh, dan lainnya — dikirim segar untuk orang Indonesia di 50 negara bagian. Selengkap warung di kampung halaman.",
+      "shopNow": "Belanja Sekarang",
+      "whatsappUs": "WhatsApp Kami",
+      "badges": {
+        "halal": "100% Halal",
+        "freshShipped": "Dikirim Segar",
+        "nationwide": "Kirim ke Seluruh Negeri"
+      },
+      "shipsToday": "Dikirim hari ini",
+      "orderBefore2pm": "Pesan sebelum jam 2 siang",
+      "familiesCount": "12.000+ keluarga Indonesia di A.S."
+    },
+    "WhyUs": {
+      "heading": "Kenapa belanja di Warung Indo?",
+      "subheading": "Kami memudahkan kamu menikmati rasa Indonesia di rumah.",
+      "features": {
+        "fastShipping": {
+          "title": "Pengiriman Cepat",
+          "desc": "Dikirim dalam 1–3 hari kerja ke 50 negara bagian di seluruh A.S."
+        },
+        "halal": {
+          "title": "100% Halal",
+          "desc": "Semua produk kami bersertifikat halal — aman untuk seluruh keluarga."
+        },
+        "authentic": {
+          "title": "Produk Asli",
+          "desc": "Diimpor langsung dari Indonesia. Rasa asli yang kamu kenal sejak kecil."
+        },
+        "securePayment": {
+          "title": "Pembayaran Aman",
+          "desc": "Checkout dilindungi oleh Stripe — informasi kamu selalu aman."
+        }
+      }
+    },
+    "BestSellers": {
+      "popularPicks": "Pilihan populer",
+      "heading": "Produk terlaris minggu ini",
+      "subheading": "Pilihan terbaik dari toko bahan makanan Indonesia kami",
+      "viewAll": "Lihat semua produk"
+    },
+    "BundleBanner": {
+      "badge": "Promo Mingguan",
+      "headingLine1": "Paket dapur",
+      "headingLine2": "minggu ini",
+      "description": "Lengkapi dapurmu dengan pilihan bahan masak Indonesia andalan kami. Semua yang kamu butuhkan untuk masak hidangan favorit di rumah.",
+      "cta": "Belanja Paket"
+    },
+    "Reviews": {
+      "kicker": "Testimoni",
+      "heading": "Kata pelanggan kami",
+      "subheading": "Disukai komunitas diaspora Indonesia di seluruh A.S.",
+      "scrollLeft": "Gulir kiri",
+      "scrollRight": "Gulir kanan",
+      "items": [
+        { "text": "Warung IndoMi benar-benar penyelamat! Akhirnya saya bisa dapat Indomie Goreng dan Sambal ABC tanpa harus nyetir berjam-jam. Pengirimannya cepat dan semua barang sampai dalam kondisi sempurna." },
+        { "text": "Harga terjangkau, pengiriman cepat, dan produknya original. Saya sudah berlangganan hampir 6 bulan dan tidak pernah kecewa! Highly recommended buat komunitas Indonesia di Michigan." },
+        { "text": "Sebagai orang yang tumbuh besar makan masakan Indonesia, menemukan toko ini benar-benar luar biasa. Pilihannya lengkap dan kualitasnya selalu segar. Suka banget pengirimannya yang cepat!" },
+        { "text": "Sudah lama cari tempat beli kecap manis dan terasi yang asli Indonesia. Akhirnya ketemu juga! Paketnya rapi, cepat sampai, dan harganya bersaing. Pasti order lagi!" },
+        { "text": "Toko bahan makanan Indonesia online terbaik! Saya pesan bumbu rendang, santan, dan ekstrak pandan — semua sampai dalam 2 hari. Kemasannya aman dan tidak ada yang rusak." },
+        { "text": "Senang banget ada Warung IndoMi. Saya bisa masak makanan Indonesia favorit di rumah tanpa ribet. Pelayanannya ramah dan responsif banget kalau ada pertanyaan. 10/10!" }
+      ]
+    },
+    "Faq": {
+      "kicker": "FAQ",
+      "heading": "Ada Pertanyaan? Kami Punya Jawabannya",
+      "subheading": "Semua yang perlu kamu tahu tentang belanja bahan makanan Indonesia di Warung IndoMi.",
+      "seeAll": "Lihat semua FAQ",
+      "callUs": "Telepon Kami",
+      "items": {
+        "guestCheckout": {
+          "q": "Apakah saya harus punya akun untuk memesan?",
+          "a": "Tidak perlu! Kami mendukung checkout sebagai tamu — cukup masukkan info kontak dan alamat pengiriman saat checkout. Namun, membuat akun memungkinkan kamu melacak riwayat pesanan dan menyimpan alamat untuk checkout yang lebih cepat di kemudian hari."
+        },
+        "shippingTime": {
+          "q": "Berapa lama waktu pengiriman?",
+          "a": "Kami memproses pesanan dalam 1–2 hari kerja. Setelah itu, estimasi pengiriman 3–7 hari kerja tergantung lokasi kamu. USPS Priority Mail biasanya 1–3 hari; USPS Ground Advantage 2–5 hari; UPS Ground 1–5 hari."
+        },
+        "shippingCost": {
+          "q": "Bagaimana ongkos kirim dihitung?",
+          "a": "Ongkos kirim dihitung saat checkout berdasarkan total berat pesanan dan alamat pengirimanmu. Kamu akan melihat tarif pastinya sebelum memasukkan info pembayaran — tanpa kejutan."
+        },
+        "authentic": {
+          "q": "Apakah produk kalian merek Indonesia asli?",
+          "a": "Tentu saja. Semua produk yang kami jual adalah merek Indonesia asli — sama seperti yang kamu temukan di supermarket di Indonesia. Kami tidak menjual produk palsu atau tiruan."
+        },
+        "paymentMethods": {
+          "q": "Metode pembayaran apa saja yang diterima?",
+          "a": "Kami menerima semua kartu kredit dan debit utama: Visa, Mastercard, American Express, dan Discover. Pembayaran diproses dengan aman melalui Stripe — info kartu kamu tidak pernah disimpan di server kami."
+        }
+      }
+    },
+    "VisitUs": {
+      "kicker": "Hubungi kami",
+      "heading": "Kunjungi kami atau pesan online",
+      "subheading": "Berbasis di Michigan — pengiriman ke seluruh penjuru A.S.",
+      "mapTitle": "Lokasi Warung IndoMi",
+      "location": "Lokasi",
+      "shippingAllStates": "Kirim ke 50 negara bagian",
+      "orderProcessing": "Proses Pesanan",
+      "hours": "Senin – Jumat: 8 Pagi – 5 Sore EST",
+      "sameDayShipping": "Pesanan sebelum jam 2 siang dikirim hari yang sama",
+      "chatWhatsapp": "Chat via WhatsApp",
+      "followFacebook": "Ikuti di Facebook"
+    }
+  },
+  "Auth": {
+    "Login": {
+      "metaTitle": "Masuk",
+      "welcomeBadge": "Selamat Datang Kembali",
+      "headingLine1": "Rasa rumah,",
+      "headingLine2": "selalu dekat.",
+      "description": "Masuk untuk mengakses akunmu, melacak pesanan, dan menikmati penawaran eksklusif dari toko bahan makanan Indonesia kami.",
+      "badges": {
+        "halal": "✅ 100% Halal",
+        "nationwide": "🚚 Kirim ke Seluruh Negeri",
+        "authentic": "🌴 Rasa Asli"
+      },
+      "tabSignIn": "Masuk",
+      "tabSignUp": "Daftar",
+      "title": "Masuk ke akun kamu",
+      "subtitle": "Masuk untuk lanjut berbelanja"
+    },
+    "Register": {
+      "metaTitle": "Daftar",
+      "joinBadge": "Bergabung dengan Komunitas",
+      "headingLine1": "Mulai perjalanan belanja",
+      "headingLine2": "Indonesia kamu.",
+      "description": "Buat akun untuk melacak pesanan, menyimpan alamat, dan mendapatkan penawaran eksklusif dari toko bahan makanan Indonesia kami.",
+      "badges": {
+        "halal": "✅ 100% Halal",
+        "nationwide": "🚚 Kirim ke Seluruh Negeri",
+        "authentic": "🌴 Rasa Asli"
+      },
+      "tabSignIn": "Masuk",
+      "tabSignUp": "Daftar",
+      "title": "Buat akun kamu",
+      "subtitle": "Bergabung dengan ribuan pecinta makanan Indonesia"
+    },
+    "ForgotPassword": {
+      "metaTitle": "Lupa Password"
+    },
+    "LoginForm": {
+      "continueGoogle": "Lanjutkan dengan Google",
+      "orSignInEmail": "atau masuk dengan email",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "forgotPassword": "Lupa password?",
+      "signIn": "Masuk",
+      "noAccount": "Belum punya akun?",
+      "signUpHere": "Daftar di sini",
+      "agreement": "Dengan melanjutkan, kamu setuju dengan syarat layanan dan kebijakan privasi kami.",
+      "errors": {
+        "required": "Wajib diisi",
+        "invalidEmail": "Format email tidak valid",
+        "incorrectCredentials": "Email atau password salah",
+        "generic": "Terjadi kesalahan. Silakan coba lagi."
+      }
+    },
+    "RegisterForm": {
+      "continueGoogle": "Lanjutkan dengan Google",
+      "orSignUpEmail": "atau daftar dengan email",
+      "firstName": "Nama Depan",
+      "lastName": "Nama Belakang",
+      "email": "Email",
+      "password": "Password",
+      "min8chars": "Min. 8 karakter",
+      "confirmPassword": "Konfirmasi Password",
+      "repeatPassword": "Ulangi password",
+      "createAccount": "Buat Akun",
+      "agreement": "Dengan membuat akun, kamu setuju dengan syarat layanan dan kebijakan privasi kami.",
+      "haveAccount": "Sudah punya akun?",
+      "signInHere": "Masuk di sini",
+      "errors": {
+        "min2": "Minimal 2 karakter",
+        "required": "Wajib diisi",
+        "invalidEmail": "Format email tidak valid",
+        "min8": "Minimal 8 karakter",
+        "passwordMismatch": "Password tidak cocok",
+        "emailInUse": "Email ini sudah terdaftar. Coba masuk saja.",
+        "generic": "Terjadi kesalahan. Silakan coba lagi."
+      }
+    },
+    "ForgotPasswordForm": {
+      "title": "Lupa Password?",
+      "description": "Masukkan emailmu dan kami akan kirimkan link untuk reset password.",
+      "email": "Email",
+      "sendResetLink": "Kirim Link Reset",
+      "emailSentTitle": "Email Terkirim!",
+      "emailSentDescription": "Link reset password telah dikirim ke <email></email>. Cek inbox atau folder spam kamu.",
+      "backToLogin": "Kembali ke halaman masuk",
+      "errors": {
+        "required": "Wajib diisi",
+        "invalidEmail": "Format email tidak valid",
+        "generic": "Terjadi kesalahan. Periksa email kamu dan coba lagi."
+      }
+    }
+  },
+  "Checkout": {
+    "metaTitle": "Checkout — Warung IndoMi",
+    "Steps": {
+      "ariaLabel": "Langkah checkout",
+      "contactInfo": "Info Kontak",
+      "shipping": "Pengiriman",
+      "payment": "Pembayaran"
+    },
+    "ContactForm": {
+      "recipientInfo": "Informasi Penerima",
+      "firstName": "Nama Depan",
+      "lastName": "Nama Belakang",
+      "emailAddress": "Alamat Email",
+      "phoneNumber": "Nomor Telepon",
+      "streetAddress": "Alamat Jalan",
+      "apartmentOptional": "Apartemen, Suite, dll. (opsional)",
+      "city": "Kota",
+      "state": "Negara Bagian",
+      "selectState": "Pilih negara bagian",
+      "zipCode": "Kode Pos",
+      "backToCart": "Kembali ke Keranjang",
+      "continueToShipping": "Lanjut ke Pengiriman",
+      "errors": {
+        "firstNameMin": "Nama depan minimal 2 karakter",
+        "lastNameMin": "Nama belakang minimal 2 karakter",
+        "emailRequired": "Email wajib diisi",
+        "invalidEmail": "Format email tidak valid",
+        "invalidPhone": "Nomor telepon tidak valid (mis. +1 626 461 4963)",
+        "streetRequired": "Alamat jalan wajib diisi",
+        "cityRequired": "Kota wajib diisi",
+        "stateRequired": "Negara bagian wajib diisi",
+        "zipLength": "Kode pos harus 5 digit"
+      }
+    },
+    "OrderSummary": {
+      "title": "Ringkasan Pesanan",
+      "subtotal": "Subtotal",
+      "shipping": "Ongkos Kirim",
+      "calculatedNextStep": "Dihitung di langkah berikutnya",
+      "tax": "Pajak",
+      "total": "Total"
+    },
+    "ShippingStep": {
+      "title": "Pilih Metode Pengiriman",
+      "loadingOptions": "Memuat opsi pengiriman…",
+      "noOptions": "Tidak ada opsi pengiriman untuk alamat ini.",
+      "estimatedDays": "Estimasi {days} hari kerja",
+      "back": "Kembali",
+      "processing": "Memproses…",
+      "continueToPayment": "Lanjut ke Pembayaran",
+      "errors": {
+        "loadFailed": "Gagal memuat opsi pengiriman. Periksa koneksi kamu dan coba lagi.",
+        "createOrderFailed": "Gagal membuat pesanan. Silakan coba lagi."
+      }
+    },
+    "PaymentStep": {
+      "title": "Pembayaran",
+      "securityNote": "Pembayaran kamu diproses dengan aman oleh Stripe. Detail kartu tidak pernah disimpan di server kami.",
+      "back": "Kembali",
+      "processing": "Memproses…",
+      "pay": "Bayar",
+      "errors": {
+        "paymentFailed": "Pembayaran gagal. Silakan coba lagi.",
+        "statusUnknown": "Status pembayaran tidak diketahui. Hubungi kami jika kartu kamu sudah terpotong."
+      }
+    }
+  },
+  "Cart": {
+    "emptyTitle": "Keranjangmu masih kosong",
+    "emptyDescription": "Tambahkan produk Indonesia favoritmu untuk mulai belanja!",
+    "startShopping": "Mulai Belanja",
+    "title": "Keranjang belanja",
+    "itemCount": "{count, plural, one {# item} other {# item}}",
+    "subtitle": "Cek lagi pesananmu — hampir siap merasakan rumah.",
+    "clearCart": "Kosongkan keranjang",
+    "freeShippingEligible": "Kamu dapat gratis ongkir!",
+    "addMoreForFreeShipping": "Tambah <amount></amount> lagi untuk gratis ongkir",
+    "remove": "Hapus",
+    "decrease": "Kurangi",
+    "increase": "Tambah",
+    "orderSummary": "Ringkasan pesanan",
+    "promoCode": "Kode promo",
+    "enterCode": "Masukkan kode",
+    "apply": "Terapkan",
+    "subtotalItems": "Subtotal ({count, plural, one {# item} other {# item}})",
+    "shipping": "Ongkos Kirim",
+    "free": "GRATIS",
+    "calculatedAtCheckout": "Dihitung saat checkout",
+    "tax": "Pajak",
+    "total": "Total",
+    "taxShippingNote": "Pajak + ongkir ditambahkan saat checkout",
+    "proceedToCheckout": "Lanjut ke checkout",
+    "secureCheckout": "Checkout aman didukung oleh Stripe",
+    "continueShopping": "Lanjut belanja",
+    "clearAllItems": "Hapus semua item",
+    "clearCartModalTitle": "Kosongkan keranjangmu?",
+    "clearCartModalDescription": "Semua item di keranjangmu akan dihapus. Aksi ini tidak bisa dibatalkan.",
+    "cancel": "Batal",
+    "confirmClear": "Ya, kosongkan keranjang"
+  },
+  "Products": {
+    "Page": {
+      "metaTitle": "Semua Produk",
+      "metaDescription": "Bahan makanan Indonesia asli dikirim ke seluruh negeri. Jelajahi 366+ produk — bumbu, mie instan, sambal, kopi, snack & banyak lagi.",
+      "kicker": "Toko Kami",
+      "heading": "Semua produk",
+      "subheading": "Bahan makanan Indonesia asli, dikirim ke seluruh negeri."
+    },
+    "Card": {
+      "outOfStock": "Stok habis",
+      "sale": "DISKON",
+      "removeOne": "Kurangi satu",
+      "addOne": "Tambah satu",
+      "addToCart": "Tambah ke keranjang"
+    },
+    "Catalog": {
+      "searchPlaceholder": "Cari produk (mis. indomie, sambal, kopi...)",
+      "scrollLeft": "Gulir kiri",
+      "scrollRight": "Gulir kanan",
+      "all": "Semua",
+      "products": "produk",
+      "in": "di",
+      "for": "untuk",
+      "sortPopularity": "Urutkan: popularitas",
+      "sortPriceAsc": "Harga: rendah ke tinggi",
+      "sortPriceDesc": "Harga: tinggi ke rendah",
+      "noProductsFound": "Produk tidak ditemukan",
+      "tryDifferentKeyword": "Coba kata kunci lain atau jelajahi kategori lainnya.",
+      "loadMore": "Muat produk lainnya"
+    },
+    "Detail": {
+      "notFound": "Produk tidak ditemukan",
+      "notFoundDescription": "Produk ini mungkin sudah dihapus atau link-nya salah.",
+      "browseAll": "Jelajahi semua produk",
+      "breadcrumbHome": "Beranda",
+      "breadcrumbAllProducts": "Semua produk",
+      "backToProducts": "Kembali ke produk",
+      "outOfStock": "Stok habis",
+      "onlyLeftInStock": "Sisa {count} stok",
+      "inStock": "Stok tersedia",
+      "quantity": "Jumlah",
+      "addedToCart": "Ditambahkan ke keranjang ✓",
+      "addToCart": "Tambah ke keranjang",
+      "viewCart": "Lihat keranjang",
+      "freeDeliveryNote": "Gratis ongkir untuk pesanan di atas <amount>$50</amount> — kirim ke seluruh negeri",
+      "aboutProduct": "Tentang produk ini",
+      "details": "Detail",
+      "package": "Kemasan",
+      "netWeight": "Berat Bersih",
+      "country": "Negara Asal",
+      "youMayAlsoLike": "Kamu mungkin juga suka",
+      "seeAll": "Lihat semua"
+    }
+  },
+  "Orders": {
+    "OrderStatus": {
+      "PENDING": "Menunggu Pembayaran",
+      "CONFIRMED": "Dikonfirmasi",
+      "PROCESSING": "Diproses",
+      "SHIPPED": "Dikirim",
+      "DELIVERED": "Terkirim",
+      "CANCELLED": "Dibatalkan",
+      "REFUNDED": "Direfund"
+    },
+    "OrderStatusTimeline": {
+      "PENDING": "Menunggu Pembayaran",
+      "CONFIRMED": "Pembayaran Dikonfirmasi",
+      "PROCESSING": "Sedang Diproses",
+      "SHIPPED": "Dalam Pengiriman",
+      "DELIVERED": "Terkirim"
+    },
+    "PaymentStatus": {
+      "UNPAID": "Belum Dibayar",
+      "PAID": "Lunas",
+      "PARTIALLY_REFUNDED": "Sebagian Direfund",
+      "REFUNDED": "Direfund",
+      "FAILED": "Gagal"
+    },
+    "List": {
+      "title": "Riwayat Pesanan",
+      "subtitle": "Semua pesanan yang pernah kamu buat di Warung IndoMi.",
+      "fetchError": "Gagal memuat riwayat pesanan.",
+      "emptyState": "Kamu belum pernah memesan apa-apa.",
+      "startShopping": "Mulai Belanja",
+      "itemCount": "{count, plural, one {# item} other {# item}}",
+      "tracking": "Nomor Resi"
+    },
+    "Detail": {
+      "notFound": "Pesanan tidak ditemukan.",
+      "backToShopping": "Kembali Belanja",
+      "paymentSuccessful": "Pembayaran Berhasil",
+      "awaitingPaymentConfirmation": "Menunggu Konfirmasi Pembayaran",
+      "thankYou": "Terima kasih atas pesananmu! 🎉",
+      "orderReceived": "Pesanan Diterima",
+      "orderNumber": "Nomor pesanan",
+      "confirmationEmailSentTo": "Email konfirmasi dikirim ke",
+      "paymentConfirmed": "Pembayaran dikonfirmasi",
+      "paymentConfirmedDescription": "Pesananmu sudah kami terima dan sedang diproses. Email konfirmasi lengkap beserta rincian pesanan sudah dikirim ke <email></email>.",
+      "orderItems": "Item Pesanan",
+      "subtotal": "Subtotal",
+      "shippingCost": "Ongkos Kirim",
+      "tax": "Pajak",
+      "discount": "Diskon",
+      "total": "Total",
+      "orderStatus": "Status Pesanan",
+      "orderRefunded": "Pesanan ini telah direfund.",
+      "orderCancelled": "Pesanan ini telah dibatalkan.",
+      "shippingInfo": "Info Pengiriman",
+      "tracking": "Nomor Resi",
+      "trackPackage": "Lacak Paket",
+      "status": "Status",
+      "order": "Pesanan",
+      "payment": "Pembayaran",
+      "shippingAddress": "Alamat Pengiriman",
+      "paid": "Lunas",
+      "on": "pada",
+      "continueShopping": "Lanjut Belanja",
+      "viewAllOrders": "Lihat Semua Pesanan"
+    }
+  },
+  "Legal": {
+    "Common": {
+      "lastUpdated": "Terakhir diperbarui",
+      "questionsContactUs": "Ada Pertanyaan? Hubungi Kami",
+      "happyToHelp": "Kami dengan senang hati membantu pertanyaan apa pun soal kebijakan kami.",
+      "whatsappUs": "WhatsApp Kami",
+      "callUs": "Telepon"
+    }
+  },
+  "About": {
+    "metaTitle": "Tentang Kami",
+    "metaDescription": "Kenali Warung IndoMi — sumber terpercaya bahan makanan Indonesia asli, dikirim ke seluruh penjuru AS dari Madison Heights, Michigan.",
+    "kicker": "Tentang",
+    "heading": "Tentang Warung IndoMi",
+    "subheading": "Sumber terpercaya bahan makanan Indonesia asli, dikirim ke seluruh AS.",
+    "productsCount": "{count} produk",
+    "ourStory": {
+      "kicker": "Kisah Kami",
+      "heading": "Membawa Rasa Rumah ke Setiap Sudut Amerika",
+      "paragraph1": "Warung IndoMi lahir dari kebutuhan sederhana namun mendalam: kerinduan akan rasa rumah. Bagi diaspora Indonesia yang tersebar di seluruh Amerika Serikat, menemukan produk Indonesia asli — merek yang sama sejak kecil, rasa yang sama yang mengingatkan pada masakan ibu, jajanan kaki lima favorit, secangkir kopi tubruk di pagi yang tenang — selalu menjadi tantangan.",
+      "paragraph2": "Kami berbasis di <location>Madison Heights, Michigan</location>, dan melayani komunitas Indonesia di 50 negara bagian AS. Yang dimulai sebagai upaya memenuhi kebutuhan lokal telah berkembang menjadi misi: menjadikan bahan makanan Indonesia asli mudah diakses oleh setiap orang Indonesia di Amerika, di mana pun mereka tinggal.",
+      "paragraph3": "Kami memilih sendiri setiap produk yang kami jual — mengutamakan merek asli, memeriksa kesegaran, dan mengemas setiap pesanan dengan hati-hati. Saat kamu memesan dari kami, kamu bukan cuma membeli bahan makanan. Kamu mendapatkan sepotong rumah, dikirim langsung ke depan pintumu."
+    },
+    "whyChooseUs": {
+      "kicker": "Kenapa Pilih Kami",
+      "heading": "Yang Membuat Kami Berbeda",
+      "points": {
+        "products": {
+          "title": "366+ Produk Asli",
+          "desc": "Pilihan merek Indonesia asli yang dikurasi dengan cermat di 12 kategori — dari Indomie, ABC, hingga Kecap Bango."
+        },
+        "shipping": {
+          "title": "Kirim ke Seluruh Negeri",
+          "desc": "Kami kirim ke 50 negara bagian AS via USPS dan UPS. Tarif pengiriman real-time dihitung saat checkout, tanpa kejutan."
+        },
+        "payments": {
+          "title": "Pembayaran Aman",
+          "desc": "Pembayaran diproses oleh Stripe, platform bersertifikat PCI DSS Level 1. Kami tidak pernah menyimpan info kartu kamu."
+        },
+        "community": {
+          "title": "Mengutamakan Komunitas",
+          "desc": "Dibangun untuk diaspora Indonesia di Amerika. Kami paham apa yang kamu rindukan dari rumah — dan kami di sini untuk menjembataninya."
+        }
+      }
+    },
+    "ourProducts": {
+      "kicker": "Produk Kami",
+      "heading": "366 Produk di 12 Kategori",
+      "description": "Dari kebutuhan sehari-hari seperti Indomie dan kecap, hingga item khusus seperti jamu dan ikan asin — semua ada di sini."
+    },
+    "location": {
+      "kicker": "Lokasi",
+      "heading": "Di Mana Kami Berada",
+      "unitedStates": "Amerika Serikat",
+      "description": "Kami beroperasi terutama sebagai toko online. Pesanan dikemas dan dikirim dari lokasi kami di Madison Heights, Michigan."
+    },
+    "contact": {
+      "kicker": "Hubungi Kami",
+      "heading": "Kami Senang Mendengar dari Kamu",
+      "description": "Punya pertanyaan tentang produk, pesananmu, atau sekadar mau menyapa? Kami merespons cepat via WhatsApp.",
+      "chatWhatsapp": "Chat via WhatsApp",
+      "callUs": "Telepon",
+      "followFacebook": "Ikuti di Facebook",
+      "browseProducts": "Jelajahi Produk"
+    }
+  },
+  "Faq": {
+    "metaTitle": "FAQ — Pertanyaan yang Sering Diajukan",
+    "metaDescription": "Jawaban atas pertanyaan umum tentang pemesanan, pengiriman, produk, pembayaran, dan akun kamu di Warung IndoMi.",
+    "label": "Bantuan",
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "Tidak menemukan jawabanmu? Chat kami di WhatsApp — biasanya kami merespons dalam beberapa jam.",
+    "stillHaveQuestions": "Masih ada pertanyaan?",
+    "teamAvailable": "Tim kami tersedia via WhatsApp. Biasanya kami merespons dalam beberapa jam.",
+    "whatsappUs": "WhatsApp Kami",
+    "callUs": "Telepon Kami",
+    "browseProducts": "Jelajahi Produk",
+    "quickLinks": {
+      "shippingPolicy": "Kebijakan Pengiriman",
+      "returnPolicy": "Kebijakan Pengembalian",
+      "privacyPolicy": "Kebijakan Privasi",
+      "terms": "Syarat & Ketentuan"
+    },
+    "groups": {
+      "orders": "Pesanan",
+      "shipping": "Pengiriman",
+      "products": "Produk",
+      "payments": "Pembayaran",
+      "returns": "Pengembalian & Refund",
+      "account": "Akun"
+    },
+    "orderStatusList": {
+      "pending": { "label": "Menunggu", "desc": "Pembayaran diterima, pesanan dalam antrean." },
+      "processing": { "label": "Diproses", "desc": "Kami sedang mengemas barangmu." },
+      "shipped": { "label": "Dikirim", "desc": "Paket sudah diserahkan ke kurir. Nomor resi sudah dikirim." },
+      "delivered": { "label": "Terkirim", "desc": "Paket ditandai sudah diterima oleh kurir." }
+    },
+    "items": {
+      "guestCheckout": {
+        "q": "Apakah saya harus punya akun untuk memesan?",
+        "a": "Tidak perlu! Kami mendukung checkout sebagai tamu — cukup masukkan info kontak dan alamat pengiriman saat checkout. Namun, membuat akun memungkinkan kamu melacak riwayat pesanan dan menyimpan alamat pengiriman untuk checkout yang lebih cepat di kemudian hari."
+      },
+      "trackOrder": {
+        "q": "Bagaimana cara melacak pesanan saya?",
+        "a": "Setelah pesananmu dikirim, kami akan mengirimkan nomor resi ke emailmu. Kamu juga bisa melihat status pelacakan di website USPS atau UPS. Jika kamu punya akun, pesananmu juga bisa dilihat di \"Pesanan Saya\"."
+      },
+      "modifyOrder": {
+        "q": "Bisakah saya mengubah atau membatalkan pesanan setelah dibuat?",
+        "a": "Kami memproses pesanan dengan cepat, tapi jika kamu perlu melakukan perubahan, silakan hubungi kami via WhatsApp (+1 626 461-4963) sesegera mungkin. Setelah pesanan dikirim (status: Dikirim), pesanan tidak bisa lagi dibatalkan atau diubah."
+      },
+      "orderStatuses": {
+        "q": "Apa arti masing-masing status pesanan?"
+      },
+      "noConfirmationEmail": {
+        "q": "Saya sudah memesan tapi tidak menerima email konfirmasi. Apa yang harus saya lakukan?",
+        "a": "Silakan cek dulu folder spam atau junk kamu. Jika emailnya tidak ada di sana, hubungi kami via WhatsApp dengan nama dan alamat email yang kamu gunakan saat memesan."
+      },
+      "shippingTime": {
+        "q": "Berapa lama waktu pengiriman?",
+        "a": "Kami memproses pesanan dalam 1–2 hari kerja. Setelah itu, estimasi pengiriman 3–7 hari kerja tergantung lokasi dan kurir yang dipilih. USPS Priority Mail biasanya 1–3 hari; USPS Ground Advantage 2–5 hari; UPS Ground 1–5 hari."
+      },
+      "shippingCost": {
+        "q": "Bagaimana ongkos kirim dihitung?",
+        "a": "Ongkos kirim dihitung saat checkout berdasarkan total berat pesanan dan alamat pengirimanmu. Kamu akan melihat tarif pengiriman pastinya sebelum memasukkan info pembayaran."
+      },
+      "hawaiiAlaska": {
+        "q": "Apakah kalian kirim ke semua negara bagian AS, termasuk Hawaii dan Alaska?",
+        "a": "Ya! Kami kirim ke 50 negara bagian AS. Perlu diketahui, pengiriman ke Hawaii dan Alaska mungkin lebih mahal dan lebih lama dibanding 48 negara bagian daratan."
+      },
+      "lostDamaged": {
+        "q": "Bagaimana jika paket saya hilang atau rusak?",
+        "a": "Silakan hubungi kami dalam 7 hari sejak tanggal perkiraan pengiriman. Kami akan mengajukan klaim ke kurir atas namamu dan menyelesaikan masalah secepat mungkin. Untuk paket rusak, simpan semua kemasan asli dan ambil foto."
+      },
+      "authentic": {
+        "q": "Apakah produk kalian merek Indonesia asli?",
+        "a": "Tentu saja. Semua produk yang kami jual adalah merek Indonesia asli — sama seperti yang kamu temukan di supermarket di Indonesia atau toko bahan makanan Asia terpercaya di AS. Kami tidak menjual produk palsu atau tiruan."
+      },
+      "halal": {
+        "q": "Apakah kalian menjual produk bersertifikat halal?",
+        "a": "Banyak produk kami bersertifikat halal. Silakan cek kemasan atau deskripsi produk untuk detail sertifikasi halal. Jika ragu tentang produk tertentu, jangan sungkan tanya kami via WhatsApp."
+      },
+      "expiry": {
+        "q": "Bagaimana dengan tanggal kedaluwarsa produk?",
+        "a": "Kami rutin merotasi stok untuk menjaga kesegaran. Semua produk dijual dengan minimal 3 bulan sebelum tanggal kedaluwarsa. Tanggal pastinya tertera di kemasan masing-masing produk."
+      },
+      "requestProduct": {
+        "q": "Bisakah saya meminta produk tertentu yang belum ada di toko?",
+        "a": "Tentu! Kami senang mendengar dari pelanggan. Jika ada produk yang ingin kamu lihat di toko kami, beri tahu kami via WhatsApp. Kami akan berusaha mencarikannya."
+      },
+      "paymentMethods": {
+        "q": "Metode pembayaran apa saja yang diterima?",
+        "a": "Kami menerima semua kartu kredit dan debit utama: Visa, Mastercard, American Express, dan Discover. Pembayaran diproses dengan aman melalui Stripe."
+      },
+      "safeCard": {
+        "q": "Apakah aman memasukkan info kartu saya di website ini?",
+        "a": "Ya. Pembayaranmu diproses oleh Stripe, prosesor pembayaran bersertifikat PCI DSS Level 1. Kami tidak pernah melihat atau menyimpan nomor kartu lengkapmu — langsung masuk ke server aman Stripe."
+      },
+      "whenCharged": {
+        "q": "Kapan kartu saya akan terpotong?",
+        "a": "Kartumu langsung terpotong saat kamu mengonfirmasi pesanan di checkout. Kamu akan menerima email konfirmasi pesanan setelahnya."
+      },
+      "canReturn": {
+        "q": "Bisakah saya mengembalikan produk?",
+        "a": "Karena regulasi keamanan pangan, sebagian besar produk makanan tidak bisa dikembalikan setelah diterima. Namun, jika kamu menerima barang rusak atau salah produk, kami akan memperbaikinya. Lihat Kebijakan Pengembalian & Refund lengkap kami untuk detailnya."
+      },
+      "refundTime": {
+        "q": "Berapa lama proses refund?",
+        "a": "Setelah refund disetujui, prosesnya lewat Stripe kembali ke metode pembayaran aslimu. Biasanya butuh 5–10 hari kerja untuk muncul di rekening kamu, tergantung bank atau penerbit kartu."
+      },
+      "resetPassword": {
+        "q": "Bagaimana cara reset password saya?",
+        "a": "Buka halaman Masuk lalu klik \"Lupa password?\" Masukkan alamat emailmu dan kami akan kirimkan link reset password."
+      },
+      "deleteAccount": {
+        "q": "Bagaimana cara menghapus akun saya?",
+        "a": "Untuk meminta penghapusan akun, silakan hubungi kami via WhatsApp (+1 626 461-4963) dengan alamat email yang terhubung ke akunmu. Kami akan memproses penghapusan dalam 5 hari kerja."
+      },
+      "guestVsAccount": {
+        "q": "Bisakah saya menggunakan akun yang sama untuk pesanan tamu dan akun terdaftar?",
+        "a": "Bisa. Jika kamu memesan sebagai tamu lalu membuat akun dengan email yang sama, riwayat pesananmu mungkin tidak otomatis terhubung. Hubungi kami dan kami bisa menghubungkan pesanan lama ke akunmu secara manual."
+      }
+    }
+  },
+  "PrivacyPolicy": {
+    "metaTitle": "Kebijakan Privasi",
+    "metaDescription": "Pelajari bagaimana Warung IndoMi mengumpulkan, menggunakan, dan melindungi informasi pribadimu saat berbelanja di website kami.",
+    "label": "Legal",
+    "title": "Kebijakan Privasi",
+    "subtitle": "Bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadimu.",
+    "lastUpdated": "29 Juni 2026",
+    "intro": "Warung IndoMi (\"kami\") berkomitmen melindungi privasimu. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasimu saat kamu mengunjungi website kami dan melakukan pemesanan. Mohon baca kebijakan ini dengan saksama. Dengan menggunakan situs kami, kamu setuju dengan praktik yang dijelaskan di sini.",
+    "s1": {
+      "heading": "1. Informasi yang Kami Kumpulkan",
+      "directInfoHeading": "Informasi yang Kamu Berikan Langsung",
+      "directInfoIntro": "Saat kamu memesan atau membuat akun, kami mengumpulkan:",
+      "directInfoList": [
+        "Nama lengkap (depan dan belakang)",
+        "Alamat email",
+        "Alamat pengiriman (jalan, kota, negara bagian, kode pos)",
+        "Nomor telepon",
+        "Password (jika kamu membuat akun — disimpan dengan aman lewat Firebase Auth, tidak pernah dalam bentuk teks biasa)",
+        "Catatan pesanan atau pesan yang kamu kirim ke kami"
+      ],
+      "paymentInfoHeading": "Informasi Pembayaran",
+      "paymentInfoBody": "Semua pemrosesan pembayaran ditangani oleh <strong>Stripe</strong>, prosesor pembayaran bersertifikat PCI DSS Level 1. Kami tidak pernah melihat, menerima, atau menyimpan nomor kartu kredit lengkap, CVV, atau data pembayaran sensitif lainnya. Stripe dapat mengumpulkan dan menyimpan informasi pembayaran sesuai dengan <link>Kebijakan Privasi</link> mereka sendiri.",
+      "autoInfoHeading": "Informasi yang Dikumpulkan Otomatis",
+      "autoInfoIntro": "Saat kamu mengunjungi website kami, kami mungkin secara otomatis mengumpulkan:",
+      "autoInfoList": [
+        "Alamat IP dan lokasi umum",
+        "Jenis dan versi browser",
+        "Halaman yang dilihat dan waktu yang dihabiskan di situs",
+        "URL rujukan",
+        "Jenis perangkat (desktop, mobile, tablet)",
+        "Data sesi yang disimpan di cookie (isi keranjang, sesi login)"
+      ]
+    },
+    "s2": {
+      "heading": "2. Bagaimana Kami Menggunakan Informasimu",
+      "intro": "Kami menggunakan informasi yang kami kumpulkan untuk:",
+      "list": [
+        "Memproses dan memenuhi pesananmu",
+        "Mengirim email konfirmasi pesanan dan notifikasi pengiriman",
+        "Membuat label pengiriman dan mengoordinasikan pengantaran lewat USPS dan UPS",
+        "Menjawab pertanyaanmu dan memberikan dukungan pelanggan",
+        "Memelihara dan meningkatkan website dan layanan kami",
+        "Memenuhi kewajiban hukum (catatan pajak, pencegahan penipuan)",
+        "Mengirim email promosi jika kamu memilih untuk berlangganan (kamu bisa berhenti berlangganan kapan saja)"
+      ],
+      "noSell": "Kami tidak menjual, menyewakan, atau memperdagangkan informasi pribadimu ke pihak ketiga untuk tujuan pemasaran mereka sendiri."
+    },
+    "s3": {
+      "heading": "3. Layanan Pihak Ketiga",
+      "intro": "Kami menggunakan layanan pihak ketiga tepercaya untuk menjalankan bisnis kami. Masing-masing punya kebijakan privasi sendiri:",
+      "firebase": "autentikasi pengguna dan manajemen akun.",
+      "firebaseLink": "Kebijakan Privasi Firebase",
+      "stripe": "pemrosesan pembayaran yang aman.",
+      "stripeLink": "Kebijakan Privasi Stripe",
+      "shippo": "pembuatan label pengiriman dan perhitungan tarif lewat USPS dan UPS.",
+      "shippoLink": "Kebijakan Privasi Shippo",
+      "resend": "pengiriman email transaksional (konfirmasi pesanan, notifikasi pengiriman).",
+      "resendLink": "Kebijakan Privasi Resend",
+      "cloudinary": "hosting dan pengiriman gambar produk.",
+      "cloudinaryLink": "Kebijakan Privasi Cloudinary",
+      "supabase": "database cloud aman tempat informasi pesanan dan akunmu disimpan.",
+      "supabaseLink": "Kebijakan Privasi Supabase"
+    },
+    "s4": {
+      "heading": "4. Cookie",
+      "intro": "Kami menggunakan cookie untuk meningkatkan pengalamanmu di situs kami. Kami hanya menggunakan cookie esensial:",
+      "authCookieLabel": "Cookie autentikasi",
+      "authCookieDesc": "membuatmu tetap masuk selama sesi (via Firebase Auth)",
+      "cartCookieLabel": "Cookie keranjang",
+      "cartCookieDesc": "menyimpan isi keranjangmu antar kunjungan halaman agar barang tidak hilang saat kamu menutup tab browser",
+      "noThirdParty": "Kami tidak menggunakan cookie iklan atau pelacakan pihak ketiga. Kamu bisa menonaktifkan cookie di pengaturan browser, tapi ini bisa memengaruhi fitur tertentu di situs (mis. tetap masuk atau menyimpan item di keranjang)."
+    },
+    "s5": {
+      "heading": "5. Retensi Data",
+      "orderRecordsLabel": "Catatan pesanan",
+      "orderRecordsDesc": "disimpan selama 7 tahun untuk memenuhi regulasi pajak dan akuntansi AS",
+      "accountDataLabel": "Data akun",
+      "accountDataDesc": "disimpan sampai kamu meminta penghapusan akunmu",
+      "guestDataLabel": "Data checkout tamu",
+      "guestDataDesc": "email dan alamat pengiriman disimpan bersama catatan pesanan untuk periode 7 tahun yang sama",
+      "deleteRequest": "Jika kamu ingin data pribadimu dihapus, silakan hubungi kami via WhatsApp atau email. Kami akan memenuhi permintaanmu dalam 30 hari, kecuali untuk informasi yang secara hukum wajib kami simpan."
+    },
+    "s6": {
+      "heading": "6. Hak Kamu (CCPA — Penduduk California)",
+      "intro": "Jika kamu penduduk California, California Consumer Privacy Act (CCPA) memberikan hak khusus terkait informasi pribadimu:",
+      "rightToKnowLabel": "Hak untuk Mengetahui",
+      "rightToKnowDesc": "kamu bisa meminta detail data pribadi apa yang telah kami kumpulkan tentang kamu dan bagaimana penggunaannya",
+      "rightToDeleteLabel": "Hak untuk Menghapus",
+      "rightToDeleteDesc": "kamu bisa meminta kami menghapus data pribadimu, dengan beberapa pengecualian",
+      "rightToOptOutLabel": "Hak untuk Menolak Penjualan Data",
+      "rightToOptOutDesc": "kami tidak menjual data pribadimu, jadi hak ini tidak berlaku, tapi kami menghormati prinsip ini",
+      "rightToNonDiscriminationLabel": "Hak Bebas Diskriminasi",
+      "rightToNonDiscriminationDesc": "kami tidak akan mendiskriminasi kamu karena menggunakan hak CCPA-mu",
+      "exerciseRights": "Untuk menggunakan hak-hak ini, hubungi kami via WhatsApp di +1 (626) 461-4963. Kami akan merespons dalam 45 hari."
+    },
+    "s7": {
+      "heading": "7. Privasi Anak (COPPA)",
+      "body": "Website kami tidak ditujukan untuk anak-anak di bawah 13 tahun. Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak di bawah 13 tahun. Jika kamu merasa kami tidak sengaja mengumpulkan informasi tersebut, segera hubungi kami dan kami akan mengambil langkah untuk menghapusnya."
+    },
+    "s8": {
+      "heading": "8. Keamanan Data",
+      "intro": "Kami mengambil langkah wajar untuk melindungi informasi pribadimu, termasuk:",
+      "list": [
+        "Enkripsi HTTPS di semua halaman",
+        "Pemrosesan pembayaran via Stripe (patuh PCI DSS — kami tidak pernah menyimpan data kartu)",
+        "Database cloud aman (Supabase) dengan kontrol akses",
+        "Firebase Auth untuk manajemen password yang aman"
+      ],
+      "noGuarantee": "Tidak ada metode transmisi lewat Internet yang 100% aman. Meski kami berusaha melindungi datamu, kami tidak bisa menjamin keamanan mutlak."
+    },
+    "s9": {
+      "heading": "9. Perubahan Kebijakan Ini",
+      "body": "Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan signifikan akan diinformasikan lewat email ke pengguna terdaftar. Tanggal \"Terakhir diperbarui\" di bagian atas halaman ini menunjukkan kapan perubahan terbaru dilakukan. Penggunaan situs kami setelah adanya perubahan berarti kamu menerima kebijakan yang diperbarui."
+    }
+  },
+  "Terms": {
+    "metaTitle": "Syarat & Ketentuan",
+    "metaDescription": "Syarat & Ketentuan berbelanja di Warung IndoMi — aturan yang mengatur pesanan, pembayaran, pengiriman, dan penggunaan website kami.",
+    "label": "Legal",
+    "title": "Syarat & Ketentuan",
+    "subtitle": "Mohon baca ketentuan ini dengan saksama sebelum memesan.",
+    "lastUpdated": "29 Juni 2026",
+    "intro": "Syarat & Ketentuan (\"Ketentuan\") ini mengatur penggunaanmu atas website Warung IndoMi (warungindomi.com) dan pembelian produk dari kami. Dengan mengakses situs kami atau melakukan pemesanan, kamu setuju untuk terikat dengan Ketentuan ini. Jika tidak setuju, mohon jangan gunakan situs kami.",
+    "s1": {
+      "heading": "1. Siapa Kami",
+      "body": "Warung IndoMi adalah toko bahan makanan Indonesia berbasis di Madison Heights, Michigan, USA. Kami menjual produk makanan Indonesia asli dan mengirim ke seluruh penjuru Amerika Serikat.",
+      "contact": "Kontak: WhatsApp +1 (626) 461-4963"
+    },
+    "s2": {
+      "heading": "2. Penerimaan Ketentuan",
+      "body": "Dengan menelusuri website kami, membuat akun, atau memesan, kamu mengonfirmasi bahwa kamu berusia minimal 18 tahun (atau punya izin orang tua) dan setuju dengan Ketentuan ini dan Kebijakan Privasi kami."
+    },
+    "s3": {
+      "heading": "3. Akun Pengguna",
+      "intro": "Membuat akun bersifat opsional — kamu bisa checkout sebagai tamu. Jika kamu memilih membuat akun:",
+      "list": [
+        "Kamu bertanggung jawab menjaga kerahasiaan passwordmu",
+        "Kamu setuju memberikan informasi yang akurat dan terkini",
+        "Kamu harus segera memberi tahu kami jika ada penggunaan akun tanpa izin",
+        "Kami berhak menangguhkan atau menghentikan akun yang melanggar Ketentuan ini atau terlibat aktivitas penipuan"
+      ]
+    },
+    "s4": {
+      "heading": "4. Produk & Harga",
+      "list": [
+        "Semua harga ditampilkan dalam Dolar AS (USD)",
+        "Harga dapat berubah sewaktu-waktu tanpa pemberitahuan",
+        "Gambar produk hanya untuk ilustrasi. Kemasan asli mungkin sedikit berbeda karena pembaruan dari produsen",
+        "Kami berusaha menjaga ketersediaan produk tetap akurat, namun kami berhak membatalkan pesanan jika produk tidak tersedia setelah pesanan dibuat. Dalam kasus ini, kamu akan menerima refund penuh",
+        "Produk merupakan merek impor Indonesia. Kami tidak memproduksi atau mengubah produk apa pun"
+      ]
+    },
+    "s5": {
+      "heading": "5. Proses Pemesanan",
+      "intro": "Pesanan dikonfirmasi hanya setelah pembayaran berhasil diproses. Begini alurnya:",
+      "list": [
+        "Tambahkan barang ke keranjang dan lanjutkan ke checkout",
+        "Isi informasi kontak dan alamat pengirimanmu",
+        "Pilih metode dan tarif pengiriman",
+        "Selesaikan pembayaran via Stripe",
+        "Kamu akan menerima email konfirmasi pesanan dengan nomor pesanan (format: WIM-TAHUN-XXXX)",
+        "Kami berhak membatalkan atau menolak pesanan apa pun atas kebijakan kami, dengan refund penuh"
+      ]
+    },
+    "s6": {
+      "heading": "6. Pembayaran",
+      "list": [
+        "Pembayaran diproses dengan aman oleh Stripe. Kami menerima Visa, Mastercard, American Express, dan Discover",
+        "Kami tidak menyimpan informasi kartu pembayaranmu di server kami",
+        "Kartumu langsung terpotong saat konfirmasi pesanan",
+        "Semua transaksi dalam USD. Jika kartumu diterbitkan dalam mata uang lain, bankmu akan menangani konversi mata uang dan mungkin mengenakan biaya transaksi luar negeri"
+      ]
+    },
+    "s7": {
+      "heading": "7. Pengiriman",
+      "body1": "Kami mengirim via USPS dan UPS ke 50 negara bagian AS. Ongkos kirim dan estimasi waktu pengiriman dihitung saat checkout berdasarkan lokasi dan berat pesananmu. Untuk detail lengkap, silakan lihat <link>Kebijakan Pengiriman</link> kami.",
+      "body2": "Waktu pengiriman adalah estimasi, bukan jaminan. Kami tidak bertanggung jawab atas keterlambatan yang disebabkan oleh kurir, cuaca, bencana alam, atau faktor lain di luar kendali kami."
+    },
+    "s8": {
+      "heading": "8. Pengembalian & Refund",
+      "body": "Karena sifat produk makanan dan bahan makanan, sebagian besar barang tidak bisa dikembalikan setelah diterima. Kami akan menerbitkan refund untuk barang yang rusak, cacat, atau salah kirim. Untuk detail lengkap, silakan lihat <link>Kebijakan Pengembalian & Refund</link> kami."
+    },
+    "s9": {
+      "heading": "9. Disclaimer Produk Makanan",
+      "intro": "Produk yang dijual di website kami adalah makanan dan bahan makanan impor Indonesia yang ditujukan untuk konsumsi manusia. Perhatikan hal berikut:",
+      "list": [
+        "Selalu periksa daftar bahan dan info alergen di kemasan produk sebelum dikonsumsi",
+        "Kami tidak bertanggung jawab atas reaksi merugikan akibat pantangan diet atau alergi individu",
+        "Beberapa produk mungkin mengandung bahan yang tidak lazim ditemukan di produk toko AS biasa. Baca label dengan cermat",
+        "Produk harus disimpan sesuai instruksi penyimpanan di kemasan",
+        "Kami tidak memodifikasi, mengemas ulang, atau mengubah produk dari bentuk asli pabrikannya"
+      ]
+    },
+    "s10": {
+      "heading": "10. Penggunaan yang Dilarang",
+      "intro": "Kamu setuju untuk tidak menggunakan situs kami untuk:",
+      "list": [
+        "Melakukan pesanan palsu atau menggunakan metode pembayaran curian",
+        "Mengumpulkan atau scraping data dari website kami",
+        "Berusaha mengganggu atau merusak operasional atau keamanan website",
+        "Menjual kembali produk kami secara komersial tanpa izin tertulis sebelumnya",
+        "Mengirimkan informasi palsu atau menyesatkan (mis. alamat pengiriman palsu)"
+      ]
+    },
+    "s11": {
+      "heading": "11. Kekayaan Intelektual",
+      "body1": "Konten di website ini — termasuk teks, gambar, logo, dan desain — dimiliki oleh atau dilisensikan ke Warung IndoMi. Kamu tidak boleh mereproduksi, mendistribusikan, atau menggunakan konten kami tanpa izin tertulis sebelumnya, kecuali untuk penggunaan pribadi non-komersial.",
+      "body2": "Nama produk dan merek dagang adalah milik pemiliknya masing-masing (mis. Indomie®, ABC®, Kecap Bango®). Kami adalah retailer resmi, bukan afiliasi atau didukung oleh merek-merek tersebut."
+    },
+    "s12": {
+      "heading": "12. Batasan Tanggung Jawab",
+      "body1": "Sejauh diizinkan oleh hukum, Warung IndoMi tidak bertanggung jawab atas kerugian tidak langsung, insidental, khusus, atau konsekuensial yang timbul dari penggunaan situs atau produk kami, termasuk namun tidak terbatas pada kehilangan keuntungan, data, atau reputasi.",
+      "body2": "Total tanggung jawab kami kepadamu untuk klaim apa pun yang timbul dari pembelianmu tidak akan melebihi jumlah yang kamu bayarkan untuk pesanan spesifik yang menjadi dasar klaim tersebut."
+    },
+    "s13": {
+      "heading": "13. Penyelesaian Sengketa",
+      "body1": "Kami mendorong kamu untuk menghubungi kami langsung untuk menyelesaikan sengketa apa pun sebelum mengambil tindakan hukum formal. Kamu bisa menghubungi kami via WhatsApp di +1 (626) 461-4963. Klaim harus diajukan dalam 30 hari sejak menerima pesananmu.",
+      "body2": "Jika sengketa tidak bisa diselesaikan secara informal, kedua pihak setuju untuk mencoba mediasi sebelum melakukan litigasi. Kamu setuju untuk mengajukan klaim secara individu, bukan sebagai penggugat dalam class action."
+    },
+    "s14": {
+      "heading": "14. Hukum yang Berlaku",
+      "body": "Ketentuan ini diatur dan ditafsirkan sesuai dengan hukum Negara Bagian Michigan, Amerika Serikat, tanpa memperhatikan ketentuan konflik hukumnya. Tindakan hukum apa pun harus diajukan di pengadilan yang berlokasi di Oakland County, Michigan."
+    },
+    "s15": {
+      "heading": "15. Perubahan Ketentuan Ini",
+      "body": "Kami berhak memperbarui Ketentuan ini kapan saja. Tanggal \"Terakhir diperbarui\" di bagian atas halaman ini mencerminkan revisi terbaru. Penggunaan website kami setelah perubahan dipublikasikan berarti kamu menerima Ketentuan yang direvisi. Kami menyarankan untuk memeriksa halaman ini secara berkala."
+    }
+  },
+  "ReturnPolicy": {
+    "metaTitle": "Kebijakan Pengembalian & Refund",
+    "metaDescription": "Kebijakan pengembalian dan refund Warung IndoMi — pelajari kapan refund diterbitkan, cara mengajukannya, dan kebijakan kami tentang produk makanan.",
+    "label": "Legal",
+    "title": "Kebijakan Pengembalian & Refund",
+    "subtitle": "Kepuasanmu penting bagi kami. Berikut semua yang perlu kamu tahu.",
+    "lastUpdated": "29 Juni 2026",
+    "s1": {
+      "heading": "Komitmen Kami",
+      "body1": "Di Warung IndoMi, kami sangat berhati-hati dalam mengemas dan mengirim setiap pesanan. Jika ada yang tidak beres, kami ingin memperbaikinya. Mohon baca kebijakan ini dengan saksama agar kamu tahu apa yang diharapkan dan bagaimana menghubungi kami jika ada masalah.",
+      "body2": "Semua permintaan pengembalian dan refund harus diajukan <strong>dalam 7 hari kalender</strong> sejak tanggal pengiriman yang tertera di info pelacakanmu."
+    },
+    "s2": {
+      "heading": "Produk Makanan Tidak Dapat Dikembalikan",
+      "intro": "Karena regulasi keamanan pangan dan pedoman FDA, <strong>sebagian besar produk makanan dan bahan makanan tidak dapat dikembalikan</strong> setelah diterima. Ini berlaku untuk:",
+      "list": [
+        "Mie instan, beras, dan bahan kering lainnya",
+        "Bumbu, rempah, dan saus masak (bumbu, sambal, kecap, saus)",
+        "Minuman dan kopi",
+        "Snack dan kerupuk (kerupuk, snack kemasan)",
+        "Bahan kue dan produk susu",
+        "Produk kesehatan, vitamin, dan personal care",
+        "Produk apa pun yang segel kemasannya sudah rusak atau terbuka"
+      ],
+      "note": "Ini adalah praktik standar bagi retailer makanan di Amerika Serikat dan wajib demi keamanan konsumen. Kami menghargai pengertianmu."
+    },
+    "s3": {
+      "heading": "Kapan Kami Menerbitkan Refund",
+      "intro": "Kami akan menerbitkan <strong>refund penuh atau penggantian</strong> dalam situasi berikut:",
+      "case1Heading": "1. Barang Rusak Saat Pengiriman",
+      "case1Intro": "Jika produkmu tiba dalam keadaan rusak (mis. kemasan pecah, kotak penyok, isi bocor), silakan hubungi kami dengan:",
+      "case1List": [
+        "Nomor pesananmu",
+        "Foto jelas dari barang yang rusak",
+        "Foto kemasan luar (kotak atau amplop)"
+      ],
+      "case2Heading": "2. Barang Salah Kirim",
+      "case2Body": "Jika kamu menerima produk yang berbeda dari yang kamu pesan, kami akan mengatur penggantian atau refund penuh. Silakan kirimkan nomor pesanan dan foto barang yang kamu terima.",
+      "case3Heading": "3. Barang Hilang dalam Paket",
+      "case3Body": "Jika pesananmu sampai tapi ada satu atau lebih barang yang hilang, hubungi kami dengan nomor pesanan dan foto barang yang kamu terima. Kami akan memverifikasi dengan catatan pengemasan kami dan menyelesaikan masalahnya.",
+      "case4Heading": "4. Pesanan Tidak Terkirim",
+      "case4Body": "Jika status pelacakanmu menunjukkan \"terkirim\" tapi kamu tidak menerima paketnya, cek dulu dengan tetangga dan sekitar propertimu. Lalu hubungi kami dan kami akan mengajukan klaim paket hilang ke kurir atas namamu."
+    },
+    "s4": {
+      "heading": "Cara Mengajukan Refund",
+      "intro": "Untuk mengajukan permintaan refund, ikuti langkah berikut:",
+      "step1Label": "Langkah 1:",
+      "step1Body": "Ambil foto jelas dari masalahnya (produk rusak, salah barang, atau kemasan luar)",
+      "step2Label": "Langkah 2:",
+      "step2BodyBefore": "Hubungi kami via WhatsApp di",
+      "step2BodyAfter": "dalam 7 hari sejak menerima pesananmu",
+      "step3Label": "Langkah 3:",
+      "step3Body": "Sertakan nomor pesananmu (format: WIM-TAHUN-XXXX) dan foto-fotonya",
+      "step4Label": "Langkah 4:",
+      "step4Body": "Tim kami akan meninjau permintaanmu dan merespons dalam 1–2 hari kerja"
+    },
+    "s5": {
+      "heading": "Waktu Proses Refund",
+      "intro": "Setelah refund disetujui, prosesnya lewat <strong>Stripe</strong> kembali ke metode pembayaran aslimu. Mohon tunggu:",
+      "list": [
+        "1–3 hari kerja bagi kami untuk memproses dan mengajukan refund lewat Stripe",
+        "5–10 hari kerja tambahan agar refund muncul di rekening bank atau kartu kreditmu (jangka waktu ini ditentukan oleh bankmu, bukan kami)"
+      ],
+      "note": "Kamu akan menerima email konfirmasi saat refund diproses. Kami tidak bisa mempercepat proses di pihak bankmu."
+    },
+    "s6": {
+      "heading": "Pembatalan Pesanan",
+      "intro": "Kamu bisa meminta pembatalan <strong>sebelum pesananmu dikirim</strong>. Karena kami memproses pesanan dengan cepat (biasanya dalam 1–2 hari kerja), segera hubungi kami jika perlu membatalkan.",
+      "pendingItem": "Pesanan berstatus <strong>Menunggu</strong> atau <strong>Diproses</strong> — bisa dibatalkan untuk refund penuh",
+      "shippedItem": "Pesanan berstatus <strong>Dikirim</strong> — tidak bisa dibatalkan. Jika tetap ingin refund, barang harus memenuhi syarat di atas"
+    },
+    "s7": {
+      "heading": "Pengecualian & Situasi Tidak Dapat Direfund",
+      "intro": "Refund tidak akan diterbitkan untuk:",
+      "list": [
+        "Produk yang dikembalikan tanpa izin sebelumnya — selalu hubungi kami dulu sebelum mengirim apa pun kembali",
+        "Kerusakan akibat penyimpanan yang tidak tepat setelah diterima (mis. terkena panas, lembap)",
+        "Produk yang sudah dibuka atau sebagian dikonsumsi, kecuali cacat saat dibuka",
+        "Alamat pengiriman salah yang diberikan pelanggan sehingga pengiriman gagal",
+        "Keterlambatan kurir di luar kendali kami (cuaca, hari libur, gangguan layanan USPS/UPS)",
+        "Permintaan yang diajukan lebih dari 7 hari setelah pengiriman",
+        "Berubah pikiran setelah pesanan dikirim"
+      ]
+    }
+  },
+  "ShippingPolicy": {
+    "metaTitle": "Kebijakan Pengiriman",
+    "metaDescription": "Kebijakan pengiriman Warung IndoMi — kurir, waktu pengiriman, tarif, area jangkauan, pelacakan, dan cara kami menangani paket hilang atau rusak.",
+    "label": "Pengiriman",
+    "title": "Kebijakan Pengiriman",
+    "subtitle": "Semua yang perlu kamu tahu tentang cara kami mengirim pesananmu.",
+    "lastUpdated": "29 Juni 2026",
+    "intro": "Kami ingin belanjaan bahan makanan Indonesiamu sampai dengan aman dan tepat waktu. Berikut semua yang perlu kamu tahu tentang cara kami mengemas dan mengirim pesanan, jangka waktu pengiriman, dan apa yang harus dilakukan jika ada masalah.",
+    "s1": {
+      "heading": "Kurir Pengiriman",
+      "intro": "Kami mengirim lewat dua kurir utama AS:",
+      "usps": "<strong>USPS (United States Postal Service)</strong> — Priority Mail (1–3 hari) dan Ground Advantage (2–5 hari)",
+      "ups": "<strong>UPS (United Parcel Service)</strong> — UPS Ground (1–5 hari tergantung zona)",
+      "note": "Kurir dan tingkat layanan dipilih secara otomatis berdasarkan berat dan dimensi pesananmu serta alamat pengirimanmu. Kami menggunakan Shippo untuk membuat label pengiriman dan menghitung tarif terbaik yang tersedia."
+    },
+    "s2": {
+      "heading": "Waktu Proses",
+      "intro": "Pesanan diproses pada <strong>hari kerja (Senin–Jumat)</strong>, tidak termasuk hari libur federal. Setelah pembayaran berhasil:",
+      "item1": "Sebagian besar pesanan dikemas dan dikirim dalam <strong>1–2 hari kerja</strong>",
+      "item2": "Pesanan yang dibuat sebelum jam 2:00 siang Waktu Timur (ET) pada hari kerja biasanya dikirim di hari yang sama atau hari kerja berikutnya",
+      "item3": "Pada musim ramai (mis. hari libur, Idul Fitri/Lebaran), proses bisa memakan waktu tambahan 1–2 hari"
+    },
+    "s3": {
+      "heading": "Estimasi Waktu Pengiriman",
+      "intro": "Waktu pengiriman di bawah ini adalah estimasi dari tanggal pengiriman (bukan tanggal pemesanan) dan berlaku untuk pesanan yang dikirim dari Madison Heights, Michigan.",
+      "usps1": "<strong>USPS Priority Mail:</strong> 1–3 hari kerja",
+      "usps2": "<strong>USPS Ground Advantage:</strong> 2–5 hari kerja",
+      "ups": "<strong>UPS Ground:</strong> 1–5 hari kerja (lebih singkat untuk negara bagian terdekat)",
+      "note": "Estimasi waktu pengiriman bukan jaminan. Kurir kadang mengalami keterlambatan karena cuaca, lonjakan volume, atau faktor lain di luar kendali kami. Kami tidak bertanggung jawab atas keterlambatan yang disebabkan masalah kurir setelah paket diserahkan."
+    },
+    "s4": {
+      "heading": "Tarif Pengiriman",
+      "intro": "Ongkos kirim dihitung secara real-time saat checkout berdasarkan:",
+      "list": [
+        "Total berat pesananmu",
+        "Dimensi kemasan (kami menggunakan preset kotak standar)",
+        "Kode pos pengirimanmu"
+      ],
+      "note": "Kamu akan melihat ongkos kirim yang pasti dan bisa memilih kurir serta tingkat layanan favoritmu <strong>sebelum memasukkan info pembayaran</strong>. Tidak ada biaya pengiriman tersembunyi."
+    },
+    "s5": {
+      "heading": "Cakupan Pengiriman",
+      "usStatesHeading": "Negara Bagian AS",
+      "usStatesBody": "Kami mengirim ke 50 negara bagian AS, termasuk Hawaii dan Alaska. Pengiriman ke Hawaii dan Alaska mungkin memiliki ongkos kirim lebih tinggi dan estimasi waktu pengiriman lebih lama.",
+      "poBoxHeading": "PO Box",
+      "poBoxBody": "USPS bisa mengirim ke PO Box. UPS tidak bisa mengirim ke PO Box. Jika kamu memberikan alamat PO Box, pesananmu otomatis akan dikirim via USPS.",
+      "internationalHeading": "Pengiriman Internasional",
+      "internationalBody": "Saat ini kami <strong>tidak mengirim ke luar negeri</strong>. Kami hanya mengirim dalam Amerika Serikat. Kami juga belum mengirim ke wilayah AS seperti Puerto Rico, Guam, US Virgin Islands, atau alamat militer APO/FPO saat ini."
+    },
+    "s6": {
+      "heading": "Pelacakan Paket",
+      "intro": "Setelah pesananmu dikirim, kamu akan menerima email konfirmasi pengiriman dengan:",
+      "list": [
+        "Nomor resimu",
+        "Link untuk melacak paketmu langsung di USPS.com atau UPS.com",
+        "Estimasi tanggal pengiriman (jika tersedia dari kurir)"
+      ],
+      "orderHistoryNote": "Jika kamu punya akun, kamu juga bisa melacak status pesananmu dari halaman <link>Riwayat Pesanan</link>.",
+      "delayNote": "Mohon tunggu 24 jam setelah menerima email pelacakan agar info pelacakan diperbarui di sistem kurir."
+    },
+    "s7": {
+      "heading": "Paket Hilang atau Rusak",
+      "notDeliveredHeading": "Paket Tidak Terkirim",
+      "notDeliveredIntro": "Jika status pelacakanmu menunjukkan \"Terkirim\" tapi kamu belum menerima paketnya:",
+      "notDeliveredStep1": "Cek kotak surat, teras, garasi, dan sekitar propertimu",
+      "notDeliveredStep2": "Tanya tetangga apakah paketnya dititipkan ke mereka",
+      "notDeliveredStep3": "Cek dengan manajer gedung jika kamu tinggal di apartemen",
+      "notDeliveredStep4": "Tunggu 1 hari kerja tambahan — kurir kadang menandai paket terkirim sehari lebih awal",
+      "notDeliveredStep5": "Jika masih belum ditemukan, hubungi kami via WhatsApp dalam <strong>7 hari</strong> sejak tanggal pengiriman yang dilaporkan. Kami akan mengajukan klaim ke kurir atas namamu.",
+      "damagedHeading": "Paket Rusak Saat Transit",
+      "damagedIntro": "Jika paketmu tiba dengan kerusakan yang terlihat:",
+      "damagedStep1": "Ambil foto kemasan luar (kotak/amplop) <strong>sebelum dibuka</strong> jika memungkinkan",
+      "damagedStep2": "Ambil foto barang yang rusak di dalamnya",
+      "damagedStep3": "Hubungi kami via WhatsApp dalam <strong>48 jam</strong> sejak pengiriman dengan foto dan nomor pesananmu",
+      "damagedStep4": "Simpan semua bahan kemasan — kurir mungkin perlu memeriksanya untuk klaim",
+      "damagedNote": "Kami akan bekerja sama dengan kurir untuk mengajukan klaim dan akan mengatur penggantian atau refund setelah klaim ditinjau."
+    },
+    "s8": {
+      "heading": "Keamanan Pangan Selama Pengiriman",
+      "body1": "Semua produk yang kami jual adalah bahan pokok dapur Indonesia yang tahan lama dan tidak mudah rusak (mie, bumbu, sambal, snack, kopi, dll). Produk-produk ini tidak memerlukan pendinginan selama transit.",
+      "body2": "Namun, perlu diperhatikan:",
+      "chocolateNote": "Produk yang mengandung cokelat (mis. wafer, snack berlapis cokelat) bisa meleleh saat cuaca sangat panas di musim panas. Kami menyarankan memilih opsi pengiriman yang lebih cepat jika memesan produk ini saat cuaca panas. Kami tidak bertanggung jawab atas pelelehan akibat panas selama transit setelah paket berada dalam penguasaan kurir.",
+      "storageNote": "Simpan semua produk sesuai instruksi di kemasannya setelah kamu menerima pesanan"
+    }
+  }
+}

@@ -1,18 +1,20 @@
 import { MessageCircle, Facebook, MapPin, Clock } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function VisitUsSection() {
+  const t = useTranslations('Home.VisitUs');
   return (
     <section className="py-16 bg-background">
       <div className="container-wim">
         <div className="text-center mb-10">
           <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1.5">
-            Get in touch
+            {t('kicker')}
           </p>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-gray-900">
-            Visit us or order online
+            {t('heading')}
           </h2>
           <p className="text-gray-500 mt-2 text-sm">
-            Based in Michigan &mdash; shipping nationwide across the U.S.
+            {t('subheading')}
           </p>
         </div>
 
@@ -28,7 +30,7 @@ export default function VisitUsSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Warung IndoMi location"
+              title={t('mapTitle')}
             />
           </div>
 
@@ -39,10 +41,10 @@ export default function VisitUsSection() {
                 <MapPin className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-0.5">Location</p>
+                <p className="font-semibold text-gray-900 mb-0.5">{t('location')}</p>
                 <p className="text-sm text-gray-500">28130 Park Ct, Madison Heights, MI 48071</p>
                 <span className="inline-block mt-1.5 text-xs font-semibold text-wim-green bg-wim-green/10 px-2.5 py-1 rounded-full">
-                  Shipping to all 50 states
+                  {t('shippingAllStates')}
                 </span>
               </div>
             </div>
@@ -52,10 +54,10 @@ export default function VisitUsSection() {
                 <Clock className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-0.5">Order Processing</p>
-                <p className="text-sm text-gray-500">Monday – Friday: 8 AM – 5 PM EST</p>
+                <p className="font-semibold text-gray-900 mb-0.5">{t('orderProcessing')}</p>
+                <p className="text-sm text-gray-500">{t('hours')}</p>
                 <span className="inline-block mt-1.5 text-xs font-semibold text-wim-yellow bg-wim-yellow/10 px-2.5 py-1 rounded-full">
-                  Orders before 2 PM ship same day
+                  {t('sameDayShipping')}
                 </span>
               </div>
             </div>
@@ -68,7 +70,7 @@ export default function VisitUsSection() {
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1EBE59] text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm flex-1"
               >
                 <MessageCircle className="h-4 w-4 shrink-0" />
-                Chat on WhatsApp
+                {t('chatWhatsapp')}
               </a>
               <a
                 href="https://www.facebook.com/levi.chen.11503/reels/"
@@ -77,7 +79,7 @@ export default function VisitUsSection() {
                 className="flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#1464D0] text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm flex-1"
               >
                 <Facebook className="h-4 w-4 shrink-0" />
-                Follow on Facebook
+                {t('followFacebook')}
               </a>
             </div>
           </div>

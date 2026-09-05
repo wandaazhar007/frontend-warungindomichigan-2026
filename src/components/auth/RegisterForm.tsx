@@ -1,35 +1,36 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Loader2, Eye, EyeOff } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { signUpWithEmail, signInWithGoogle } from '@/lib/auth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-const schema = z
-  .object({
-    firstName:       z.string().min(2, 'Minimum 2 characters'),
-    lastName:        z.string().min(2, 'Minimum 2 characters'),
-    email:           z.string().min(1, 'Required').email('Invalid email address'),
-    password:        z.string().min(8, 'Minimum 8 characters'),
-    confirmPassword: z.string().min(1, 'Required'),
-  })
-  .refine((d) => d.password === d.confirmPassword, {
-    message: 'Passwords do not match',
-    path: ['confirmPassword'],
-  });
-type FormValues = z.infer<typeof schema>;
-
 export default function RegisterForm() {
+  const t = useTranslations('Auth.RegisterForm');
   const router = useRouter();
   const [serverError, setServerError]     = useState('');
   const [googleLoading, setGoogleLoading] = useState(false);
   const [showPassword, setShowPassword]   = useState(false);
+
+  const schema = z
+    .object({
+      firstName:       z.string().min(2, t('errors.min2')),
+      lastName:        z.string().min(2, t('errors.min2')),
+      email:           z.string().min(1, t('errors.required')).email(t('errors.invalidEmail')),
+      password:        z.string().min(8, t('errors.min8')),
+      confirmPassword: z.string().min(1, t('errors.required')),
+    })
+    .refine((d) => d.password === d.confirmPassword, {
+      message: t('errors.passwordMismatch'),
+      path: ['confirmPassword'],
+    });
+  type FormValues = z.infer<typeof schema>;
 
   const {
     register,
@@ -45,9 +46,9 @@ export default function RegisterForm() {
     } catch (err: unknown) {
       const code = (err as { code?: string }).code ?? '';
       if (code === 'auth/email-already-in-use') {
-        setServerError('This email is already registered. Try signing in instead.');
+        setServerError(t('errors.emailInUse'));
       } else {
-        setServerError('Something went wrong. Please try again.');
+        setServerError(t('errors.generic'));
       }
     }
   }
@@ -59,7 +60,7 @@ export default function RegisterForm() {
       await signInWithGoogle();
       router.push('/');
     } catch {
-      setServerError('Something went wrong. Please try again.');
+      setServerError(t('errors.generic'));
     } finally {
       setGoogleLoading(false);
     }
@@ -87,7 +88,7 @@ export default function RegisterForm() {
             <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
           </svg>
         )}
-        Continue with Google
+        {t('continueGoogle')}
       </Button>
 
       <div className="relative mb-5">
@@ -95,36 +96,36 @@ export default function RegisterForm() {
           <span className="w-full border-t border-border" />
         </div>
         <div className="relative flex justify-center text-xs">
-          <span className="bg-background px-3 text-gray-400">or sign up with email</span>
+          <span className="bg-background px-3 text-gray-400">{t('orSignUpEmail')}</span>
         </div>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">First Name</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('firstName')}</label>
             <Input placeholder="Budi" className="bg-white" {...register('firstName')} />
             {errors.firstName && <p className="text-xs text-red-600 mt-1">{errors.firstName.message}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Last Name</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('lastName')}</label>
             <Input placeholder="Santoso" className="bg-white" {...register('lastName')} />
             {errors.lastName && <p className="text-xs text-red-600 mt-1">{errors.lastName.message}</p>}
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('email')}</label>
           <Input type="email" placeholder="you@example.com" className="bg-white" {...register('email')} />
           {errors.email && <p className="text-xs text-red-600 mt-1">{errors.email.message}</p>}
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Password</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('password')}</label>
           <div className="relative">
             <Input
               type={showPassword ? 'text' : 'password'}
-              placeholder="Min. 8 characters"
+              placeholder={t('min8chars')}
               className="bg-white pr-10"
               {...register('password')}
             />
@@ -141,8 +142,8 @@ export default function RegisterForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Confirm Password</label>
-          <Input type="password" placeholder="Repeat password" className="bg-white" {...register('confirmPassword')} />
+          <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('confirmPassword')}</label>
+          <Input type="password" placeholder={t('repeatPassword')} className="bg-white" {...register('confirmPassword')} />
           {errors.confirmPassword && <p className="text-xs text-red-600 mt-1">{errors.confirmPassword.message}</p>}
         </div>
 
@@ -154,18 +155,18 @@ export default function RegisterForm() {
 
         <Button type="submit" className="w-full" size="lg" disabled={disabled}>
           {isSubmitting ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : null}
-          Create Account
+          {t('createAccount')}
         </Button>
 
         <p className="text-xs text-gray-400 text-center leading-relaxed">
-          By creating an account, you agree to our terms of service and privacy policy.
+          {t('agreement')}
         </p>
       </form>
 
       <p className="text-center text-sm text-gray-500 mt-5">
-        Already have an account?{' '}
+        {t('haveAccount')}{' '}
         <Link href="/login" className="text-primary font-semibold hover:underline">
-          Sign in here
+          {t('signInHere')}
         </Link>
       </p>
     </div>

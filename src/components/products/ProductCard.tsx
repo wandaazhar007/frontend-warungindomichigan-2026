@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Plus, Minus } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { Product } from '@/types';
 import { useCartStore } from '@/store/cartStore';
 import { formatPrice } from '@/lib/utils';
@@ -12,6 +13,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const t = useTranslations('Products.Card');
   const { items, addItem, updateQuantity } = useCartStore();
   const inCart = items.find((i) => i.productId === product.id);
   const qty    = inCart?.quantity ?? 0;
@@ -65,7 +67,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {isOutOfStock && (
             <div className="absolute inset-0 bg-white/60 flex items-center justify-center">
               <span className="text-xs font-semibold text-gray-500 bg-white/90 px-2 py-1 rounded-full border border-gray-200">
-                Out of stock
+                {t('outOfStock')}
               </span>
             </div>
           )}
@@ -74,7 +76,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {comparePrice && comparePrice > price && (
             <div className="absolute top-2 left-2">
               <span className="text-[10px] font-bold bg-primary text-white px-1.5 py-0.5 rounded-md">
-                SALE
+                {t('sale')}
               </span>
             </div>
           )}
@@ -109,7 +111,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               <div className="flex items-center gap-1" onClick={(e) => e.preventDefault()}>
                 <button
                   onClick={handleRemove}
-                  aria-label="Remove one"
+                  aria-label={t('removeOne')}
                   className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors shrink-0"
                 >
                   <Minus className="h-3.5 w-3.5" />
@@ -120,7 +122,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <button
                   onClick={handleAdd}
                   disabled={qty >= product.stock}
-                  aria-label="Add one"
+                  aria-label={t('addOne')}
                   className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
                 >
                   <Plus className="h-3.5 w-3.5" />
@@ -130,7 +132,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               <button
                 onClick={handleAdd}
                 disabled={isOutOfStock}
-                aria-label="Add to cart"
+                aria-label={t('addToCart')}
                 className="h-7 w-7 rounded-lg bg-primary hover:bg-red-600 text-white flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
               >
                 <Plus className="h-3.5 w-3.5" />

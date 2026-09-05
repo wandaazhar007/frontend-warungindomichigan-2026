@@ -2,53 +2,20 @@
 
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
-const reviews = [
-  {
-    name: 'Siti Rahmawati',
-    location: 'Ann Arbor, MI',
-    rating: 5,
-    text: 'Warung IndoMi is a lifesaver! Finally I can get Indomie Goreng and Sambal ABC without driving hours away. The shipping is fast and everything arrives in perfect condition.',
-    initials: 'SR',
-  },
-  {
-    name: 'Budi Santoso',
-    location: 'Detroit, MI',
-    rating: 5,
-    text: 'Harga terjangkau, pengiriman cepat, dan produknya original. Saya sudah berlangganan hampir 6 bulan dan tidak pernah kecewa! Highly recommended buat komunitas Indonesia di Michigan.',
-    initials: 'BS',
-  },
-  {
-    name: 'Jessica Chen',
-    location: 'Lansing, MI',
-    rating: 5,
-    text: 'As someone who grew up eating Indonesian food, finding this store was amazing. The selection is incredible and the quality is always fresh. Love the fast shipping too!',
-    initials: 'JC',
-  },
-  {
-    name: 'Dewi Kusuma',
-    location: 'Grand Rapids, MI',
-    rating: 5,
-    text: 'Sudah lama cari tempat beli kecap manis dan terasi yang asli Indonesia. Akhirnya ketemu juga! Paketnya rapi, cepat sampai, dan harganya bersaing. Pasti order lagi!',
-    initials: 'DK',
-  },
-  {
-    name: 'Ahmad Fauzi',
-    location: 'Kalamazoo, MI',
-    rating: 5,
-    text: 'Best Indonesian grocery store online! I ordered rendang paste, coconut milk, and pandan extract — all arrived within 2 days. The packaging was secure and nothing was damaged.',
-    initials: 'AF',
-  },
-  {
-    name: 'Rina Wulandari',
-    location: 'Flint, MI',
-    rating: 5,
-    text: 'Senang banget ada Warung IndoMi. Saya bisa masak makanan Indonesia favorit di rumah tanpa ribet. Pelayanannya ramah dan responsif banget kalau ada pertanyaan. 10/10!',
-    initials: 'RW',
-  },
-];
+const REVIEW_META = [
+  { name: 'Siti Rahmawati', location: 'Ann Arbor, MI', rating: 5, initials: 'SR' },
+  { name: 'Budi Santoso', location: 'Detroit, MI', rating: 5, initials: 'BS' },
+  { name: 'Jessica Chen', location: 'Lansing, MI', rating: 5, initials: 'JC' },
+  { name: 'Dewi Kusuma', location: 'Grand Rapids, MI', rating: 5, initials: 'DK' },
+  { name: 'Ahmad Fauzi', location: 'Kalamazoo, MI', rating: 5, initials: 'AF' },
+  { name: 'Rina Wulandari', location: 'Flint, MI', rating: 5, initials: 'RW' },
+] as const;
 
 export default function ReviewsSection() {
+  const t = useTranslations('Home.Reviews');
+  const reviews = REVIEW_META.map((meta, i) => ({ ...meta, text: t(`items.${i}.text`) }));
   const scrollRef = useRef<HTMLDivElement>(null);
 
   function scroll(direction: 'left' | 'right') {
@@ -63,13 +30,13 @@ export default function ReviewsSection() {
       <div className="container-wim">
         <div className="text-center mb-10">
           <p className="text-xs font-bold uppercase tracking-widest mb-1.5 text-wim-gold">
-            Testimonials
+            {t('kicker')}
           </p>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-            What our customers say
+            {t('heading')}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Loved by Indonesian diaspora communities across the U.S.
+            {t('subheading')}
           </p>
         </div>
 
@@ -78,7 +45,7 @@ export default function ReviewsSection() {
           {/* Left button */}
           <button
             onClick={() => scroll('left')}
-            aria-label="Scroll left"
+            aria-label={t('scrollLeft')}
             className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 h-9 w-9 rounded-full bg-card border border-border shadow-sm flex items-center justify-center text-wim-text2 hover:bg-primary hover:text-white hover:border-primary transition-colors"
           >
             <ChevronLeft className="h-4 w-4" />
@@ -122,7 +89,7 @@ export default function ReviewsSection() {
           {/* Right button */}
           <button
             onClick={() => scroll('right')}
-            aria-label="Scroll right"
+            aria-label={t('scrollRight')}
             className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 h-9 w-9 rounded-full bg-card border border-border shadow-sm flex items-center justify-center text-wim-text2 hover:bg-primary hover:text-white hover:border-primary transition-colors"
           >
             <ChevronRight className="h-4 w-4" />

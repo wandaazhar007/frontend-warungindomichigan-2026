@@ -1,0 +1,1052 @@
+{
+  "Navbar": {
+    "account": "Account",
+    "myOrders": "My Orders",
+    "signOut": "Sign Out",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "announcements": {
+      "shipping": "Shipping nationwide across the U.S.",
+      "sameDay": "Order before 2 PM, ships today",
+      "authentic": "Authentic Indonesian flavors, delivered to your door",
+      "freeDelivery": "Free delivery on orders over $50"
+    },
+    "links": {
+      "shop": "Shop",
+      "about": "About Us",
+      "faq": "FAQ"
+    }
+  },
+  "Footer": {
+    "tagline": "Authentic Indonesian groceries, delivered nationwide. Taste of home, wherever you are.",
+    "ourLocation": "Our Location",
+    "unitedStates": "United States",
+    "information": "Information",
+    "account": "Account",
+    "contactUs": "Contact Us",
+    "followFacebook": "Follow on Facebook",
+    "copyright": "© 2026 Warung IndoMi. All rights reserved.",
+    "builtWith": "Built with ❤️ by <author>Wanda Azhar</author> in Michigan, USA",
+    "links": {
+      "about": "About Us",
+      "faq": "FAQ",
+      "shippingPolicy": "Shipping Policy",
+      "returnPolicy": "Return Policy",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "signIn": "Sign In",
+      "signUp": "Sign Up",
+      "myOrders": "My Orders"
+    },
+    "bottom": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "returns": "Returns"
+    }
+  },
+  "Home": {
+    "Hero": {
+      "sinceBadge": "Indonesian grocery store · since 2019",
+      "headingLine1": "Indonesian flavors,",
+      "headingLine2": "delivered to your",
+      "headingLine3": "door",
+      "headingEmphasis": "across the U.S.",
+      "description": "Authentic Indonesian pantry staples — kecap manis, sambal, kopi, teh, and more — shipped fresh to Indonesians in all 50 states. As complete as the warung back home.",
+      "shopNow": "Shop Now",
+      "whatsappUs": "WhatsApp Us",
+      "badges": {
+        "halal": "100% Halal",
+        "freshShipped": "Shipped Fresh",
+        "nationwide": "Ships Nationwide"
+      },
+      "shipsToday": "Ships today",
+      "orderBefore2pm": "Order before 2pm",
+      "familiesCount": "12,000+ Indonesian families in the U.S."
+    },
+    "WhyUs": {
+      "heading": "Why shop with Warung Indo?",
+      "subheading": "We make it easy to enjoy Indonesian flavors at home.",
+      "features": {
+        "fastShipping": {
+          "title": "Fast Shipping",
+          "desc": "Ships in 1–3 business days to all 50 states across the U.S."
+        },
+        "halal": {
+          "title": "100% Halal",
+          "desc": "All our products are certified halal — safe for the whole family."
+        },
+        "authentic": {
+          "title": "Authentic Products",
+          "desc": "Imported directly from Indonesia. The real taste you grew up with."
+        },
+        "securePayment": {
+          "title": "Secure Payment",
+          "desc": "Checkout protected by Stripe — your information is always safe."
+        }
+      }
+    },
+    "BestSellers": {
+      "popularPicks": "Popular picks",
+      "heading": "This week's best-sellers",
+      "subheading": "Curated top picks from our Indonesian grocery",
+      "viewAll": "View all products"
+    },
+    "BundleBanner": {
+      "badge": "Weekly Special",
+      "headingLine1": "This week's",
+      "headingLine2": "dapur bundle",
+      "description": "Get your kitchen fully stocked with our curated Indonesian cooking essentials. Everything you need to cook your favorite dishes at home.",
+      "cta": "Shop Bundle"
+    },
+    "Reviews": {
+      "kicker": "Testimonials",
+      "heading": "What our customers say",
+      "subheading": "Loved by Indonesian diaspora communities across the U.S.",
+      "scrollLeft": "Scroll left",
+      "scrollRight": "Scroll right",
+      "items": [
+        { "text": "Warung IndoMi is a lifesaver! Finally I can get Indomie Goreng and Sambal ABC without driving hours away. The shipping is fast and everything arrives in perfect condition." },
+        { "text": "Harga terjangkau, pengiriman cepat, dan produknya original. Saya sudah berlangganan hampir 6 bulan dan tidak pernah kecewa! Highly recommended buat komunitas Indonesia di Michigan." },
+        { "text": "As someone who grew up eating Indonesian food, finding this store was amazing. The selection is incredible and the quality is always fresh. Love the fast shipping too!" },
+        { "text": "Sudah lama cari tempat beli kecap manis dan terasi yang asli Indonesia. Akhirnya ketemu juga! Paketnya rapi, cepat sampai, dan harganya bersaing. Pasti order lagi!" },
+        { "text": "Best Indonesian grocery store online! I ordered rendang paste, coconut milk, and pandan extract — all arrived within 2 days. The packaging was secure and nothing was damaged." },
+        { "text": "Senang banget ada Warung IndoMi. Saya bisa masak makanan Indonesia favorit di rumah tanpa ribet. Pelayanannya ramah dan responsif banget kalau ada pertanyaan. 10/10!" }
+      ]
+    },
+    "Faq": {
+      "kicker": "FAQ",
+      "heading": "Questions? We Have Answers",
+      "subheading": "Everything you need to know about ordering Indonesian groceries from Warung IndoMi.",
+      "seeAll": "See all FAQ",
+      "callUs": "Call Us",
+      "items": {
+        "guestCheckout": {
+          "q": "Do I need an account to place an order?",
+          "a": "No! We support guest checkout — simply enter your contact info and shipping address at checkout. However, creating an account lets you track your order history and save your addresses for faster future checkouts."
+        },
+        "shippingTime": {
+          "q": "How long does shipping take?",
+          "a": "We process orders within 1–2 business days. After that, estimated delivery is 3–7 business days depending on your location. USPS Priority Mail typically takes 1–3 days; USPS Ground Advantage 2–5 days; UPS Ground 1–5 days."
+        },
+        "shippingCost": {
+          "q": "How are shipping costs calculated?",
+          "a": "Shipping costs are calculated at checkout based on the total weight of your order and your delivery address. You'll see the exact rate before entering payment information — no surprises."
+        },
+        "authentic": {
+          "q": "Are your products authentic Indonesian brands?",
+          "a": "Absolutely. All products we carry are genuine, original Indonesian brands — the same ones you'd find at a supermarket in Indonesia. We do not sell counterfeit or knock-off products."
+        },
+        "paymentMethods": {
+          "q": "What payment methods do you accept?",
+          "a": "We accept all major credit and debit cards: Visa, Mastercard, American Express, and Discover. Payments are processed securely through Stripe — your card information is never stored on our servers."
+        }
+      }
+    },
+    "VisitUs": {
+      "kicker": "Get in touch",
+      "heading": "Visit us or order online",
+      "subheading": "Based in Michigan — shipping nationwide across the U.S.",
+      "mapTitle": "Warung IndoMi location",
+      "location": "Location",
+      "shippingAllStates": "Shipping to all 50 states",
+      "orderProcessing": "Order Processing",
+      "hours": "Monday – Friday: 8 AM – 5 PM EST",
+      "sameDayShipping": "Orders before 2 PM ship same day",
+      "chatWhatsapp": "Chat on WhatsApp",
+      "followFacebook": "Follow on Facebook"
+    }
+  },
+  "Auth": {
+    "Login": {
+      "metaTitle": "Sign In",
+      "welcomeBadge": "Welcomed Back",
+      "headingLine1": "The taste of home,",
+      "headingLine2": "always close.",
+      "description": "Sign in to access your account, track orders, and enjoy exclusive deals from our Indonesian grocery store.",
+      "badges": {
+        "halal": "✅ 100% Halal",
+        "nationwide": "🚚 Ships Nationwide",
+        "authentic": "🌴 Authentic Flavors"
+      },
+      "tabSignIn": "Sign In",
+      "tabSignUp": "Sign Up",
+      "title": "Sign in to your account",
+      "subtitle": "Sign in to continue shopping"
+    },
+    "Register": {
+      "metaTitle": "Sign Up",
+      "joinBadge": "Join the Community",
+      "headingLine1": "Start your Indonesian",
+      "headingLine2": "grocery journey.",
+      "description": "Create an account to track orders, save your address, and get exclusive deals from our Indonesian grocery store.",
+      "badges": {
+        "halal": "✅ 100% Halal",
+        "nationwide": "🚚 Ships Nationwide",
+        "authentic": "🌴 Authentic Flavors"
+      },
+      "tabSignIn": "Sign In",
+      "tabSignUp": "Sign Up",
+      "title": "Create your account",
+      "subtitle": "Join thousands of Indonesian food lovers"
+    },
+    "ForgotPassword": {
+      "metaTitle": "Forgot Password"
+    },
+    "LoginForm": {
+      "continueGoogle": "Continue with Google",
+      "orSignInEmail": "or sign in with email",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUpHere": "Sign up here",
+      "agreement": "By continuing, you agree to our terms of service and privacy policy.",
+      "errors": {
+        "required": "Required",
+        "invalidEmail": "Invalid email address",
+        "incorrectCredentials": "Incorrect email or password",
+        "generic": "Something went wrong. Please try again."
+      }
+    },
+    "RegisterForm": {
+      "continueGoogle": "Continue with Google",
+      "orSignUpEmail": "or sign up with email",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "min8chars": "Min. 8 characters",
+      "confirmPassword": "Confirm Password",
+      "repeatPassword": "Repeat password",
+      "createAccount": "Create Account",
+      "agreement": "By creating an account, you agree to our terms of service and privacy policy.",
+      "haveAccount": "Already have an account?",
+      "signInHere": "Sign in here",
+      "errors": {
+        "min2": "Minimum 2 characters",
+        "required": "Required",
+        "invalidEmail": "Invalid email address",
+        "min8": "Minimum 8 characters",
+        "passwordMismatch": "Passwords do not match",
+        "emailInUse": "This email is already registered. Try signing in instead.",
+        "generic": "Something went wrong. Please try again."
+      }
+    },
+    "ForgotPasswordForm": {
+      "title": "Forgot Password?",
+      "description": "Enter your email and we'll send you a link to reset your password.",
+      "email": "Email",
+      "sendResetLink": "Send Reset Link",
+      "emailSentTitle": "Email Sent!",
+      "emailSentDescription": "A password reset link has been sent to <email></email>. Check your inbox or spam folder.",
+      "backToLogin": "Back to sign in",
+      "errors": {
+        "required": "Required",
+        "invalidEmail": "Invalid email address",
+        "generic": "Something went wrong. Check your email and try again."
+      }
+    }
+  },
+  "Checkout": {
+    "metaTitle": "Checkout — Warung IndoMi",
+    "Steps": {
+      "ariaLabel": "Checkout steps",
+      "contactInfo": "Contact Info",
+      "shipping": "Shipping",
+      "payment": "Payment"
+    },
+    "ContactForm": {
+      "recipientInfo": "Recipient Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "phoneNumber": "Phone Number",
+      "streetAddress": "Street Address",
+      "apartmentOptional": "Apartment, Suite, etc. (optional)",
+      "city": "City",
+      "state": "State",
+      "selectState": "Select state",
+      "zipCode": "ZIP Code",
+      "backToCart": "Back to Cart",
+      "continueToShipping": "Continue to Shipping",
+      "errors": {
+        "firstNameMin": "First name must be at least 2 characters",
+        "lastNameMin": "Last name must be at least 2 characters",
+        "emailRequired": "Email is required",
+        "invalidEmail": "Invalid email address",
+        "invalidPhone": "Invalid phone number (e.g. +1 626 461 4963)",
+        "streetRequired": "Street address is required",
+        "cityRequired": "City is required",
+        "stateRequired": "State is required",
+        "zipLength": "ZIP code must be 5 digits"
+      }
+    },
+    "OrderSummary": {
+      "title": "Order Summary",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "calculatedNextStep": "Calculated at next step",
+      "tax": "Tax",
+      "total": "Total"
+    },
+    "ShippingStep": {
+      "title": "Choose Shipping Method",
+      "loadingOptions": "Loading shipping options…",
+      "noOptions": "No shipping options available for this address.",
+      "estimatedDays": "Estimated {days} business day{days, plural, one {} other {s}}",
+      "back": "Back",
+      "processing": "Processing…",
+      "continueToPayment": "Continue to Payment",
+      "errors": {
+        "loadFailed": "Failed to load shipping options. Please check your connection and try again.",
+        "createOrderFailed": "Failed to create order. Please try again."
+      }
+    },
+    "PaymentStep": {
+      "title": "Payment",
+      "securityNote": "Your payment is processed securely by Stripe. Card details are never stored on our servers.",
+      "back": "Back",
+      "processing": "Processing…",
+      "pay": "Pay",
+      "errors": {
+        "paymentFailed": "Payment failed. Please try again.",
+        "statusUnknown": "Payment status unknown. Please contact us if your card was charged."
+      }
+    }
+  },
+  "Cart": {
+    "emptyTitle": "Your cart is empty",
+    "emptyDescription": "Add your favorite Indonesian products to get started!",
+    "startShopping": "Start Shopping",
+    "title": "Shopping cart",
+    "itemCount": "{count, plural, one {# item} other {# items}}",
+    "subtitle": "Review your order — almost ready to taste home.",
+    "clearCart": "Clear cart",
+    "freeShippingEligible": "You're eligible for free shipping!",
+    "addMoreForFreeShipping": "Add <amount></amount> more for free shipping",
+    "remove": "Remove",
+    "decrease": "Decrease",
+    "increase": "Increase",
+    "orderSummary": "Order summary",
+    "promoCode": "Promo code",
+    "enterCode": "Enter code",
+    "apply": "Apply",
+    "subtotalItems": "Subtotal ({count, plural, one {# item} other {# items}})",
+    "shipping": "Shipping",
+    "free": "FREE",
+    "calculatedAtCheckout": "Calculated at checkout",
+    "tax": "Tax",
+    "total": "Total",
+    "taxShippingNote": "Tax + shipping added at checkout",
+    "proceedToCheckout": "Proceed to checkout",
+    "secureCheckout": "Secure checkout powered by Stripe",
+    "continueShopping": "Continue shopping",
+    "clearAllItems": "Clear all items",
+    "clearCartModalTitle": "Clear your cart?",
+    "clearCartModalDescription": "All items in your cart will be removed. This action cannot be undone.",
+    "cancel": "Cancel",
+    "confirmClear": "Yes, clear cart"
+  },
+  "Products": {
+    "Page": {
+      "metaTitle": "All Products",
+      "metaDescription": "Authentic Indonesian groceries shipped nationwide. Browse 366+ products — spices, instant noodles, sambal, coffee, snacks & more.",
+      "kicker": "Our Store",
+      "heading": "All products",
+      "subheading": "Authentic Indonesian groceries, shipped nationwide."
+    },
+    "Card": {
+      "outOfStock": "Out of stock",
+      "sale": "SALE",
+      "removeOne": "Remove one",
+      "addOne": "Add one",
+      "addToCart": "Add to cart"
+    },
+    "Catalog": {
+      "searchPlaceholder": "Search products (e.g. indomie, sambal, kopi...)",
+      "scrollLeft": "Scroll left",
+      "scrollRight": "Scroll right",
+      "all": "All",
+      "products": "products",
+      "in": "in",
+      "for": "for",
+      "sortPopularity": "Sort by: popularity",
+      "sortPriceAsc": "Price: low to high",
+      "sortPriceDesc": "Price: high to low",
+      "noProductsFound": "No products found",
+      "tryDifferentKeyword": "Try a different keyword or browse another category.",
+      "loadMore": "Load more products"
+    },
+    "Detail": {
+      "notFound": "Product not found",
+      "notFoundDescription": "This product may have been removed or the link is incorrect.",
+      "browseAll": "Browse all products",
+      "breadcrumbHome": "Home",
+      "breadcrumbAllProducts": "All products",
+      "backToProducts": "Back to products",
+      "outOfStock": "Out of stock",
+      "onlyLeftInStock": "Only {count} left in stock",
+      "inStock": "In stock",
+      "quantity": "Quantity",
+      "addedToCart": "Added to cart ✓",
+      "addToCart": "Add to cart",
+      "viewCart": "View cart",
+      "freeDeliveryNote": "Free delivery on orders over <amount>$50</amount> — ships nationwide",
+      "aboutProduct": "About this product",
+      "details": "Details",
+      "package": "Package",
+      "netWeight": "Net Weight",
+      "country": "Country",
+      "youMayAlsoLike": "You may also like",
+      "seeAll": "See all"
+    }
+  },
+  "Orders": {
+    "OrderStatus": {
+      "PENDING": "Awaiting Payment",
+      "CONFIRMED": "Confirmed",
+      "PROCESSING": "Processing",
+      "SHIPPED": "Shipped",
+      "DELIVERED": "Delivered",
+      "CANCELLED": "Cancelled",
+      "REFUNDED": "Refunded"
+    },
+    "OrderStatusTimeline": {
+      "PENDING": "Awaiting Payment",
+      "CONFIRMED": "Payment Confirmed",
+      "PROCESSING": "Being Processed",
+      "SHIPPED": "In Transit",
+      "DELIVERED": "Delivered"
+    },
+    "PaymentStatus": {
+      "UNPAID": "Unpaid",
+      "PAID": "Paid",
+      "PARTIALLY_REFUNDED": "Partially Refunded",
+      "REFUNDED": "Refunded",
+      "FAILED": "Failed"
+    },
+    "List": {
+      "title": "Order History",
+      "subtitle": "All orders you've ever placed at Warung IndoMi.",
+      "fetchError": "Failed to load order history.",
+      "emptyState": "You haven't placed any orders yet.",
+      "startShopping": "Start Shopping",
+      "itemCount": "{count, plural, one {# item} other {# items}}",
+      "tracking": "Tracking"
+    },
+    "Detail": {
+      "notFound": "Order not found.",
+      "backToShopping": "Back to Shopping",
+      "paymentSuccessful": "Payment Successful",
+      "awaitingPaymentConfirmation": "Awaiting Payment Confirmation",
+      "thankYou": "Thank you for your order! 🎉",
+      "orderReceived": "Order Received",
+      "orderNumber": "Order number",
+      "confirmationEmailSentTo": "Confirmation email sent to",
+      "paymentConfirmed": "Payment confirmed",
+      "paymentConfirmedDescription": "Your order has been received and is being processed. A full confirmation email with order details has been sent to <email></email>.",
+      "orderItems": "Order Items",
+      "subtotal": "Subtotal",
+      "shippingCost": "Shipping Cost",
+      "tax": "Tax",
+      "discount": "Discount",
+      "total": "Total",
+      "orderStatus": "Order Status",
+      "orderRefunded": "This order has been refunded.",
+      "orderCancelled": "This order has been cancelled.",
+      "shippingInfo": "Shipping Info",
+      "tracking": "Tracking",
+      "trackPackage": "Track Package",
+      "status": "Status",
+      "order": "Order",
+      "payment": "Payment",
+      "shippingAddress": "Shipping Address",
+      "paid": "Paid",
+      "on": "on",
+      "continueShopping": "Continue Shopping",
+      "viewAllOrders": "View All Orders"
+    }
+  },
+  "Legal": {
+    "Common": {
+      "lastUpdated": "Last updated",
+      "questionsContactUs": "Questions? Contact Us",
+      "happyToHelp": "We're happy to help with any questions about our policies.",
+      "whatsappUs": "WhatsApp Us",
+      "callUs": "Call"
+    }
+  },
+  "About": {
+    "metaTitle": "About Us",
+    "metaDescription": "Learn about Warung IndoMi — your trusted source for authentic Indonesian groceries, shipped nationwide across the USA from Madison Heights, Michigan.",
+    "kicker": "About",
+    "heading": "About Warung IndoMi",
+    "subheading": "Your trusted source for authentic Indonesian groceries, delivered across the USA.",
+    "productsCount": "{count} products",
+    "ourStory": {
+      "kicker": "Our Story",
+      "heading": "Bringing a Taste of Home to Every Corner of America",
+      "paragraph1": "Warung IndoMi was born out of a simple, deeply felt need: the longing for the flavors of home. For the Indonesian diaspora scattered across the United States, finding authentic Indonesian products — the same brands you grew up with, the same tastes that remind you of your mother's cooking, your favorite street snack, the cup of kopi tubruk on a quiet morning — has always been a challenge.",
+      "paragraph2": "We are based in <location>Madison Heights, Michigan</location>, and we serve Indonesian communities across all 50 US states. What started as a way to meet local demand has grown into a mission: to make authentic Indonesian groceries accessible to every Indonesian in America, no matter where they live.",
+      "paragraph3": "We hand-select every product we carry — prioritizing genuine brands, checking freshness, and packing every order with care. When you order from us, you're not just buying groceries. You're getting a piece of home, shipped directly to your door."
+    },
+    "whyChooseUs": {
+      "kicker": "Why Choose Us",
+      "heading": "What Makes Us Different",
+      "points": {
+        "products": {
+          "title": "366+ Authentic Products",
+          "desc": "Carefully curated selection of genuine Indonesian brands across 12 categories — from Indomie to ABC to Kecap Bango."
+        },
+        "shipping": {
+          "title": "Nationwide Shipping",
+          "desc": "We ship to all 50 US states via USPS and UPS. Real-time shipping rates calculated at checkout so there are no surprises."
+        },
+        "payments": {
+          "title": "Secure Payments",
+          "desc": "Payments processed by Stripe, a PCI DSS Level 1 certified platform. We never store your card information."
+        },
+        "community": {
+          "title": "Community-First",
+          "desc": "Built for the Indonesian diaspora in America. We understand what you miss from home — and we're here to bridge that gap."
+        }
+      }
+    },
+    "ourProducts": {
+      "kicker": "Our Products",
+      "heading": "366 Products Across 12 Categories",
+      "description": "From everyday essentials like Indomie and kecap, to specialty items like jamu and ikan asin — we've got you covered."
+    },
+    "location": {
+      "kicker": "Location",
+      "heading": "Where We Are",
+      "unitedStates": "United States",
+      "description": "We primarily operate as an online store. Orders are packed and shipped from our location in Madison Heights, Michigan."
+    },
+    "contact": {
+      "kicker": "Get in Touch",
+      "heading": "We'd Love to Hear from You",
+      "description": "Have a question about a product, your order, or just want to say hi? We respond quickly via WhatsApp.",
+      "chatWhatsapp": "Chat via WhatsApp",
+      "callUs": "Call",
+      "followFacebook": "Follow on Facebook",
+      "browseProducts": "Browse Products"
+    }
+  },
+  "Faq": {
+    "metaTitle": "FAQ — Frequently Asked Questions",
+    "metaDescription": "Answers to common questions about ordering, shipping, products, payments, and your account at Warung IndoMi.",
+    "label": "Help",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Can't find your answer? Chat with us on WhatsApp — we usually respond within a few hours.",
+    "stillHaveQuestions": "Still have questions?",
+    "teamAvailable": "Our team is available via WhatsApp. We typically respond within a few hours.",
+    "whatsappUs": "WhatsApp Us",
+    "callUs": "Call Us",
+    "browseProducts": "Browse Products",
+    "quickLinks": {
+      "shippingPolicy": "Shipping Policy",
+      "returnPolicy": "Return Policy",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    },
+    "groups": {
+      "orders": "Orders",
+      "shipping": "Shipping",
+      "products": "Products",
+      "payments": "Payments",
+      "returns": "Returns & Refunds",
+      "account": "Account"
+    },
+    "orderStatusList": {
+      "pending": { "label": "Pending", "desc": "Payment received, order is in queue." },
+      "processing": { "label": "Processing", "desc": "We are packing your items." },
+      "shipped": { "label": "Shipped", "desc": "Package handed to carrier. Tracking number sent." },
+      "delivered": { "label": "Delivered", "desc": "Package marked as delivered by carrier." }
+    },
+    "items": {
+      "guestCheckout": {
+        "q": "Do I need an account to place an order?",
+        "a": "No! We support guest checkout — simply enter your contact info and shipping address at checkout. However, creating an account lets you track your order history and save your shipping addresses for faster future checkouts."
+      },
+      "trackOrder": {
+        "q": "How do I track my order?",
+        "a": "Once your order ships, we'll send a tracking number to your email. You can also view your tracking status on the USPS or UPS website. If you have an account, your orders are also visible under \"My Orders.\""
+      },
+      "modifyOrder": {
+        "q": "Can I modify or cancel my order after placing it?",
+        "a": "We process orders quickly, but if you need to make changes, please contact us via WhatsApp (+1 626 461-4963) as soon as possible. Once an order has been shipped (status: Shipped), it can no longer be cancelled or modified."
+      },
+      "orderStatuses": {
+        "q": "What does each order status mean?"
+      },
+      "noConfirmationEmail": {
+        "q": "I placed an order but didn't receive a confirmation email. What should I do?",
+        "a": "Please check your spam or junk folder first. If the email is not there, contact us via WhatsApp with your name and the email address you used to place the order."
+      },
+      "shippingTime": {
+        "q": "How long does shipping take?",
+        "a": "We process orders within 1–2 business days. After that, estimated delivery is 3–7 business days depending on your location and the carrier chosen. USPS Priority Mail typically takes 1–3 days; USPS Ground Advantage 2–5 days; UPS Ground 1–5 days."
+      },
+      "shippingCost": {
+        "q": "How are shipping costs calculated?",
+        "a": "Shipping costs are calculated at checkout based on the total weight of your order and your delivery address. You'll see the exact shipping rate before you enter payment information."
+      },
+      "hawaiiAlaska": {
+        "q": "Do you ship to all US states, including Hawaii and Alaska?",
+        "a": "Yes! We ship to all 50 US states. Please note that shipping to Hawaii and Alaska may cost more and take longer than the contiguous 48 states."
+      },
+      "lostDamaged": {
+        "q": "What happens if my package is lost or damaged?",
+        "a": "Please contact us within 7 days of the expected delivery date. We'll file a carrier claim on your behalf and resolve the situation as quickly as possible. For damaged packages, please keep all original packaging and take photos."
+      },
+      "authentic": {
+        "q": "Are your products authentic Indonesian brands?",
+        "a": "Absolutely. All products we carry are genuine, original Indonesian brands — the same ones you'd find at a supermarket in Indonesia or trusted Asian grocery stores in the US. We do not sell counterfeit or knock-off products."
+      },
+      "halal": {
+        "q": "Do you carry halal-certified products?",
+        "a": "Many of our products are halal-certified. Please check the product packaging or description for halal certification details. If you're unsure about a specific product, feel free to ask us via WhatsApp."
+      },
+      "expiry": {
+        "q": "What are the expiry dates on products?",
+        "a": "We regularly rotate our stock to ensure freshness. All products are sold with a minimum of 3 months before the expiry date. The exact expiry date is printed on each product's packaging."
+      },
+      "requestProduct": {
+        "q": "Can I request a specific product you don't currently carry?",
+        "a": "Yes! We love hearing from our customers. If there's a product you'd like us to stock, please let us know via WhatsApp. We do our best to source popular requests."
+      },
+      "paymentMethods": {
+        "q": "What payment methods do you accept?",
+        "a": "We accept all major credit and debit cards: Visa, Mastercard, American Express, and Discover. Payments are processed securely through Stripe."
+      },
+      "safeCard": {
+        "q": "Is it safe to enter my card details on your website?",
+        "a": "Yes. Your payment is processed by Stripe, a PCI DSS Level 1 certified payment processor. We never see or store your full card number — it goes directly to Stripe's secure servers."
+      },
+      "whenCharged": {
+        "q": "When will I be charged?",
+        "a": "Your card is charged immediately when you confirm your order at checkout. You'll receive an order confirmation email right after."
+      },
+      "canReturn": {
+        "q": "Can I return a product?",
+        "a": "Due to food safety regulations, most grocery and food items are non-returnable once received. However, if you received a damaged item or the wrong product, we will make it right. Please see our full Return & Refund Policy for details."
+      },
+      "refundTime": {
+        "q": "How long does a refund take?",
+        "a": "Once we approve your refund, it is processed via Stripe back to your original payment method. This typically takes 5–10 business days to appear on your statement, depending on your bank or card issuer."
+      },
+      "resetPassword": {
+        "q": "How do I reset my password?",
+        "a": "Go to the Login page and click \"Forgot Password?\" Enter your email address and we'll send you a password reset link."
+      },
+      "deleteAccount": {
+        "q": "How do I delete my account?",
+        "a": "To request account deletion, please contact us via WhatsApp (+1 626 461-4963) with the email address associated with your account. We'll process the deletion within 5 business days."
+      },
+      "guestVsAccount": {
+        "q": "Can I use the same account for both ordering and as a guest?",
+        "a": "Yes. If you placed a guest order and then create an account with the same email, your order history may not automatically link. Contact us and we can manually associate past orders with your account."
+      }
+    }
+  },
+  "PrivacyPolicy": {
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "Learn how Warung IndoMi collects, uses, and protects your personal information when you shop on our website.",
+    "label": "Legal",
+    "title": "Privacy Policy",
+    "subtitle": "How we collect, use, and protect your personal information.",
+    "lastUpdated": "June 29, 2026",
+    "intro": "Warung IndoMi (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and place an order. Please read this policy carefully. By using our site, you agree to the practices described here.",
+    "s1": {
+      "heading": "1. Information We Collect",
+      "directInfoHeading": "Information You Provide Directly",
+      "directInfoIntro": "When you place an order or create an account, we collect:",
+      "directInfoList": [
+        "Full name (first and last)",
+        "Email address",
+        "Shipping address (street, city, state, ZIP code)",
+        "Phone number",
+        "Password (if you create an account — stored securely via Firebase Auth, never in plain text)",
+        "Order notes or messages you send us"
+      ],
+      "paymentInfoHeading": "Payment Information",
+      "paymentInfoBody": "All payment processing is handled by <strong>Stripe</strong>, a PCI DSS Level 1 certified payment processor. We never see, receive, or store your full credit card number, CVV, or other sensitive payment data. Stripe may collect and store payment information in accordance with their own <link>Privacy Policy</link>.",
+      "autoInfoHeading": "Information Collected Automatically",
+      "autoInfoIntro": "When you visit our website, we may automatically collect:",
+      "autoInfoList": [
+        "IP address and general location",
+        "Browser type and version",
+        "Pages viewed and time spent on the site",
+        "Referring URL",
+        "Device type (desktop, mobile, tablet)",
+        "Session data stored in cookies (cart contents, login session)"
+      ]
+    },
+    "s2": {
+      "heading": "2. How We Use Your Information",
+      "intro": "We use the information we collect to:",
+      "list": [
+        "Process and fulfill your orders",
+        "Send order confirmation and shipping notification emails",
+        "Generate shipping labels and coordinate delivery via USPS and UPS",
+        "Respond to your questions and provide customer support",
+        "Maintain and improve our website and services",
+        "Comply with legal obligations (tax records, fraud prevention)",
+        "Send promotional emails if you opt in (you can unsubscribe at any time)"
+      ],
+      "noSell": "We do not sell, rent, or trade your personal information to third parties for their own marketing purposes."
+    },
+    "s3": {
+      "heading": "3. Third-Party Services",
+      "intro": "We use trusted third-party services to operate our business. Each has its own privacy policy:",
+      "firebase": "user authentication and account management.",
+      "firebaseLink": "Firebase Privacy Policy",
+      "stripe": "secure payment processing.",
+      "stripeLink": "Stripe Privacy Policy",
+      "shippo": "shipping label generation and rate calculation via USPS and UPS.",
+      "shippoLink": "Shippo Privacy Policy",
+      "resend": "transactional email delivery (order confirmations, shipping notifications).",
+      "resendLink": "Resend Privacy Policy",
+      "cloudinary": "product image hosting and delivery.",
+      "cloudinaryLink": "Cloudinary Privacy Policy",
+      "supabase": "secure cloud database where your order and account information is stored.",
+      "supabaseLink": "Supabase Privacy Policy"
+    },
+    "s4": {
+      "heading": "4. Cookies",
+      "intro": "We use cookies to improve your experience on our site. We use only essential cookies:",
+      "authCookieLabel": "Authentication cookie",
+      "authCookieDesc": "keeps you logged in during your session (via Firebase Auth)",
+      "cartCookieLabel": "Cart cookie",
+      "cartCookieDesc": "saves your cart contents between page visits so items are not lost when you close the browser tab",
+      "noThirdParty": "We do not use third-party advertising or tracking cookies. You can disable cookies in your browser settings, but this may affect certain features of the site (e.g., staying logged in or keeping items in your cart)."
+    },
+    "s5": {
+      "heading": "5. Data Retention",
+      "orderRecordsLabel": "Order records",
+      "orderRecordsDesc": "retained for 7 years to comply with US tax and accounting regulations",
+      "accountDataLabel": "Account data",
+      "accountDataDesc": "retained until you request deletion of your account",
+      "guestDataLabel": "Guest checkout data",
+      "guestDataDesc": "email and shipping address retained alongside the order record for the same 7-year period",
+      "deleteRequest": "If you would like your personal data deleted, please contact us via WhatsApp or email. We will fulfill your request within 30 days, except for information we are legally required to retain."
+    },
+    "s6": {
+      "heading": "6. Your Rights (CCPA — California Residents)",
+      "intro": "If you are a California resident, the California Consumer Privacy Act (CCPA) gives you specific rights regarding your personal information:",
+      "rightToKnowLabel": "Right to Know",
+      "rightToKnowDesc": "you can request details about what personal data we have collected about you and how it is used",
+      "rightToDeleteLabel": "Right to Delete",
+      "rightToDeleteDesc": "you can request that we delete your personal data, subject to certain exceptions",
+      "rightToOptOutLabel": "Right to Opt Out of Sale",
+      "rightToOptOutDesc": "we do not sell your personal data, so this right is not applicable, but we honor this principle",
+      "rightToNonDiscriminationLabel": "Right to Non-Discrimination",
+      "rightToNonDiscriminationDesc": "we will not discriminate against you for exercising any of your CCPA rights",
+      "exerciseRights": "To exercise these rights, contact us via WhatsApp at +1 (626) 461-4963. We will respond within 45 days."
+    },
+    "s7": {
+      "heading": "7. Children's Privacy (COPPA)",
+      "body": "Our website is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately and we will take steps to delete it."
+    },
+    "s8": {
+      "heading": "8. Data Security",
+      "intro": "We take reasonable measures to protect your personal information, including:",
+      "list": [
+        "HTTPS encryption on all pages",
+        "Payment processing via Stripe (PCI DSS compliant — we never store card data)",
+        "Secure cloud database (Supabase) with access controls",
+        "Firebase Auth for secure password management"
+      ],
+      "noGuarantee": "No method of transmission over the Internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security."
+    },
+    "s9": {
+      "heading": "9. Changes to This Policy",
+      "body": "We may update this Privacy Policy from time to time. Material changes will be communicated via email to registered users. The \"Last updated\" date at the top of this page indicates when the most recent changes were made. Continued use of our site after any changes constitutes your acceptance of the updated policy."
+    }
+  },
+  "Terms": {
+    "metaTitle": "Terms & Conditions",
+    "metaDescription": "Terms and Conditions for shopping at Warung IndoMi — the rules governing orders, payments, shipping, and use of our website.",
+    "label": "Legal",
+    "title": "Terms & Conditions",
+    "subtitle": "Please read these terms carefully before placing an order.",
+    "lastUpdated": "June 29, 2026",
+    "intro": "These Terms and Conditions (\"Terms\") govern your use of the Warung IndoMi website (warungindomi.com) and your purchase of products from us. By accessing our site or placing an order, you agree to be bound by these Terms. If you do not agree, please do not use our site.",
+    "s1": {
+      "heading": "1. Who We Are",
+      "body": "Warung IndoMi is an Indonesian grocery store based in Madison Heights, Michigan, USA. We sell authentic Indonesian food products and ship nationwide across the United States.",
+      "contact": "Contact: WhatsApp +1 (626) 461-4963"
+    },
+    "s2": {
+      "heading": "2. Acceptance of Terms",
+      "body": "By browsing our website, creating an account, or placing an order, you confirm that you are at least 18 years of age (or have parental consent) and that you agree to these Terms and our Privacy Policy."
+    },
+    "s3": {
+      "heading": "3. User Accounts",
+      "intro": "Creating an account is optional — you may check out as a guest. If you choose to create an account:",
+      "list": [
+        "You are responsible for maintaining the confidentiality of your password",
+        "You agree to provide accurate and current information",
+        "You must notify us immediately of any unauthorized use of your account",
+        "We reserve the right to suspend or terminate accounts that violate these Terms or engage in fraudulent activity"
+      ]
+    },
+    "s4": {
+      "heading": "4. Products & Pricing",
+      "list": [
+        "All prices are displayed in US Dollars (USD)",
+        "Prices are subject to change without notice",
+        "Product images are for illustrative purposes. Actual packaging may vary slightly due to manufacturer updates",
+        "We strive to keep product availability accurate, but we reserve the right to cancel orders if a product becomes unavailable after your order is placed. In such cases, you will receive a full refund",
+        "Products are imported Indonesian brands. We do not manufacture or alter any products"
+      ]
+    },
+    "s5": {
+      "heading": "5. Ordering Process",
+      "intro": "An order is confirmed only after successful payment processing. Here is how the process works:",
+      "list": [
+        "Add items to your cart and proceed to checkout",
+        "Provide your contact information and shipping address",
+        "Select a shipping method and rate",
+        "Complete payment via Stripe",
+        "You will receive an order confirmation email with your order number (format: WIM-YEAR-XXXX)",
+        "We reserve the right to cancel or refuse any order at our discretion, with a full refund issued"
+      ]
+    },
+    "s6": {
+      "heading": "6. Payment",
+      "list": [
+        "Payments are processed securely by Stripe. We accept Visa, Mastercard, American Express, and Discover",
+        "We do not store your payment card information on our servers",
+        "Your card is charged immediately upon order confirmation",
+        "All transactions are in USD. If your card is issued in another currency, your bank will handle the currency conversion and may charge a foreign transaction fee"
+      ]
+    },
+    "s7": {
+      "heading": "7. Shipping",
+      "body1": "We ship via USPS and UPS to all 50 US states. Shipping costs and estimated delivery times are calculated at checkout based on your location and order weight. For full details, please see our <link>Shipping Policy</link>.",
+      "body2": "Delivery times are estimates and not guarantees. We are not liable for delays caused by carriers, weather events, natural disasters, or other factors outside our control."
+    },
+    "s8": {
+      "heading": "8. Returns & Refunds",
+      "body": "Due to the nature of food and grocery products, most items are non-returnable after delivery. We will issue refunds for damaged, defective, or incorrectly shipped items. For full details, please see our <link>Return & Refund Policy</link>."
+    },
+    "s9": {
+      "heading": "9. Food Product Disclaimer",
+      "intro": "Products sold on our website are imported Indonesian food and grocery items intended for human consumption. Please be aware of the following:",
+      "list": [
+        "Always check the ingredient list and allergen information on the product packaging before consuming",
+        "We are not responsible for adverse reactions due to individual dietary restrictions or allergies",
+        "Some products may contain ingredients not found in typical US grocery items. Please read labels carefully",
+        "Products should be stored according to the storage instructions on the packaging",
+        "We do not modify, repackage, or alter products from their original manufacturer's form"
+      ]
+    },
+    "s10": {
+      "heading": "10. Prohibited Uses",
+      "intro": "You agree not to use our site to:",
+      "list": [
+        "Place fraudulent orders or use stolen payment methods",
+        "Harvest or scrape data from our website",
+        "Attempt to interfere with or disrupt the website's operation or security",
+        "Resell our products commercially without prior written consent",
+        "Submit false or misleading information (e.g., fake shipping addresses)"
+      ]
+    },
+    "s11": {
+      "heading": "11. Intellectual Property",
+      "body1": "The content on this website — including text, images, logos, and design — is owned by or licensed to Warung IndoMi. You may not reproduce, distribute, or use our content without prior written permission, except for personal, non-commercial use.",
+      "body2": "Product names and trademarks belong to their respective owners (e.g., Indomie®, ABC®, Kecap Bango®). We are an authorized retailer, not affiliated with or endorsed by these brands."
+    },
+    "s12": {
+      "heading": "12. Limitation of Liability",
+      "body1": "To the fullest extent permitted by law, Warung IndoMi shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our site or products, including but not limited to loss of profits, data, or goodwill.",
+      "body2": "Our total liability to you for any claim arising from your purchase shall not exceed the amount you paid for the specific order giving rise to the claim."
+    },
+    "s13": {
+      "heading": "13. Dispute Resolution",
+      "body1": "We encourage you to contact us directly to resolve any dispute before pursuing formal legal action. You can reach us via WhatsApp at +1 (626) 461-4963. Claims must be raised within 30 days of receiving your order.",
+      "body2": "If a dispute cannot be resolved informally, both parties agree to attempt mediation before pursuing litigation. You agree to bring claims in your individual capacity only, not as a plaintiff in any class action."
+    },
+    "s14": {
+      "heading": "14. Governing Law",
+      "body": "These Terms are governed by and construed in accordance with the laws of the State of Michigan, United States, without regard to its conflict of law provisions. Any legal action must be brought in the courts located in Oakland County, Michigan."
+    },
+    "s15": {
+      "heading": "15. Changes to These Terms",
+      "body": "We reserve the right to update these Terms at any time. The \"Last updated\" date at the top of this page reflects the most recent revision. Continued use of our website after changes are posted constitutes your acceptance of the revised Terms. We recommend checking this page periodically."
+    }
+  },
+  "ReturnPolicy": {
+    "metaTitle": "Return & Refund Policy",
+    "metaDescription": "Warung IndoMi return and refund policy — learn when refunds are issued, how to request one, and our policy on food and grocery items.",
+    "label": "Legal",
+    "title": "Return & Refund Policy",
+    "subtitle": "Your satisfaction matters to us. Here's everything you need to know.",
+    "lastUpdated": "June 29, 2026",
+    "s1": {
+      "heading": "Our Commitment",
+      "body1": "At Warung IndoMi, we take great care in packing and shipping every order. If something goes wrong, we want to make it right. Please read this policy carefully so you know what to expect and how to reach us if you have a problem.",
+      "body2": "All return and refund requests must be submitted <strong>within 7 calendar days</strong> of the delivery date shown in your tracking information."
+    },
+    "s2": {
+      "heading": "Food & Grocery Items Are Non-Returnable",
+      "intro": "Due to food safety regulations and FDA guidelines, <strong>most food and grocery products cannot be returned</strong> once they have been delivered. This applies to:",
+      "list": [
+        "Instant noodles (mie instan), rice, and other dry goods",
+        "Seasonings, spices, and cooking sauces (bumbu, sambal, kecap, saus)",
+        "Beverages and coffee",
+        "Snacks and crackers (kerupuk, snack kemasan)",
+        "Baking ingredients and dairy products",
+        "Health products, vitamins, and personal care items",
+        "Any product where the packaging seal has been broken or opened"
+      ],
+      "note": "This is standard practice for food retailers in the United States and is required for consumer safety. We appreciate your understanding."
+    },
+    "s3": {
+      "heading": "When We Will Issue a Refund",
+      "intro": "We will issue a <strong>full refund or replacement</strong> in the following situations:",
+      "case1Heading": "1. Item Damaged During Shipping",
+      "case1Intro": "If your product arrived damaged (e.g., broken packaging, crushed boxes, leaking contents), please contact us with:",
+      "case1List": [
+        "Your order number",
+        "Clear photos of the damaged item(s)",
+        "Photos of the outer packaging (box or mailer)"
+      ],
+      "case2Heading": "2. Wrong Item Shipped",
+      "case2Body": "If you received a product that is different from what you ordered, we will arrange a replacement or full refund. Please send us your order number and a photo of the item you received.",
+      "case3Heading": "3. Missing Items",
+      "case3Body": "If your order arrived but one or more items were missing, contact us with your order number and a photo of the items you did receive. We will verify against our packing records and resolve the issue.",
+      "case4Heading": "4. Order Not Delivered",
+      "case4Body": "If your tracking shows \"delivered\" but you did not receive the package, please first check with neighbors and around your property. Then contact us and we will file a missing package claim with the carrier on your behalf."
+    },
+    "s4": {
+      "heading": "How to Request a Refund",
+      "intro": "To submit a refund request, follow these steps:",
+      "step1Label": "Step 1:",
+      "step1Body": "Take clear photos of the issue (damaged product, wrong item, or the outer packaging)",
+      "step2Label": "Step 2:",
+      "step2BodyBefore": "Contact us via WhatsApp at",
+      "step2BodyAfter": "within 7 days of receiving your order",
+      "step3Label": "Step 3:",
+      "step3Body": "Include your order number (format: WIM-YEAR-XXXX) and photos",
+      "step4Label": "Step 4:",
+      "step4Body": "Our team will review your request and respond within 1–2 business days"
+    },
+    "s5": {
+      "heading": "Refund Processing Time",
+      "intro": "Once your refund is approved, it will be processed through <strong>Stripe</strong> back to your original payment method. Please allow:",
+      "list": [
+        "1–3 business days for us to process and submit the refund through Stripe",
+        "5–10 additional business days for the refund to appear on your bank or credit card statement (this timeline is set by your bank, not us)"
+      ],
+      "note": "You will receive an email confirmation when the refund is processed. We are unable to accelerate the timeline on your bank's end."
+    },
+    "s6": {
+      "heading": "Order Cancellations",
+      "intro": "You may request a cancellation <strong>before your order is shipped</strong>. Since we process orders quickly (typically within 1–2 business days), please contact us as soon as possible if you need to cancel.",
+      "pendingItem": "Orders with status <strong>Pending</strong> or <strong>Processing</strong> — can be cancelled for a full refund",
+      "shippedItem": "Orders with status <strong>Shipped</strong> — cannot be cancelled. If you still want a refund, the item must qualify under the conditions above"
+    },
+    "s7": {
+      "heading": "Exceptions & Non-Refundable Situations",
+      "intro": "Refunds will not be issued for:",
+      "list": [
+        "Products returned without prior authorization — please always contact us first before sending anything back",
+        "Damage caused by improper storage after delivery (e.g., heat exposure, moisture)",
+        "Products opened or partially consumed, unless defective upon opening",
+        "Incorrect shipping address provided by the customer resulting in a failed delivery",
+        "Carrier delays outside our control (weather events, holidays, USPS/UPS service disruptions)",
+        "Requests submitted more than 7 days after delivery",
+        "Change of mind after the order has been shipped"
+      ]
+    }
+  },
+  "ShippingPolicy": {
+    "metaTitle": "Shipping Policy",
+    "metaDescription": "Warung IndoMi shipping policy — carriers, delivery times, shipping rates, coverage area, tracking, and how we handle lost or damaged packages.",
+    "label": "Shipping",
+    "title": "Shipping Policy",
+    "subtitle": "Everything you need to know about how we ship your order.",
+    "lastUpdated": "June 29, 2026",
+    "intro": "We want your Indonesian grocery haul to arrive safely and on time. Below is everything you need to know about how we pack and ship orders, delivery timeframes, and what to do if something goes wrong.",
+    "s1": {
+      "heading": "Shipping Carriers",
+      "intro": "We ship via two major US carriers:",
+      "usps": "<strong>USPS (United States Postal Service)</strong> — Priority Mail (1–3 days) and Ground Advantage (2–5 days)",
+      "ups": "<strong>UPS (United Parcel Service)</strong> — UPS Ground (1–5 days depending on zone)",
+      "note": "The carrier and service level are selected automatically based on the weight and dimensions of your order and your delivery address. We use Shippo to generate shipping labels and calculate the best available rates."
+    },
+    "s2": {
+      "heading": "Processing Time",
+      "intro": "Orders are processed on <strong>business days (Monday–Friday)</strong>, excluding federal holidays. After successful payment:",
+      "item1": "Most orders are packed and shipped within <strong>1–2 business days</strong>",
+      "item2": "Orders placed before 2:00 PM Eastern Time (ET) on a business day are typically shipped the same day or next business day",
+      "item3": "During peak seasons (e.g., holidays, Eid/Lebaran), processing may take an additional 1–2 days"
+    },
+    "s3": {
+      "heading": "Estimated Delivery Times",
+      "intro": "Delivery times below are estimates from the ship date (not the order date) and apply to orders shipped from Madison Heights, Michigan.",
+      "usps1": "<strong>USPS Priority Mail:</strong> 1–3 business days",
+      "usps2": "<strong>USPS Ground Advantage:</strong> 2–5 business days",
+      "ups": "<strong>UPS Ground:</strong> 1–5 business days (shorter for nearby states)",
+      "note": "Estimated delivery times are not guarantees. Carriers occasionally experience delays due to weather, volume surges, or other factors outside our control. We are not liable for delays caused by carrier issues once the package has been handed off."
+    },
+    "s4": {
+      "heading": "Shipping Rates",
+      "intro": "Shipping costs are calculated in real time at checkout based on:",
+      "list": [
+        "Total weight of your order",
+        "Package dimensions (we use standard box presets)",
+        "Your delivery zip code"
+      ],
+      "note": "You will see the exact shipping cost and can choose your preferred carrier and service level <strong>before you enter payment information</strong>. There are no hidden shipping fees."
+    },
+    "s5": {
+      "heading": "Shipping Coverage",
+      "usStatesHeading": "US States",
+      "usStatesBody": "We ship to all 50 US states, including Hawaii and Alaska. Deliveries to Hawaii and Alaska may have higher shipping costs and longer estimated delivery times.",
+      "poBoxHeading": "PO Boxes",
+      "poBoxBody": "USPS can deliver to PO Boxes. UPS cannot deliver to PO Boxes. If you provide a PO Box address, your order will automatically be shipped via USPS.",
+      "internationalHeading": "International Shipping",
+      "internationalBody": "We currently <strong>do not ship internationally</strong>. We only ship within the United States. We also do not ship to US territories such as Puerto Rico, Guam, US Virgin Islands, or APO/FPO military addresses at this time."
+    },
+    "s6": {
+      "heading": "Package Tracking",
+      "intro": "Once your order ships, you will receive a shipping confirmation email with:",
+      "list": [
+        "Your tracking number",
+        "A link to track your package directly on USPS.com or UPS.com",
+        "Estimated delivery date (if available from the carrier)"
+      ],
+      "orderHistoryNote": "If you have an account, you can also track your order status from your <link>Order History</link> page.",
+      "delayNote": "Please allow 24 hours after receiving your tracking email for the tracking information to be updated in the carrier's system."
+    },
+    "s7": {
+      "heading": "Lost or Damaged Packages",
+      "notDeliveredHeading": "Package Not Delivered",
+      "notDeliveredIntro": "If your tracking shows \"Delivered\" but you have not received your package:",
+      "notDeliveredStep1": "Check your mailbox, porch, garage, and around your property",
+      "notDeliveredStep2": "Ask neighbors if the package was left with them",
+      "notDeliveredStep3": "Check with your building manager if you live in an apartment",
+      "notDeliveredStep4": "Wait 1 additional business day — carriers sometimes mark packages as delivered a day early",
+      "notDeliveredStep5": "If still not found, contact us via WhatsApp within <strong>7 days</strong> of the reported delivery date. We will file a carrier claim on your behalf.",
+      "damagedHeading": "Package Damaged in Transit",
+      "damagedIntro": "If your package arrives visibly damaged:",
+      "damagedStep1": "Take photos of the outer packaging (box/mailer) <strong>before opening</strong> if possible",
+      "damagedStep2": "Take photos of the damaged items inside",
+      "damagedStep3": "Contact us via WhatsApp within <strong>48 hours</strong> of delivery with your photos and order number",
+      "damagedStep4": "Keep all packaging materials — carriers may need to inspect them for the claim",
+      "damagedNote": "We will work with the carrier to file a claim and will arrange a replacement or refund once the claim is reviewed."
+    },
+    "s8": {
+      "heading": "Food Safety During Shipping",
+      "body1": "All products we sell are shelf-stable, non-perishable Indonesian pantry items (mie, bumbu, sambal, snack, kopi, etc.). They do not require refrigeration during transit.",
+      "body2": "However, please be aware:",
+      "chocolateNote": "Products containing chocolate (e.g., wafer bars, chocolate-coated snacks) may melt in extreme heat during summer months. We recommend selecting faster shipping options if ordering these items during hot weather. We are not responsible for heat-related melting during transit after the package is in the carrier's possession.",
+      "storageNote": "Store all products according to the instructions on their packaging once you receive your order"
+    }
+  }
+}

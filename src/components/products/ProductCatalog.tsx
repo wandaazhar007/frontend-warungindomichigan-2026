@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Search, Loader2, SlidersHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { Product, Category } from '@/types';
 import { getProducts, getCategories } from '@/lib/api';
 import ProductCard from './ProductCard';
@@ -12,6 +13,7 @@ import { useDebounce } from '@/lib/useDebounce';
 import { useUIStore } from '@/store/uiStore';
 
 export default function ProductCatalog() {
+  const t = useTranslations('Products.Catalog');
   const [products, setProducts]         = useState<Product[]>([]);
   const [categories, setCategories]     = useState<Category[]>([]);
   const [total, setTotal]               = useState(0);
@@ -118,7 +120,7 @@ export default function ProductCatalog() {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
             <Input
               type="search"
-              placeholder="Search products (e.g. indomie, sambal, kopi...)"
+              placeholder={t('searchPlaceholder')}
               value={search}
               onChange={(e) => { setSearch(e.target.value); setActiveCategory(''); }}
               className="pl-10 bg-white border-border h-11 text-sm"
@@ -130,7 +132,7 @@ export default function ProductCatalog() {
             {/* Left arrow */}
             <button
               onClick={() => scrollPills('left')}
-              aria-label="Scroll left"
+              aria-label={t('scrollLeft')}
               className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
             >
               <ChevronLeft className="h-4 w-4" />
@@ -151,7 +153,7 @@ export default function ProductCatalog() {
                     : 'bg-white text-gray-600 border-border hover:border-primary hover:text-primary'
                 )}
               >
-                All
+                {t('all')}
               </button>
               {categories.map((cat) => (
                 <button
@@ -172,7 +174,7 @@ export default function ProductCatalog() {
             {/* Right arrow */}
             <button
               onClick={() => scrollPills('right')}
-              aria-label="Scroll right"
+              aria-label={t('scrollRight')}
               className="shrink-0 h-8 w-8 rounded-full border border-border bg-white shadow-sm flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors"
             >
               <ChevronRight className="h-4 w-4" />
@@ -189,12 +191,12 @@ export default function ProductCatalog() {
         {!loading && (
           <div className="flex items-center justify-between mb-6 gap-4">
             <p className="text-sm text-gray-500">
-              <span className="font-semibold text-gray-900">{total}</span> products
+              <span className="font-semibold text-gray-900">{total}</span> {t('products')}
               {activeCategory && categories.find((c) => c.slug === activeCategory) && (
-                <> in <span className="font-semibold">{categories.find((c) => c.slug === activeCategory)?.name}</span></>
+                <> {t('in')} <span className="font-semibold">{categories.find((c) => c.slug === activeCategory)?.name}</span></>
               )}
               {debouncedSearch && (
-                <> for &ldquo;<span className="font-semibold">{debouncedSearch}</span>&rdquo;</>
+                <> {t('for')} &ldquo;<span className="font-semibold">{debouncedSearch}</span>&rdquo;</>
               )}
             </p>
             <div className="flex items-center gap-2 shrink-0">
@@ -204,9 +206,9 @@ export default function ProductCatalog() {
                 onChange={(e) => setSortBy(e.target.value)}
                 className="text-sm text-gray-700 bg-white border border-border rounded-lg px-3 py-1.5 focus:outline-none focus:border-primary"
               >
-                <option value="">Sort by: popularity</option>
-                <option value="price-asc">Price: low to high</option>
-                <option value="price-desc">Price: high to low</option>
+                <option value="">{t('sortPopularity')}</option>
+                <option value="price-asc">{t('sortPriceAsc')}</option>
+                <option value="price-desc">{t('sortPriceDesc')}</option>
               </select>
             </div>
           </div>
@@ -221,10 +223,10 @@ export default function ProductCatalog() {
           <div className="text-center py-20">
             <span className="text-6xl mb-4 block">🔍</span>
             <h3 className="font-display font-semibold text-gray-900 text-lg mb-2">
-              No products found
+              {t('noProductsFound')}
             </h3>
             <p className="text-gray-500 text-sm">
-              Try a different keyword or browse another category.
+              {t('tryDifferentKeyword')}
             </p>
           </div>
         ) : (
@@ -247,7 +249,7 @@ export default function ProductCatalog() {
                   {loadingMore ? (
                     <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                   ) : null}
-                  Load more products
+                  {t('loadMore')}
                 </Button>
               </div>
             )}

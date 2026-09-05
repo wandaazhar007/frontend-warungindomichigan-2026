@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import { useRouter, Link } from '@/i18n/navigation';
 import { Package, Loader2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useCartStore } from '@/store/cartStore';
 import { useCheckoutStore } from '@/store/checkoutStore';
 import { getOrCreateSessionId } from '@/lib/utils';
@@ -13,6 +13,7 @@ import api from '@/lib/api';
 import { ShippingRate } from '@/types';
 
 export default function ShippingStep() {
+  const t = useTranslations('Checkout.ShippingStep');
   const router = useRouter();
   const items   = useCartStore((s) => s.items);
   const { contact, selectedRate, setSelectedRate, setOrderData } = useCheckoutStore();
@@ -77,7 +78,7 @@ export default function ShippingStep() {
           setSelectedRate(cheapest);
         }
       } catch {
-        setError('Failed to load shipping options. Please check your connection and try again.');
+        setError(t('errors.loadFailed'));
       } finally {
         setLoading(false);
       }
@@ -125,7 +126,7 @@ export default function ShippingStep() {
       router.push('/checkout/payment');
     } catch (err: unknown) {
       const msg = (err as { response?: { data?: { error?: string } } })
-        ?.response?.data?.error ?? 'Failed to create order. Please try again.';
+        ?.response?.data?.error ?? t('errors.createOrderFailed');
       setError(msg);
     } finally {
       setSubmitting(false);
@@ -134,12 +135,12 @@ export default function ShippingStep() {
 
   return (
     <div className="space-y-6">
-      <h2 className="font-display font-700 text-gray-900 text-lg">Choose Shipping Method</h2>
+      <h2 className="font-display font-700 text-gray-900 text-lg">{t('title')}</h2>
 
       {loading && (
         <div className="flex items-center justify-center py-12 gap-3 text-gray-500">
           <Loader2 className="h-5 w-5 animate-spin" />
-          <span>Loading shipping options…</span>
+          <span>{t('loadingOptions')}</span>
         </div>
       )}
 
@@ -151,7 +152,7 @@ export default function ShippingStep() {
 
       {!loading && !error && rates.length === 0 && (
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800">
-          No shipping options available for this address.
+          {t('noOptions')}
         </div>
       )}
 
@@ -186,7 +187,7 @@ export default function ShippingStep() {
                       </p>
                       {rate.estimatedDays && (
                         <p className="text-xs text-gray-500 mt-0.5">
-                          Estimated {rate.estimatedDays} business day{rate.estimatedDays === 1 ? '' : 's'}
+                          {t('estimatedDays', { days: rate.estimatedDays })}
                         </p>
                       )}
                     </div>
@@ -202,7 +203,7 @@ export default function ShippingStep() {
 
       <div className="flex flex-col-reverse sm:flex-row gap-3 pt-2">
         <Button type="button" variant="outline" asChild>
-          <Link href="/checkout">← Kembali</Link>
+          <Link href="/checkout">← {t('back')}</Link>
         </Button>
         <Button
           onClick={handleContinue}
@@ -210,9 +211,9 @@ export default function ShippingStep() {
           className="flex-1 sm:flex-none sm:min-w-48"
         >
           {submitting ? (
-            <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Processing…</>
+            <><Loader2 className="h-4 w-4 mr-2 animate-spin" />{t('processing')}</>
           ) : (
-            'Continue to Payment →'
+            `${t('continueToPayment')} →`
           )}
         </Button>
       </div>

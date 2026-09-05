@@ -1,4 +1,7 @@
+'use client';
+
 import { ReactNode } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface LegalPageLayoutProps {
   label: string;
@@ -15,6 +18,8 @@ export default function LegalPageLayout({
   lastUpdated,
   children,
 }: LegalPageLayoutProps) {
+  const t = useTranslations('Legal.Common');
+
   return (
     <div>
       <div className="bg-white border-b border-border py-10">
@@ -25,7 +30,7 @@ export default function LegalPageLayout({
             <p className="text-muted-foreground text-sm sm:text-base max-w-2xl">{subtitle}</p>
           )}
           {lastUpdated && (
-            <p className="text-xs text-muted-foreground mt-3">Last updated: {lastUpdated}</p>
+            <p className="text-xs text-muted-foreground mt-3">{t('lastUpdated')}: {lastUpdated}</p>
           )}
         </div>
       </div>
@@ -73,11 +78,12 @@ export function ProseDivider() {
 }
 
 export function ProseContactBox() {
+  const t = useTranslations('Legal.Common');
   return (
     <div className="mt-10 rounded-xl bg-[var(--secondary)] border border-border p-6">
-      <p className="text-sm font-semibold text-gray-900 mb-1">Questions? Contact Us</p>
+      <p className="text-sm font-semibold text-gray-900 mb-1">{t('questionsContactUs')}</p>
       <p className="text-sm text-muted-foreground mb-4">
-        We&apos;re happy to help with any questions about our policies.
+        {t('happyToHelp')}
       </p>
       <div className="flex flex-col sm:flex-row gap-3">
         <a
@@ -86,13 +92,13 @@ export function ProseContactBox() {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-white text-sm font-semibold px-4 py-2.5 hover:bg-primary/90 transition-colors"
         >
-          💬 WhatsApp Us
+          💬 {t('whatsappUs')}
         </a>
         <a
           href="tel:+16264614963"
           className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-white text-sm font-semibold px-4 py-2.5 text-gray-900 hover:bg-secondary transition-colors"
         >
-          📞 Call +1 (626) 461-4963
+          📞 {t('callUs')} +1 (626) 461-4963
         </a>
       </div>
     </div>

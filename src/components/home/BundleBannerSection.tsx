@@ -1,8 +1,10 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function BundleBannerSection() {
+  const t = useTranslations('Home.BundleBanner');
   return (
     <section className="py-8 sm:py-10">
       <div className="container-wim">
@@ -34,20 +36,19 @@ export default function BundleBannerSection() {
           <div className="relative z-10 flex items-center p-8 md:p-12 w-full md:w-[55%]">
             <div className="text-white max-w-lg">
               <div className="inline-flex items-center gap-1.5 bg-yellow-400/20 text-yellow-300 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest border border-yellow-400/30">
-                Weekly Special
+                {t('badge')}
               </div>
               <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3 leading-tight">
-                This week&rsquo;s<br className="hidden sm:block" /> dapur bundle
+                {t('headingLine1')}<br className="hidden sm:block" /> {t('headingLine2')}
               </h2>
               <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6 max-w-sm">
-                Get your kitchen fully stocked with our curated Indonesian cooking essentials.
-                Everything you need to cook your favorite dishes at home.
+                {t('description')}
               </p>
               <Link
                 href="/products"
                 className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-3 rounded-xl text-sm transition-colors"
               >
-                Shop Bundle
+                {t('cta')}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

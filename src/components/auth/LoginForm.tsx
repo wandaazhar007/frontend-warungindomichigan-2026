@@ -1,27 +1,28 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { Link, useRouter } from '@/i18n/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Loader2, Eye, EyeOff } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { signInWithEmail, signInWithGoogle } from '@/lib/auth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-const schema = z.object({
-  email:    z.string().min(1, 'Required').email('Invalid email address'),
-  password: z.string().min(1, 'Required'),
-});
-type FormValues = z.infer<typeof schema>;
-
 export default function LoginForm() {
+  const t = useTranslations('Auth.LoginForm');
   const router = useRouter();
   const [serverError, setServerError]   = useState('');
   const [googleLoading, setGoogleLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  const schema = z.object({
+    email:    z.string().min(1, t('errors.required')).email(t('errors.invalidEmail')),
+    password: z.string().min(1, t('errors.required')),
+  });
+  type FormValues = z.infer<typeof schema>;
 
   const {
     register,
@@ -37,9 +38,9 @@ export default function LoginForm() {
     } catch (err: unknown) {
       const code = (err as { code?: string }).code ?? '';
       if (code === 'auth/invalid-credential' || code === 'auth/wrong-password' || code === 'auth/user-not-found') {
-        setServerError('Incorrect email or password');
+        setServerError(t('errors.incorrectCredentials'));
       } else {
-        setServerError('Something went wrong. Please try again.');
+        setServerError(t('errors.generic'));
       }
     }
   }
@@ -51,7 +52,7 @@ export default function LoginForm() {
       await signInWithGoogle();
       router.push('/');
     } catch {
-      setServerError('Something went wrong. Please try again.');
+      setServerError(t('errors.generic'));
     } finally {
       setGoogleLoading(false);
     }
@@ -79,7 +80,7 @@ export default function LoginForm() {
             <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
           </svg>
         )}
-        Continue with Google
+        {t('continueGoogle')}
       </Button>
 
       <div className="relative mb-5">
@@ -87,14 +88,14 @@ export default function LoginForm() {
           <span className="w-full border-t border-border" />
         </div>
         <div className="relative flex justify-center text-xs">
-          <span className="bg-background px-3 text-gray-400">or sign in with email</span>
+          <span className="bg-background px-3 text-gray-400">{t('orSignInEmail')}</span>
         </div>
       </div>
 
       {/* Email/password form */}
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('emailLabel')}</label>
           <Input
             type="email"
             placeholder="you@example.com"
@@ -106,9 +107,9 @@ export default function LoginForm() {
 
         <div>
           <div className="flex items-center justify-between mb-1.5">
-            <label className="block text-sm font-medium text-gray-700">Password</label>
+            <label className="block text-sm font-medium text-gray-700">{t('passwordLabel')}</label>
             <Link href="/forgot-password" className="text-xs text-primary hover:underline">
-              Forgot password?
+              {t('forgotPassword')}
             </Link>
           </div>
           <div className="relative">
@@ -138,19 +139,19 @@ export default function LoginForm() {
 
         <Button type="submit" className="w-full" size="lg" disabled={disabled}>
           {isSubmitting ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : null}
-          Sign In
+          {t('signIn')}
         </Button>
       </form>
 
       <p className="text-center text-sm text-gray-500 mt-6">
-        Don&apos;t have an account?{' '}
+        {t('noAccount')}{' '}
         <Link href="/register" className="text-primary font-semibold hover:underline">
-          Sign up here
+          {t('signUpHere')}
         </Link>
       </p>
 
       <p className="text-center text-xs text-gray-400 mt-4 leading-relaxed">
-        By continuing, you agree to our terms of service and privacy policy.
+        {t('agreement')}
       </p>
     </div>
   );

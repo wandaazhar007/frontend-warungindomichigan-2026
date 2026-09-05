@@ -1,23 +1,18 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { ShoppingBasket, Menu, X, LogOut, Package, User } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { useCartStore } from '@/store/cartStore';
 import { useAuthStore } from '@/store/authStore';
 import { useUIStore } from '@/store/uiStore';
 import { signOut } from '@/lib/auth';
 import { cn } from '@/lib/utils';
-
-const announcements = [
-  'Shipping nationwide across the U.S.',
-  'Order before 2 PM, ships today',
-  'Authentic Indonesian flavors, delivered to your door',
-  'Free delivery on orders over $50',
-];
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
+  const t = useTranslations('Navbar');
   const [mobileOpen, setMobileOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const userMenuRef = useRef<HTMLDivElement>(null);
@@ -37,14 +32,26 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  const displayName = user?.displayName ?? user?.email?.split('@')[0] ?? 'Account';
+  const displayName = user?.displayName ?? user?.email?.split('@')[0] ?? t('account');
 
   async function handleSignOut() {
     await signOut();
     setUserMenuOpen(false);
   }
 
+  const announcements = [
+    t('announcements.shipping'),
+    t('announcements.sameDay'),
+    t('announcements.authentic'),
+    t('announcements.freeDelivery'),
+  ];
   const tickerItems = [...announcements, ...announcements, ...announcements];
+
+  const navLinks = [
+    { href: '/products', label: t('links.shop'), mobileLabel: `🛒 ${t('links.shop')}` },
+    { href: '/about', label: t('links.about'), mobileLabel: `👋 ${t('links.about')}` },
+    { href: '/faq', label: t('links.faq'), mobileLabel: `❓ ${t('links.faq')}` },
+  ];
 
   return (
     <header className={cn(
@@ -88,11 +95,7 @@ export default function Navbar() {
 
             {/* Nav links — desktop only */}
             <nav className="hidden md:flex items-center gap-0.5">
-              {[
-                { href: '/products', label: 'Shop' },
-                { href: '/about', label: 'About Us' },
-                { href: '/faq', label: 'FAQ' },
-              ].map(({ href, label }) => {
+              {navLinks.map(({ href, label }) => {
                 const isActive = pathname === href || pathname.startsWith(href + '/');
                 return (
                   <Link
@@ -113,6 +116,8 @@ export default function Navbar() {
                 );
               })}
             </nav>
+
+            <LanguageSwitcher className="hidden md:flex" />
 
             {/* Auth — desktop */}
             {!loading && (
@@ -136,14 +141,14 @@ export default function Navbar() {
                           className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-gray-50 text-foreground"
                           onClick={() => setUserMenuOpen(false)}>
                           <Package className="h-4 w-4 text-wim-faint" />
-                          My Orders
+                          {t('myOrders')}
                         </Link>
                         <div className="border-t border-border my-1" />
                         <button
                           onClick={handleSignOut}
                           className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-red-600 hover:bg-red-50">
                           <LogOut className="h-4 w-4" />
-                          Sign Out
+                          {t('signOut')}
                         </button>
                       </div>
                     )}
@@ -152,11 +157,11 @@ export default function Navbar() {
                   <>
                     <Link href="/login"
                       className="text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors text-foreground">
-                      Sign In
+                      {t('signIn')}
                     </Link>
                     <Link href="/register"
                       className="text-sm font-bold text-white px-4 py-1.5 rounded-lg transition-colors ml-0.5 bg-primary hover:bg-wim-red-hover">
-                      Sign Up
+                      {t('signUp')}
                     </Link>
                   </>
                 )}
@@ -193,14 +198,10 @@ export default function Navbar() {
       {/* ── Mobile menu ── */}
       <div className={cn(
         'md:hidden bg-white border-b border-border overflow-hidden transition-all duration-300',
-        mobileOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
+        mobileOpen ? 'max-h-[36rem] opacity-100' : 'max-h-0 opacity-0'
       )}>
         <div className="container-wim py-4 flex flex-col gap-1">
-          {[
-            { href: '/products', label: '🛒 Shop' },
-            { href: '/about', label: '👋 About Us' },
-            { href: '/faq', label: '❓ FAQ' },
-          ].map(({ href, label }) => {
+          {navLinks.map(({ href, mobileLabel }) => {
             const isActive = pathname === href || pathname.startsWith(href + '/');
             return (
               <Link
@@ -214,13 +215,17 @@ export default function Navbar() {
                 )}
                 onClick={() => setMobileOpen(false)}
               >
-                {label}
+                {mobileLabel}
                 {isActive && (
                   <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                 )}
               </Link>
             );
           })}
+
+          <div className="mt-2 pt-3 border-t border-border">
+            <LanguageSwitcher />
+          </div>
 
           {!loading && (
             <div className="mt-2 pt-3 border-t border-border">
@@ -230,13 +235,13 @@ export default function Navbar() {
                     className="flex items-center gap-2 px-3 py-2.5 text-sm rounded-lg hover:bg-gray-50 text-foreground"
                     onClick={() => setMobileOpen(false)}>
                     <Package className="h-4 w-4 text-wim-faint" />
-                    My Orders
+                    {t('myOrders')}
                   </Link>
                   <button
                     onClick={() => { handleSignOut(); setMobileOpen(false); }}
                     className="flex items-center gap-2 w-full px-3 py-2.5 text-sm text-red-600 rounded-lg hover:bg-red-50 text-left">
                     <LogOut className="h-4 w-4" />
-                    Sign Out
+                    {t('signOut')}
                   </button>
                 </>
               ) : (
@@ -244,12 +249,12 @@ export default function Navbar() {
                   <Link href="/login"
                     onClick={() => setMobileOpen(false)}
                     className="flex-1 text-center text-sm font-semibold py-2 rounded-lg border border-border transition-colors text-foreground">
-                    Sign In
+                    {t('signIn')}
                   </Link>
                   <Link href="/register"
                     onClick={() => setMobileOpen(false)}
                     className="flex-1 text-center text-sm font-bold text-white py-2 rounded-lg transition-colors bg-primary hover:bg-wim-red-hover">
-                    Sign Up
+                    {t('signUp')}
                   </Link>
                 </div>
               )}

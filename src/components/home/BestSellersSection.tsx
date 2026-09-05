@@ -1,13 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { ArrowRight, Loader2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { getProducts } from '@/lib/api';
 import { Product } from '@/types';
 import ProductCard from '@/components/products/ProductCard';
 
 export default function BestSellersSection() {
+  const t = useTranslations('Home.BestSellers');
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading]   = useState(true);
 
@@ -28,20 +30,20 @@ export default function BestSellersSection() {
         <div className="flex items-end justify-between mb-8 gap-4">
           <div>
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1.5">
-              Popular picks
+              {t('popularPicks')}
             </p>
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-gray-900">
-              This week&rsquo;s best&#8209;sellers
+              {t('heading')}
             </h2>
             <p className="text-gray-500 mt-1 text-sm">
-              Curated top picks from our Indonesian grocery
+              {t('subheading')}
             </p>
           </div>
           <Link
             href="/products"
             className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline shrink-0"
           >
-            View all products
+            {t('viewAll')}
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -66,7 +68,7 @@ export default function BestSellersSection() {
               href="/products"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
             >
-              View all products
+              {t('viewAll')}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
