@@ -154,16 +154,10 @@ export default function Navbar() {
                     )}
                   </div>
                 ) : (
-                  <>
-                    <Link href="/login"
-                      className="text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors text-foreground">
-                      {t('signIn')}
-                    </Link>
-                    <Link href="/register"
-                      className="text-sm font-bold text-white px-4 py-1.5 rounded-lg transition-colors ml-0.5 bg-primary hover:bg-wim-red-hover">
-                      {t('signUp')}
-                    </Link>
-                  </>
+                  <Link href="/login"
+                    className="text-sm font-semibold px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors text-foreground">
+                    {t('signIn')}
+                  </Link>
                 )}
               </div>
             )}
