@@ -117,8 +117,6 @@ export default function Navbar() {
               })}
             </nav>
 
-            <LanguageSwitcher className="hidden md:flex" />
-
             {/* Auth — desktop */}
             {!loading && (
               <div className="hidden md:flex items-center gap-1">
@@ -161,6 +159,8 @@ export default function Navbar() {
                 )}
               </div>
             )}
+
+            <LanguageSwitcher className="hidden md:flex" />
 
             {/* Cart icon */}
             <Link href="/cart" className="relative ml-1">
