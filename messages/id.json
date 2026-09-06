@@ -2,6 +2,8 @@
   "Navbar": {
     "account": "Akun",
     "myOrders": "Pesanan Saya",
+    "addresses": "Alamat",
+    "paymentMethods": "Metode Pembayaran",
     "signOut": "Keluar",
     "signIn": "Masuk",
     "signUp": "Daftar",
@@ -246,6 +248,20 @@
         "invalidEmail": "Format email tidak valid",
         "generic": "Terjadi kesalahan. Periksa email kamu dan coba lagi."
       }
+    },
+    "VerifyEmail": {
+      "metaTitle": "Verifikasi Email Kamu",
+      "title": "Verifikasi email kamu",
+      "sentTo": "Kami mengirim link verifikasi ke <email></email>. Klik link tersebut untuk mengaktifkan checkout di akun kamu.",
+      "resend": "Kirim ulang email verifikasi",
+      "resendCooldown": "Kirim ulang dalam {seconds}d",
+      "resendSuccess": "Email verifikasi terkirim. Cek inbox atau folder spam kamu.",
+      "iveVerified": "Saya sudah verifikasi — lanjut",
+      "notVerifiedYet": "Masih belum terverifikasi. Klik link di email, lalu coba lagi.",
+      "signOutGuest": "atau keluar dan checkout sebagai tamu",
+      "errors": {
+        "generic": "Terjadi kesalahan. Silakan coba lagi."
+      }
     }
   },
   "Checkout": {
@@ -300,7 +316,8 @@
       "continueToPayment": "Lanjut ke Pembayaran",
       "errors": {
         "loadFailed": "Gagal memuat opsi pengiriman. Periksa koneksi kamu dan coba lagi.",
-        "createOrderFailed": "Gagal membuat pesanan. Silakan coba lagi."
+        "createOrderFailed": "Gagal membuat pesanan. Silakan coba lagi.",
+        "emailNotVerified": "Silakan verifikasi email kamu sebelum memesan, atau checkout sebagai tamu."
       }
     },
     "PaymentStep": {
@@ -1047,6 +1064,64 @@
       "body2": "Namun, perlu diperhatikan:",
       "chocolateNote": "Produk yang mengandung cokelat (mis. wafer, snack berlapis cokelat) bisa meleleh saat cuaca sangat panas di musim panas. Kami menyarankan memilih opsi pengiriman yang lebih cepat jika memesan produk ini saat cuaca panas. Kami tidak bertanggung jawab atas pelelehan akibat panas selama transit setelah paket berada dalam penguasaan kurir.",
       "storageNote": "Simpan semua produk sesuai instruksi di kemasannya setelah kamu menerima pesanan"
+    }
+  },
+  "Account": {
+    "Addresses": {
+      "title": "Alamat",
+      "subtitle": "Kelola alamat pengiriman yang tersimpan.",
+      "addAddress": "Tambah Alamat",
+      "editAddress": "Edit Alamat",
+      "fetchError": "Gagal memuat alamatmu.",
+      "emptyState": "Kamu belum menyimpan alamat apa pun.",
+      "default": "Utama",
+      "setDefault": "Jadikan utama",
+      "edit": "Edit",
+      "delete": "Hapus"
+    },
+    "AddressForm": {
+      "firstName": "Nama Depan",
+      "lastName": "Nama Belakang",
+      "phone": "Nomor Telepon",
+      "streetAddress": "Alamat Jalan",
+      "apartmentOptional": "Apartemen, Suite, dll. (opsional)",
+      "city": "Kota",
+      "state": "Negara Bagian",
+      "selectState": "Pilih negara bagian",
+      "zipCode": "Kode Pos",
+      "setAsDefault": "Jadikan alamat utama",
+      "cancel": "Batal",
+      "saveChanges": "Simpan Perubahan",
+      "addAddress": "Tambah Alamat",
+      "errors": {
+        "firstNameMin": "Nama depan minimal 2 karakter",
+        "lastNameMin": "Nama belakang minimal 2 karakter",
+        "streetRequired": "Alamat jalan wajib diisi",
+        "cityRequired": "Kota wajib diisi",
+        "stateRequired": "Negara bagian wajib diisi",
+        "zipLength": "Kode pos harus 5 digit",
+        "generic": "Terjadi kesalahan. Silakan coba lagi."
+      }
+    },
+    "PaymentMethods": {
+      "title": "Metode Pembayaran",
+      "subtitle": "Kelola kartu tersimpan untuk checkout yang lebih cepat.",
+      "addCard": "Tambah Kartu",
+      "fetchError": "Gagal memuat metode pembayaranmu.",
+      "emptyState": "Kamu belum menyimpan kartu apa pun.",
+      "default": "Utama",
+      "setDefault": "Jadikan utama",
+      "delete": "Hapus",
+      "card": "Kartu",
+      "expires": "Berlaku hingga"
+    },
+    "PaymentMethodForm": {
+      "cancel": "Batal",
+      "saveCard": "Simpan Kartu",
+      "errors": {
+        "generic": "Terjadi kesalahan. Silakan coba lagi.",
+        "setupFailed": "Gagal menyiapkan form kartu. Silakan coba lagi."
+      }
     }
   }
 }

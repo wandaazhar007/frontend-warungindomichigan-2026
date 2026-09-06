@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Product, ProductsResponse, Category } from '@/types';
+import { Product, ProductsResponse, Category, Address, SavedPaymentMethod } from '@/types';
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
@@ -139,6 +139,54 @@ export async function registerCustomer(payload: {
 
 export async function getMyProfile() {
   const { data } = await api.get('/api/customers/me');
+  return data;
+}
+
+// --- Addresses ---
+
+export type AddressPayload = Omit<Address, 'id' | 'isDefault'> & { isDefault?: boolean };
+
+export async function createAddress(payload: AddressPayload) {
+  const { data } = await api.post<Address>('/api/customers/me/addresses', payload);
+  return data;
+}
+
+export async function updateAddress(id: string, payload: AddressPayload) {
+  const { data } = await api.put<Address>(`/api/customers/me/addresses/${id}`, payload);
+  return data;
+}
+
+export async function setDefaultAddress(id: string) {
+  const { data } = await api.put(`/api/customers/me/addresses/${id}/default`);
+  return data;
+}
+
+export async function deleteAddress(id: string) {
+  const { data } = await api.delete(`/api/customers/me/addresses/${id}`);
+  return data;
+}
+
+// --- Payment Methods (Stripe saved cards) ---
+
+export async function createPaymentMethodSetupIntent() {
+  const { data } = await api.post<{ clientSecret: string }>(
+    '/api/customers/me/payment-methods/setup-intent'
+  );
+  return data;
+}
+
+export async function getMyPaymentMethods() {
+  const { data } = await api.get<SavedPaymentMethod[]>('/api/customers/me/payment-methods');
+  return data;
+}
+
+export async function setDefaultPaymentMethod(id: string) {
+  const { data } = await api.put(`/api/customers/me/payment-methods/${id}/default`);
+  return data;
+}
+
+export async function deletePaymentMethod(id: string) {
+  const { data } = await api.delete(`/api/customers/me/payment-methods/${id}`);
   return data;
 }
 

@@ -6,6 +6,7 @@ import { Package, Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useCartStore } from '@/store/cartStore';
 import { useCheckoutStore } from '@/store/checkoutStore';
+import { useAuthStore } from '@/store/authStore';
 import { getOrCreateSessionId } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { formatPrice } from '@/lib/utils';
@@ -90,6 +91,14 @@ export default function ShippingStep() {
 
   async function handleContinue() {
     if (!selectedRate || !contact) return;
+
+    // Second line of defense — logged-in user with an unverified email cannot order.
+    const authUser = useAuthStore.getState().user;
+    if (authUser && !authUser.emailVerified) {
+      router.replace('/verify-email?redirect=/checkout');
+      return;
+    }
+
     setSubmitting(true);
     setError('');
     try {
@@ -125,6 +134,12 @@ export default function ShippingStep() {
       setOrderData(res.data);
       router.push('/checkout/payment');
     } catch (err: unknown) {
+      const status = (err as { response?: { status?: number } })?.response?.status;
+      if (status === 403) {
+        setError(t('errors.emailNotVerified'));
+        router.replace('/verify-email?redirect=/checkout');
+        return;
+      }
       const msg = (err as { response?: { data?: { error?: string } } })
         ?.response?.data?.error ?? t('errors.createOrderFailed');
       setError(msg);

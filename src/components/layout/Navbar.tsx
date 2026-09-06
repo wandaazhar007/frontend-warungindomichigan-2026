@@ -1,7 +1,7 @@
 'use client';
 
 import { Link, usePathname } from '@/i18n/navigation';
-import { ShoppingBasket, Menu, X, LogOut, Package, User } from 'lucide-react';
+import { ShoppingBasket, Menu, X, LogOut, Package, User, MapPin, CreditCard } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { useCartStore } from '@/store/cartStore';
@@ -76,15 +76,15 @@ export default function Navbar() {
         <div className="container-wim flex items-center justify-between h-14">
 
           {/* ── Left: Logo ── */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-              <span className="text-white font-display font-bold text-[11px] leading-none tracking-wide">WIM</span>
+          <Link href="/" className="flex items-center gap-2.5 shrink-0">
+            <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center shrink-0">
+              <span className="text-white font-display font-bold text-sm leading-none tracking-wide">WIM</span>
             </div>
             <div className="leading-tight hidden sm:block">
-              <p className="font-display font-bold text-[13px] leading-none tracking-tight text-foreground">
+              <p className="font-display font-bold text-lg leading-none tracking-tight text-foreground">
                 Warung IndoMi
               </p>
-              <p className="text-[9px] uppercase tracking-widest font-semibold mt-0.5 text-wim-faint">
+              <p className="text-[10px] uppercase tracking-widest font-semibold mt-1 text-wim-faint">
                 Michigan
               </p>
             </div>
@@ -140,6 +140,18 @@ export default function Navbar() {
                           onClick={() => setUserMenuOpen(false)}>
                           <Package className="h-4 w-4 text-wim-faint" />
                           {t('myOrders')}
+                        </Link>
+                        <Link href="/account/addresses"
+                          className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-gray-50 text-foreground"
+                          onClick={() => setUserMenuOpen(false)}>
+                          <MapPin className="h-4 w-4 text-wim-faint" />
+                          {t('addresses')}
+                        </Link>
+                        <Link href="/account/payment-methods"
+                          className="flex items-center gap-2 px-4 py-2.5 text-sm hover:bg-gray-50 text-foreground"
+                          onClick={() => setUserMenuOpen(false)}>
+                          <CreditCard className="h-4 w-4 text-wim-faint" />
+                          {t('paymentMethods')}
                         </Link>
                         <div className="border-t border-border my-1" />
                         <button
@@ -230,6 +242,18 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}>
                     <Package className="h-4 w-4 text-wim-faint" />
                     {t('myOrders')}
+                  </Link>
+                  <Link href="/account/addresses"
+                    className="flex items-center gap-2 px-3 py-2.5 text-sm rounded-lg hover:bg-gray-50 text-foreground"
+                    onClick={() => setMobileOpen(false)}>
+                    <MapPin className="h-4 w-4 text-wim-faint" />
+                    {t('addresses')}
+                  </Link>
+                  <Link href="/account/payment-methods"
+                    className="flex items-center gap-2 px-3 py-2.5 text-sm rounded-lg hover:bg-gray-50 text-foreground"
+                    onClick={() => setMobileOpen(false)}>
+                    <CreditCard className="h-4 w-4 text-wim-faint" />
+                    {t('paymentMethods')}
                   </Link>
                   <button
                     onClick={() => { handleSignOut(); setMobileOpen(false); }}

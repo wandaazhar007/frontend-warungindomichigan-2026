@@ -33,8 +33,8 @@ export default function LoginForm() {
   async function onSubmit(data: FormValues) {
     setServerError('');
     try {
-      await signInWithEmail(data.email, data.password);
-      router.push('/');
+      const user = await signInWithEmail(data.email, data.password);
+      router.push(user.emailVerified ? '/' : '/verify-email');
     } catch (err: unknown) {
       const code = (err as { code?: string }).code ?? '';
       if (code === 'auth/invalid-credential' || code === 'auth/wrong-password' || code === 'auth/user-not-found') {

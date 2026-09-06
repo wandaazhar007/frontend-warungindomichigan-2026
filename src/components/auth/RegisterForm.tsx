@@ -42,7 +42,7 @@ export default function RegisterForm() {
     setServerError('');
     try {
       await signUpWithEmail(data.email, data.password, data.firstName, data.lastName);
-      router.push('/');
+      router.push('/verify-email');
     } catch (err: unknown) {
       const code = (err as { code?: string }).code ?? '';
       if (code === 'auth/email-already-in-use') {

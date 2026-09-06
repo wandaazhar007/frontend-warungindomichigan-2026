@@ -88,3 +88,26 @@ export type OrderStatus =
 
 export type PaymentStatus = 'UNPAID' | 'PAID' | 'PARTIALLY_REFUNDED' | 'REFUNDED' | 'FAILED';
 export type FulfillStatus = 'UNFULFILLED' | 'PARTIALLY_FULFILLED' | 'FULFILLED';
+
+export interface Address {
+  id: string;
+  firstName: string;
+  lastName: string;
+  street1: string;
+  street2: string | null;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+  phone: string | null;
+  isDefault: boolean;
+}
+
+export interface SavedPaymentMethod {
+  id: string;
+  brand: string | null;
+  last4: string | null;
+  expMonth: number | null;
+  expYear: number | null;
+  isDefault: boolean;
+}

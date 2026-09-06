@@ -2,6 +2,8 @@
   "Navbar": {
     "account": "Account",
     "myOrders": "My Orders",
+    "addresses": "Addresses",
+    "paymentMethods": "Payment Methods",
     "signOut": "Sign Out",
     "signIn": "Sign In",
     "signUp": "Sign Up",
@@ -246,6 +248,20 @@
         "invalidEmail": "Invalid email address",
         "generic": "Something went wrong. Check your email and try again."
       }
+    },
+    "VerifyEmail": {
+      "metaTitle": "Verify Your Email",
+      "title": "Verify your email",
+      "sentTo": "We sent a verification link to <email></email>. Click it to activate checkout on your account.",
+      "resend": "Resend verification email",
+      "resendCooldown": "Resend in {seconds}s",
+      "resendSuccess": "Verification email sent. Check your inbox or spam folder.",
+      "iveVerified": "I've verified — continue",
+      "notVerifiedYet": "Still not verified. Click the link in the email, then try again.",
+      "signOutGuest": "or sign out and check out as guest",
+      "errors": {
+        "generic": "Something went wrong. Please try again."
+      }
     }
   },
   "Checkout": {
@@ -300,7 +316,8 @@
       "continueToPayment": "Continue to Payment",
       "errors": {
         "loadFailed": "Failed to load shipping options. Please check your connection and try again.",
-        "createOrderFailed": "Failed to create order. Please try again."
+        "createOrderFailed": "Failed to create order. Please try again.",
+        "emailNotVerified": "Please verify your email before placing an order, or check out as a guest."
       }
     },
     "PaymentStep": {
@@ -1047,6 +1064,64 @@
       "body2": "However, please be aware:",
       "chocolateNote": "Products containing chocolate (e.g., wafer bars, chocolate-coated snacks) may melt in extreme heat during summer months. We recommend selecting faster shipping options if ordering these items during hot weather. We are not responsible for heat-related melting during transit after the package is in the carrier's possession.",
       "storageNote": "Store all products according to the instructions on their packaging once you receive your order"
+    }
+  },
+  "Account": {
+    "Addresses": {
+      "title": "Addresses",
+      "subtitle": "Manage your saved shipping addresses.",
+      "addAddress": "Add Address",
+      "editAddress": "Edit Address",
+      "fetchError": "Failed to load your addresses.",
+      "emptyState": "You haven't saved any addresses yet.",
+      "default": "Default",
+      "setDefault": "Set as default",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "AddressForm": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "streetAddress": "Street Address",
+      "apartmentOptional": "Apartment, Suite, etc. (optional)",
+      "city": "City",
+      "state": "State",
+      "selectState": "Select state",
+      "zipCode": "ZIP Code",
+      "setAsDefault": "Set as default address",
+      "cancel": "Cancel",
+      "saveChanges": "Save Changes",
+      "addAddress": "Add Address",
+      "errors": {
+        "firstNameMin": "First name must be at least 2 characters",
+        "lastNameMin": "Last name must be at least 2 characters",
+        "streetRequired": "Street address is required",
+        "cityRequired": "City is required",
+        "stateRequired": "State is required",
+        "zipLength": "ZIP code must be 5 digits",
+        "generic": "Something went wrong. Please try again."
+      }
+    },
+    "PaymentMethods": {
+      "title": "Payment Methods",
+      "subtitle": "Manage your saved cards for faster checkout.",
+      "addCard": "Add Card",
+      "fetchError": "Failed to load your payment methods.",
+      "emptyState": "You haven't saved any cards yet.",
+      "default": "Default",
+      "setDefault": "Set as default",
+      "delete": "Delete",
+      "card": "Card",
+      "expires": "Expires"
+    },
+    "PaymentMethodForm": {
+      "cancel": "Cancel",
+      "saveCard": "Save Card",
+      "errors": {
+        "generic": "Something went wrong. Please try again.",
+        "setupFailed": "Failed to set up card form. Please try again."
+      }
     }
   }
 }

@@ -4,6 +4,7 @@ import {
   signInWithPopup,
   signOut as firebaseSignOut,
   sendPasswordResetEmail,
+  sendEmailVerification,
   updateProfile,
   User,
 } from 'firebase/auth';
@@ -48,6 +49,14 @@ export async function signInWithEmail(email: string, password: string): Promise<
   return user;
 }
 
+// Send Firebase's built-in verification email. The link lands the user back on /verify-email.
+export async function sendVerificationEmail(user: User): Promise<void> {
+  await sendEmailVerification(user, {
+    url: `${window.location.origin}/verify-email`,
+    handleCodeInApp: false,
+  });
+}
+
 export async function signUpWithEmail(
   email: string,
   password: string,
@@ -57,6 +66,11 @@ export async function signUpWithEmail(
   const { user } = await createUserWithEmailAndPassword(auth, email, password);
   await updateProfile(user, { displayName: `${firstName} ${lastName}`.trim() });
   await postLoginSync(user);
+  try {
+    await sendVerificationEmail(user);
+  } catch {
+    // Non-critical: the /verify-email page has a "resend" button as the recovery path
+  }
   return user;
 }
 
