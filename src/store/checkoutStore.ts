@@ -36,6 +36,7 @@ interface CheckoutStore {
   setContact:      (contact: ContactData) => void;
   setContactDraft: (contact: ContactData) => void;
   setSelectedRate: (rate: ShippingRate) => void;
+  clearShipping:   () => void;
   setOrderData:    (data: {
     orderNumber:     string;
     clientSecret:    string;
@@ -55,11 +56,22 @@ export const useCheckoutStore = create<CheckoutStore>()(
       paymentIntentId: null,
       breakdown:       null,
 
-      // Confirmed address (form submit) — clear selectedRate so ShippingStep refetches fresh rates
-      setContact: (contact) => set({ contact, selectedRate: null }),
+      // Confirmed address (form submit) — invalidate every shipping/order value computed downstream
+      // so ShippingStep refetches fresh rates and no stale order/PaymentIntent is reused.
+      setContact: (contact) => set({
+        contact,
+        selectedRate: null, breakdown: null,
+        orderNumber: null, clientSecret: null, paymentIntentId: null,
+      }),
       // Live-typing draft — persisted on every change, does NOT reset the chosen shipping rate
       setContactDraft: (contact) => set({ contact }),
       setSelectedRate: (selectedRate) => set({ selectedRate }),
+      // Wipe everything derived after the contact step (rate, breakdown, created order).
+      // Called when the user is back on the contact step: nothing downstream is valid yet.
+      clearShipping: () => set({
+        selectedRate: null, breakdown: null,
+        orderNumber: null, clientSecret: null, paymentIntentId: null,
+      }),
       setOrderData:    (data)      => set(data),
       reset: () => set({
         contact: null, selectedRate: null,

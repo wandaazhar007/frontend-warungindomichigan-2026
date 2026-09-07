@@ -53,6 +53,12 @@ export default function ContactForm() {
     if (items.length === 0) router.replace('/cart');
   }, [items.length, router]);
 
+  // On the contact step nothing past it is confirmed — drop any shipping rate / created
+  // order left over from navigating "Back", so Order Summary shows "calculated next step".
+  useEffect(() => {
+    useCheckoutStore.getState().clearShipping();
+  }, []);
+
   // Pre-fill once on mount: persisted draft (localStorage) wins, else the auth user's details.
   const prefilledRef = useRef(false);
   useEffect(() => {
