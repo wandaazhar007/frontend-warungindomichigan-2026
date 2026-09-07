@@ -223,7 +223,7 @@ export default function ShippingStep() {
         <Button
           onClick={handleContinue}
           disabled={!selectedRate || submitting || loading}
-          className="flex-1 sm:flex-none sm:min-w-48"
+          className="w-full sm:w-auto sm:min-w-48"
         >
           {submitting ? (
             <><Loader2 className="h-4 w-4 mr-2 animate-spin" />{t('processing')}</>

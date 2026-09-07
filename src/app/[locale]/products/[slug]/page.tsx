@@ -242,7 +242,7 @@ export default function ProductDetailPage() {
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <Button
                 size="lg"
-                className="flex-1 font-semibold"
+                className="w-full sm:flex-1 font-semibold"
                 disabled={isOutOfStock}
                 onClick={handleAddToCart}
               >
@@ -252,7 +252,7 @@ export default function ProductDetailPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="flex-1 border-border"
+                className="w-full sm:flex-1 border-border"
                 asChild
               >
                 <Link href="/cart">{t('viewCart')}</Link>

@@ -91,7 +91,7 @@ function PaymentForm({ orderNumber, total }: { orderNumber: string; total: numbe
         <Button
           type="submit"
           disabled={!stripe || !elements || loading || !ready}
-          className="flex-1 sm:flex-none sm:min-w-48"
+          className="w-full sm:w-auto sm:min-w-48"
         >
           {loading ? (
             <><Loader2 className="h-4 w-4 mr-2 animate-spin" />{t('processing')}</>

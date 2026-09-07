@@ -156,7 +156,7 @@ export default function ContactForm() {
         <Button type="button" variant="outline" asChild>
           <Link href="/cart">← {t('backToCart')}</Link>
         </Button>
-        <Button type="submit" className="flex-1 sm:flex-none sm:min-w-48" disabled={isSubmitting}>
+        <Button type="submit" className="w-full sm:w-auto sm:min-w-48" disabled={isSubmitting}>
           {t('continueToShipping')} →
         </Button>
       </div>
