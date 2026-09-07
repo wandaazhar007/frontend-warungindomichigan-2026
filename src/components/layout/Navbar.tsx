@@ -22,6 +22,12 @@ export default function Navbar() {
   const { user, loading } = useAuthStore();
   const mobileNavHidden = useUIStore((s) => s.mobileNavHidden);
 
+  // The cart store hydrates from localStorage only on the client, so gate anything
+  // derived from it behind a mount flag to keep the first client render identical
+  // to the server render (avoids a hydration mismatch on the cart badge).
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
@@ -179,7 +185,7 @@ export default function Navbar() {
               <div className="h-8 w-8 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors">
                 <ShoppingBasket className="h-5 w-5 text-foreground" />
               </div>
-              {totalItems > 0 && (
+              {mounted && totalItems > 0 && (
                 <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full text-white text-[9px] flex items-center justify-center font-bold bg-wim-yellow">
                   {totalItems > 9 ? '9+' : totalItems}
                 </span>

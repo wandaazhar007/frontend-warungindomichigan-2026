@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useRouter } from '@/i18n/navigation';
 import { useForm, useController } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,7 +20,8 @@ export default function ContactForm() {
   const router  = useRouter();
   const items   = useCartStore((s) => s.items);
   const user    = useAuthStore((s) => s.user);
-  const { contact, setContact } = useCheckoutStore();
+  const setContact      = useCheckoutStore((s) => s.setContact);
+  const setContactDraft = useCheckoutStore((s) => s.setContactDraft);
 
   const schema = z.object({
     firstName: z.string().min(2, t('errors.firstNameMin')),
@@ -41,6 +42,7 @@ export default function ContactForm() {
     control,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({ resolver: zodResolver(schema), defaultValues: { street1: '' } });
 
@@ -51,19 +53,32 @@ export default function ContactForm() {
     if (items.length === 0) router.replace('/cart');
   }, [items.length, router]);
 
-  // Pre-fill from auth user or existing checkout contact
+  // Pre-fill once on mount: persisted draft (localStorage) wins, else the auth user's details.
+  const prefilledRef = useRef(false);
   useEffect(() => {
-    if (contact) {
-      Object.entries(contact).forEach(([k, v]) =>
+    if (prefilledRef.current) return;
+    const saved = useCheckoutStore.getState().contact;
+    if (saved) {
+      prefilledRef.current = true;
+      Object.entries(saved).forEach(([k, v]) =>
         setValue(k as keyof FormValues, v as string)
       );
     } else if (user) {
+      prefilledRef.current = true;
       const [first, ...rest] = (user.displayName ?? '').split(' ');
       if (first) setValue('firstName', first);
       if (rest.length) setValue('lastName', rest.join(' '));
       if (user.email) setValue('email', user.email);
     }
-  }, [contact, user, setValue]);
+  }, [user, setValue]);
+
+  // Persist every field change to localStorage so a refresh / back-navigation keeps the input.
+  useEffect(() => {
+    const sub = watch((values) => {
+      setContactDraft(values as ContactData);
+    });
+    return () => sub.unsubscribe();
+  }, [watch, setContactDraft]);
 
   function onSubmit(data: FormValues) {
     setContact(data as ContactData);
