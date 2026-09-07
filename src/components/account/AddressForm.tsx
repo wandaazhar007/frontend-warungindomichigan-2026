@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, useController } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Loader2 } from 'lucide-react';
@@ -10,6 +10,7 @@ import { createAddress, updateAddress } from '@/lib/api';
 import { Address } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import AddressAutocomplete from '@/components/address/AddressAutocomplete';
 import { US_STATES } from '@/lib/constants';
 
 interface AddressFormProps {
@@ -37,7 +38,9 @@ export default function AddressForm({ address, onSaved, onCancel }: AddressFormP
 
   const {
     register,
+    control,
     handleSubmit,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
@@ -53,8 +56,10 @@ export default function AddressForm({ address, onSaved, onCancel }: AddressFormP
           phone: address.phone ?? '',
           isDefault: address.isDefault,
         }
-      : undefined,
+      : { street1: '' },
   });
+
+  const street1 = useController({ name: 'street1', control });
 
   async function onSubmit(data: FormValues) {
     setServerError('');
@@ -93,7 +98,18 @@ export default function AddressForm({ address, onSaved, onCancel }: AddressFormP
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('streetAddress')} *</label>
-        <Input placeholder="123 Main St" {...register('street1')} />
+        <AddressAutocomplete
+          placeholder="123 Main St"
+          value={street1.field.value ?? ''}
+          onChange={street1.field.onChange}
+          onBlur={street1.field.onBlur}
+          onSelect={({ street1: s1, city, state, zip }) => {
+            if (s1) setValue('street1', s1, { shouldValidate: true });
+            if (city) setValue('city', city, { shouldValidate: true });
+            if (state) setValue('state', state, { shouldValidate: true });
+            if (zip) setValue('zip', zip, { shouldValidate: true });
+          }}
+        />
         {errors.street1 && <p className="text-xs text-error mt-1">{errors.street1.message}</p>}
       </div>
 

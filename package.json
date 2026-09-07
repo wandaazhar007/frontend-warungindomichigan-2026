@@ -12,6 +12,7 @@
     "test:e2e:headed": "playwright test --headed"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^2.1.1",
     "@hookform/resolvers": "^3.9.1",
     "@stripe/react-stripe-js": "^3.2.0",
     "@stripe/stripe-js": "^5.5.0",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.61.0",
+    "@types/google.maps": "^3.66.2",
     "@types/node": "^22.10.6",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

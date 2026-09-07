@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from '@/i18n/navigation';
-import { useForm } from 'react-hook-form';
+import { useForm, useController } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Link } from '@/i18n/navigation';
@@ -12,6 +12,7 @@ import { useAuthStore } from '@/store/authStore';
 import { useCheckoutStore, ContactData } from '@/store/checkoutStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import AddressAutocomplete from '@/components/address/AddressAutocomplete';
 import { US_STATES } from '@/lib/constants';
 
 export default function ContactForm() {
@@ -37,10 +38,13 @@ export default function ContactForm() {
 
   const {
     register,
+    control,
     handleSubmit,
     setValue,
     formState: { errors, isSubmitting },
-  } = useForm<FormValues>({ resolver: zodResolver(schema) });
+  } = useForm<FormValues>({ resolver: zodResolver(schema), defaultValues: { street1: '' } });
+
+  const street1 = useController({ name: 'street1', control });
 
   // Guard: redirect if cart is empty
   useEffect(() => {
@@ -99,7 +103,18 @@ export default function ContactForm() {
 
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('streetAddress')} *</label>
-          <Input placeholder="123 Main St" {...register('street1')} />
+          <AddressAutocomplete
+            placeholder="123 Main St"
+            value={street1.field.value ?? ''}
+            onChange={street1.field.onChange}
+            onBlur={street1.field.onBlur}
+            onSelect={({ street1: s1, city, state, zip }) => {
+              if (s1) setValue('street1', s1, { shouldValidate: true });
+              if (city) setValue('city', city, { shouldValidate: true });
+              if (state) setValue('state', state, { shouldValidate: true });
+              if (zip) setValue('zip', zip, { shouldValidate: true });
+            }}
+          />
           {errors.street1 && <p className="text-xs text-error mt-1">{errors.street1.message}</p>}
         </div>
 
