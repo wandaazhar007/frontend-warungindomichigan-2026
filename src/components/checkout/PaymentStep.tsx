@@ -15,7 +15,15 @@ import api from '@/lib/api';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 // Inner form — rendered inside <Elements> where useStripe/useElements are available
-function PaymentForm({ orderNumber, total }: { orderNumber: string; total: number }) {
+function PaymentForm({
+  orderNumber,
+  total,
+  onPaid,
+}: {
+  orderNumber: string;
+  total: number;
+  onPaid: () => void;
+}) {
   const t = useTranslations('Checkout.PaymentStep');
   const stripe   = useStripe();
   const elements = useElements();
@@ -54,9 +62,12 @@ function PaymentForm({ orderNumber, total }: { orderNumber: string; total: numbe
         // Log but don't block redirect — webhook may still fire in production
         console.error('confirm-payment call failed:', confirmErr);
       }
+      // Freeze the outer redirect guard BEFORE emptying the cart, otherwise the
+      // guard sees an empty cart and bounces to /cart instead of the order page.
+      onPaid();
+      router.push(`/order/${orderNumber}`);
       clearCart();
       reset();
-      router.push(`/order/${orderNumber}`);
     } else {
       setError(t('errors.statusUnknown'));
       setLoading(false);
@@ -114,11 +125,24 @@ export default function PaymentStep() {
   const breakdown    = useCheckoutStore((s) => s.breakdown);
   const contact      = useCheckoutStore((s) => s.contact);
 
+  // Set once payment succeeds: the checkout store + cart get cleared and we are
+  // navigating to the order page — the guard below must not fire during that.
+  const [paid, setPaid] = useState(false);
+
   useEffect(() => {
+    if (paid) return;
     if (items.length === 0)  { router.replace('/cart');             return; }
     if (!contact)            { router.replace('/checkout');          return; }
     if (!clientSecret)       { router.replace('/checkout/shipping'); return; }
-  }, [items.length, contact, clientSecret, router]);
+  }, [items.length, contact, clientSecret, router, paid]);
+
+  if (paid) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
+      </div>
+    );
+  }
 
   if (!clientSecret || !orderNumber || !breakdown) {
     return (
@@ -141,7 +165,11 @@ export default function PaymentStep() {
     >
       <div className="space-y-4">
         <h2 className="font-display font-700 text-gray-900 text-lg">{t('title')}</h2>
-        <PaymentForm orderNumber={orderNumber} total={breakdown.total} />
+        <PaymentForm
+          orderNumber={orderNumber}
+          total={breakdown.total}
+          onPaid={() => setPaid(true)}
+        />
       </div>
     </Elements>
   );
